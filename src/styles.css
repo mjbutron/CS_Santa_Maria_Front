@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+.loading {
+  text-align: center;
+}
+
+.upper-bar {
+  background-color: #0e94a0;
+  color: #FFF;
+  padding: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.upper-bar span {
+  color: #add5dd;
+}
+
+.upper-bar .login {
+  display: inline-block;
+  border: 1px solid #add5dd;
+  padding: 2px 10px;
+  margin-left: 20px;
+}

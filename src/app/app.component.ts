@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'centrosanitario-santamaria';
+  loading: boolean;
+
+  constructor(){
+    this.loading = false;
+
+    //this.loading = setInterval(()=>{this.setLoading();}, 3000);
+  }
+
+  setLoading() {
+      this.loading = false;
+  }
 }
