@@ -11,7 +11,6 @@ export class AppComponent {
 
   constructor(){
     this.loading = false;
-
     //this.loading = setInterval(()=>{this.setLoading();}, 3000);
   }
 
