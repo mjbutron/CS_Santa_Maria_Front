@@ -1,0 +1,30 @@
+
+.cssm-footer-color {
+  background-color: #0e94a0;
+  color: #ffffff;
+}
+
+.margin-icon {
+  margin-right: 1rem;
+}
+
+.lnks-footer-cssm {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.lnks-footer-cssm:hover {
+  color: #add5dd;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+img{
+display:block;
+margin:auto;
+}
+
+.font-weight {
+  font-weight: 700 !important;
+}
