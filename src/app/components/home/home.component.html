@@ -6,19 +6,19 @@
     <li data-target="#slider" data-slide-to="2"></li>
   </ul>
   <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active" style="background-image: url('../../assets/img/slider1.jpg')">
+    <div class="carousel-item active" [style.background-image]="'url('+pathImgSlider1+')'">
       <div class="carousel-caption d-md-block">
           <h2 class="display-4" style="color: #638699;">Masaje prenatal</h2>
           <p class="lead" style="color: #638699;">Masajes especializados en minimizar las molestias comunes de gestación.</p>
         </div>
     </div>
-    <div class="carousel-item" style="background-image: url('../../assets/img/blw.jpg')">
+    <div class="carousel-item" [style.background-image]="'url('+pathImgSlider2+')'">
       <div class="carousel-caption d-md-block">
           <h2 class="display-4">Método BLW</h2>
           <p class="lead">El método BLW/BLISS que ha revolucionado la alimentación infantil.</p>
         </div>
     </div>
-    <div class="carousel-item" style="background-image: url('../../assets/img/classPrenatal.png')">
+    <div class="carousel-item" [style.background-image]="'url('+pathImgSlider3+')'">
       <div class="carousel-caption d-md-block">
           <h2 class="display-4">Talleres</h2>
           <p class="lead">Apuntate a nuestros talleres. Plazas limitadas.</p>
@@ -28,7 +28,7 @@
 </div>
 <!-- End Slider -->
 <!-- Blq0 Welcome -->
-<div class="row padding" >
+<div class="row padding animated fadeInUp">
   <div class="col-sm-12 col-md-6 col-lg-5">
     <h1 class="cssm-display-5">¡Bienvenida!</h1>
     <hr class="my-6">
@@ -36,7 +36,7 @@
     <p>Integer dapibus vestibulum nisi, non sodales libero semper a. Cras id dolor ipsum. Cras tincidunt pellentesque dapibus. Nullam eget consectetur purus, ut semper erat. Phasellus vel convallis nisi. Mauris at enim eleifend, elementum tellus eget, porta augue. Maecenas quis interdum arcu, sit amet congue velit.</p>
   </div>
   <div class="col-sm-12 col-md-6 col-lg-7">
-    <img src="../../assets/img/slider1.jpg" alt="" class="rounded-lg cssm-img-full">
+    <img [src]="pathImgSlider1" alt="" class="rounded-lg cssm-img-full">
   </div>
 </div>
   <!-- End Blq0 Welcome -->
@@ -132,12 +132,14 @@
 </div>
 <!-- End Blq1 Services -->
 <!-- Blq 2 Event -->
-<h1 class="cssm-display-5">Talleres</h1>
-<p class="cssm-lead text-center">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-<div class="row padding">
+<div class="row padding animated fadeInUp">
+  <div class="col-sm-12 col-md-12 col-lg-12">
+    <h1 class="cssm-display-5">Talleres</h1>
+    <p class="cssm-lead text-center">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  </div>
   <div class="card-columns">
     <div class="card" style="background-color: #5fbcb1">
-      <img src="../../assets/img/classPrenatal.png" class="card-img-top" alt="...">
+      <img [src]="pathImgSlider1" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title cssm-colorWhite">Card title</h5>
         <p class="card-text cssm-colorWhite">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -192,7 +194,7 @@
       </div>
     </div>
     <div class="card" style="background-color: #5fbcb1">
-      <img src="../../assets/img/slider1.jpg" class="card-img-top" alt="...">
+      <img src="../../assets/img/massagePrenatal.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title cssm-colorWhite">Card title</h5>
         <p class="card-text cssm-colorWhite">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
