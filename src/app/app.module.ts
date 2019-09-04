@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -27,7 +28,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

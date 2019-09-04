@@ -11,13 +11,13 @@ export class HomeComponent implements OnInit {
   pathImgSlider1: String;
   pathImgSlider2: String;
   pathImgSlider3: String;
-  pathImgBg: String;
+  pathImgService: String;
 
   constructor() {
     this.pathImgSlider1 = environment.pathImageDev + "/massagePrenatal.jpg";
     this.pathImgSlider2 = environment.pathImageDev + "/blw.jpg";
     this.pathImgSlider3 = environment.pathImageDev + "/classPrenatal.png";
-    this.pathImgBg = environment.pathImageDev + "/bgImage.png";
+    this.pathImgService = environment.pathImageDev + "/girl.png";
   }
 
   ngOnInit() {
