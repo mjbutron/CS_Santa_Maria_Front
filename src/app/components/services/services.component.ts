@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-services',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  pathImgSlider: String;
+
+  constructor() {
+    this.pathImgSlider = environment.pathImageDev + "/massagePrenatal.jpg";
+  }
 
   ngOnInit() {
   }
