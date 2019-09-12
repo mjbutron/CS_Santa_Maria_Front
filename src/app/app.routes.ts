@@ -10,4 +10,4 @@ const APP_ROUTES: Routes = [
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {scrollPositionRestoration: 'top'});
