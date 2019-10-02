@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  pathImageDev: "../../assets/img"
+  pathImage: "../../assets/img"
 };
 
 /*

@@ -1,11 +1,20 @@
 <!-- Slider -->
 <div class="carousel slide animated fadeInUp" id="slider" data-ride="carousel">
   <ul class="carousel-indicators">
-    <li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" *ngFor="let x of sliders;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>
+    <!-- <li data-target="#slider" data-slide-to="0" class="active"></li>
     <li data-target="#slider" data-slide-to="1"></li>
-    <li data-target="#slider" data-slide-to="2"></li>
+    <li data-target="#slider" data-slide-to="2"></li> -->
   </ul>
   <div class="carousel-inner" role="listbox">
+    <div *ngFor="let slider of sliders; let j = index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'" [style.background-image]="'url('+slider.image+')'">
+      <div class="carousel-caption d-md-block">
+          <h2 class="display-4" style="color: #638699;">{{slider.title}}</h2>
+          <p class="lead" style="color: #638699;">{{slider.description}}</p>
+        </div>
+    </div>
+  </div>
+  <!-- <div class="carousel-inner" role="listbox">
     <div class="carousel-item active" [style.background-image]="'url('+pathImgSlider1+')'">
       <div class="carousel-caption d-md-block">
           <h2 class="display-4" style="color: #638699;">Masaje prenatal</h2>
@@ -24,7 +33,7 @@
           <p class="lead">Apuntate a nuestros talleres. Plazas limitadas.</p>
         </div>
     </div>
-  </div>
+  </div> -->
 </div>
 <!-- End Slider -->
 <!-- Blq0 Welcome -->

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -13,6 +14,10 @@ import { ServicesComponent } from './components/services/services.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+
+// Services
+import { DataApiService } from './services/data-api.service';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,15 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     ServicesComponent,
     LoadingComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     APP_ROUTING
   ],
-  providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
+  providers: [DataApiService, {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

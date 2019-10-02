@@ -11,7 +11,7 @@ export class ServicesComponent implements OnInit {
   pathImgSlider: String;
 
   constructor() {
-    this.pathImgSlider = environment.pathImageDev + "/massagePrenatal.jpg";
+    this.pathImgSlider = environment.pathImage + "/massagePrenatal.jpg";
   }
 
   ngOnInit() {
