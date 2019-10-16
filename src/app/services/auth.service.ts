@@ -47,8 +47,13 @@ export class AuthService {
     return this.userToken;
   }
 
-  logout(){
+  isAuthenticated(): boolean {
+    return this.userToken.length > 10;
+  }
 
+  logout(){
+    localStorage.removeItem('accessTkn');
+    this.userToken = '';
   }
 
 
