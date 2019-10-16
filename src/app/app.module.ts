@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // Routes
 import { APP_ROUTING } from './app.routes';
@@ -33,6 +34,7 @@ import { DataApiService } from './services/data-api.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     APP_ROUTING
   ],
   providers: [DataApiService, {provide : LocationStrategy , useClass: HashLocationStrategy}],

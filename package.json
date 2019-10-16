@@ -21,6 +21,7 @@
     "@angular/router": "~8.1.2",
     "animate.css": "^3.7.2",
     "rxjs": "~6.4.0",
+    "sweetalert2": "^8.18.4",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },

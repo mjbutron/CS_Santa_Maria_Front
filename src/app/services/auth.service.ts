@@ -4,51 +4,52 @@ import { Observable } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
 
-import { UserInterface } from '../models/user-interface';
+import { UserModel } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  private url = "http://localhost/apiRest/public";
+  userToken: string;
 
-  headers : HttpHeaders = new HttpHeaders({
-    "Content-type": "application/json"
-  });
-
-  loginUser(email: string, password: string): Observable<any>{
-    const url_api = 'http://localhost/apiRest/public/api/login';
-    return this.http.post<UserInterface>(url_api, {email, password}, {headers: this.headers})
-    .pipe(map(data => data));
+  constructor(private http: HttpClient) {
+    this.getTokenStorage();
   }
 
-  setUser(user: UserInterface): void{
-    let user_obj = JSON.stringify(user);
-    localStorage.setItem("currentUser", user_obj);
+  login( user: UserModel){
+    const authData = {
+      ...user,
+      returnSecureToken: true
+    };
+
+    return this.http.post(`${this.url}/login`,
+      authData).pipe(
+        map(res => {
+          this.saveToken(res['token']);
+          return res;
+        })
+      );
   }
 
-  setToken(accessToken): void{
-    localStorage.setItem("keyAccess", accessToken);
+  private saveToken(idToken: string){
+    this.userToken = idToken;
+    localStorage.setItem('accessTkn', idToken);
   }
 
-  getToken(){
-    return localStorage.getItem("keyAccess");
-  }
-
-  getCurrentUser(): UserInterface {
-    let user_obj = localStorage.getItem("currentUser");
-    if(!isNullOrUndefined(user_obj)){
-      let user: UserInterface = JSON.parse(user_obj);
-      return user;
+  getTokenStorage(){
+    if(localStorage.getItem('accessTkn')){
+      this.userToken = localStorage.getItem('accessTkn');
     }else{
-      return null;
+      this.userToken = '';
     }
+    return this.userToken;
   }
 
-  logoutUser(){
-    // deslogar en el servidor ??
-    localStorage.removeItem("keyAccess");
-    localStorage.removeItem("currentUser");
+  logout(){
+
   }
+
+
 }
