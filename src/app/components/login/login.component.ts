@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
     Swal.showLoading();
 
     this.auth.login(this.user).subscribe(res => {
-      console.log(res);
       Swal.close();
 
       if(this.rememberUser){
@@ -50,7 +49,6 @@ export class LoginComponent implements OnInit {
 
       this.router.navigateByUrl('/admin/dashboard');
     }, (err) => {
-      console.log(err.error.error.message);
       Swal.fire({
         type: 'error',
         title: 'Error al iniciar sesión',

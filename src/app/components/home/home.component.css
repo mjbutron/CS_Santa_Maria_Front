@@ -1,4 +1,8 @@
 /* Welcome-->  */
+p {
+  color: #638699;
+  font-family: 'Indie Flower', cursive;
+}
 .my-6 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
@@ -17,8 +21,9 @@
 }
 
 .cssm-display-5 {
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-family: 'Amatic SC', cursive;
+  font-size: 4rem;
+  font-weight: 400;
   line-height: 1.2;
   text-align: center;
   font-weight: bold;
@@ -125,6 +130,16 @@ section {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+}
+
+.card-amatic-title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+
+}
+.card-color {
+  color: #FFF !important;
 }
 /* <--Cards */
 

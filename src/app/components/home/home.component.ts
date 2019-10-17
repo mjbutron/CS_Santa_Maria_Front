@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { DataApiService } from 'src/app/services/data-api.service';
+import Swal from 'sweetalert2';
 
+import { DataApiService } from 'src/app/services/data-api.service';
 import { SliderInterface } from '../../models/slider-interface';
 
 @Component({
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   pathImgService: String;
 
   private sliders: SliderInterface;
+  loading: boolean;
 
   constructor(private dataApi: DataApiService) {
     this.pathImgSlider1 = environment.pathImage + "/massagePrenatal.jpg";
@@ -26,12 +28,24 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loading = true;
     this.getSlider();
   }
 
   getSlider(){
     this.dataApi.getAllSlider()
-    .subscribe((allSliders: SliderInterface) => (this.sliders = allSliders));
+    .subscribe((allSliders: SliderInterface) => {
+      this.sliders = allSliders;
+      this.loading = false;
+    }, (err) => {
+      Swal.fire({
+        allowOutsideClick: false,
+        showConfirmButton: false,
+        type: 'error',
+        title: 'Ups!',
+        text: "Parece que tenemos un problema. Intentelo de nuevo pasado unos minutos."
+      });
+    });
   }
 
 }
