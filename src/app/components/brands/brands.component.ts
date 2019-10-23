@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class BrandsComponent implements OnInit {
 
   slides = [
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"},
-    {img: "https://cdn.blisk.io/square-promo-logo-256.jpg?v=d9954ab765a2471d985e27862d3d940c"}
+    {img: "http://sueiro.es/wp-content/uploads/2019/03/Asisa-200x100.png"},
+    {img: "http://sueiro.es/wp-content/uploads/2019/03/Allianz-200x100.png"},
+    {img: "https://hospitalangeldelmar.com.mx/wp-content/uploads/2018/01/gnp-seguros-medicos-200x100.jpg"},
+    {img: "http://sueiro.es/wp-content/uploads/2019/03/Xurich-200x100.png"},
+    {img: "http://www.minguezsaez.com/wp-content/uploads/2018/03/reale-200x100.jpg"},
+    {img: "http://sueiro.es/wp-content/uploads/2019/03/Aegon-200x100.png"},
+    {img: "https://sueiro.es/wp-content/uploads/2019/03/Liberty-200x100.png"},
+    {img: "https://www.segurosequitacion.com/wp-content/uploads/2013/04/sponsor3-200x100.jpg"}
   ];
 
   slideConfig = {
