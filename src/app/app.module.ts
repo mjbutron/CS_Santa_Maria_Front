@@ -19,6 +19,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { WorkshopComponent } from './components/workshop/workshop.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { CoursesComponent } from './components/courses/courses.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 // Services
 import { DataApiService } from './services/data-api.service';
@@ -34,7 +37,10 @@ import { DataApiService } from './services/data-api.service';
     FooterComponent,
     DashboardComponent,
     BrandsComponent,
-    WorkshopComponent
+    WorkshopComponent,
+    AboutusComponent,
+    CoursesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

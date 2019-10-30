@@ -57,7 +57,6 @@
   font-family: "Amatic SC", cursive;
   font-size: 28px;
   font-weight:bold;
-  text-align: center;
 }
 .card-title-bg {
   background-color: #0095A6;
@@ -73,6 +72,10 @@
 
 .cssm-icon-color {
   color: #04c1c3;
+}
+
+.cssm-body-card-color {
+  background-color: ghostwhite;
 }
 
 .cssm-bg-footer {
