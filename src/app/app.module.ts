@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { BrandsComponent } from './components/brands/brands.component';
+import { WorkshopComponent } from './components/workshop/workshop.component';
 
 // Services
 import { DataApiService } from './services/data-api.service';
@@ -32,7 +33,8 @@ import { DataApiService } from './services/data-api.service';
     LoginComponent,
     FooterComponent,
     DashboardComponent,
-    BrandsComponent
+    BrandsComponent,
+    WorkshopComponent
   ],
   imports: [
     BrowserModule,

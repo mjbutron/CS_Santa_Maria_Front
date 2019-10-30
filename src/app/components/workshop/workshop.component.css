@@ -1,0 +1,87 @@
+@media all{
+  *,::after,::before{
+    box-sizing:border-box;
+  }
+  p {
+    margin-top:0;
+    margin-bottom:1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .fade{transition:none;}
+  }
+
+  .fade:not(.show){
+    opacity:0;
+  }
+
+  .md-tabs{
+    position:relative;
+    z-index:1;
+    padding:.7rem;
+    margin-right:1rem;
+    margin-bottom:-20px;
+    margin-left:1rem;
+    background-color:#04c1c3;
+    border:0;
+    border-radius:.25rem;
+    box-shadow:0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
+  }
+  .md-tabs .nav-item+.nav-item{
+    margin-left:0;
+  }
+  .md-tabs .nav-link{
+    color:#fff;
+    border:0;
+    transition:all .4s;
+  }
+  .md-tabs .nav-link.active{
+    color:#fff;
+    background-color: #0095a6;
+    border-radius:.25rem;
+    transition:all 1s;
+  }
+
+
+}
+
+.card {
+  /* opacity: 0.8; */
+  /* filter: alpha(opacity=60); */
+}
+.card-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 28px;
+  font-weight:bold;
+  text-align: center;
+}
+.card-title-bg {
+  background-color: #0095A6;
+}
+.card-text {
+  text-align: justify;
+}
+
+.lead {
+  font-size: 0.90rem !important;
+  font-weight: 100 !important;
+}
+
+.cssm-icon-color {
+  color: #04c1c3;
+}
+
+.cssm-bg-footer {
+  background-color: #04c1c3;
+}
+
+.cssm-card-footer-text{
+  font-family: "Amatic SC",cursive;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
