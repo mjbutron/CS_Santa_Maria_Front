@@ -1,2 +1,95 @@
-<h3>Sección Contacto</h3>
-<p>Sección contacto</p>
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="16">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="'../../assets/img/logo.png'"></agm-marker>
+</agm-map>
+
+<div class="row mt-4 pl-3">
+  <div class="col-md-6">
+    <h3 class="cssm-display-5">Datos de contacto</h3>
+    <hr class="my-6">
+    <p>Dirección</p>
+    <blockquote>
+      <p>Calle Aurora, 18 <br> (Detrás de la comisaría de la policía nacional)
+      <br>11500 El Puerto de Santa María (Cadíz)</p>
+    </blockquote>
+    <p>Teléfono cita previa</p>
+    <blockquote>
+      <p>640 195 160</p>
+    </blockquote>
+    <p>Emails</p>
+    <blockquote>
+      <p>lauraferia@smmatronas.com<br>mariaterry@smmatronas.com</p>
+    </blockquote>
+    <p>Teléfonos matrona</p>
+    <blockquote>
+      <p>640 195 160<br>664 147 896</p>
+    </blockquote>
+    <p>Teléfono Fisioterapia</p>
+    <blockquote>
+      <p>640 195 160</p>
+    </blockquote>
+  </div>
+  <div class="col-md-6">
+    <h3 class="cssm-display-5">Envianos tu solicitud</h3>
+    <hr class="my-6">
+
+    <form (ngSubmit)="onSubmit( contactForm )" #contactForm="ngForm" class="validate-form contact-form">
+
+      <div class="cssm-rgpd mb-3">
+        <input type="checkbox" id="checkRGPD" name="checkAcceptRGPD"
+          [(ngModel)]="checkAcceptRGPD" (change)="checkValue(checkAcceptRGPD ? 'true':'false', contactForm)">
+        He leído y acepto el reglamento general de protección de datos (RGPD).
+      </div>
+
+      <!-- <span *ngIf="contactForm.submitted && contactForm.controls['name'].errors"
+            class="text-danger animated fadeIn">El nombre es obligatorio</span> -->
+      <div class="form-group">
+        <label for="inputName">Nombre</label>
+        <input type="text" name="name" class="form-control"
+          id="inputName" required name placeholder="" [disabled]="inputDisabled">
+      </div>
+
+      <!-- <span *ngIf="contactForm.submitted && contactForm.controls['surname'].errors"
+            class="text-danger animated fadeIn">Los apellidos son obligatorios</span> -->
+      <div class="form-group">
+        <label for="inputSurname">Apellidos</label>
+        <input type="text" name="surname" class="form-control"
+          id="inputSurname" required surname placeholder="" [disabled]="inputDisabled">
+      </div>
+
+      <!-- <span *ngIf="contactForm.submitted && contactForm.controls['email'].errors"
+            class="text-danger animated fadeIn">El email es obligatorio</span> -->
+      <div class="form-group">
+        <label for="inputEmail">Email</label>
+        <input type="email" name="email" class="form-control"
+          id="inputEmail" required email placeholder="" [disabled]="inputDisabled">
+      </div>
+
+
+      <div class="form-group">
+        <label for="selectSubject">Asunto</label>
+        <select class="form-control" name="subject" id="selectSubject"
+          required subject [disabled]="inputDisabled">
+          <option>Información</option>
+          <option>Cita Previa</option>
+          <option>Inscripción Taller/Curso</option>
+        </select>
+      </div>
+
+      <!-- <span *ngIf="contactForm.submitted && contactForm.controls['message'].errors"
+            class="text-danger animated fadeIn">El mensaje es obligatorio</span> -->
+      <div class="form-group">
+        <label for="inputMessage">Mensaje</label>
+        <textarea class="form-control" name="message" id="inputMessage"
+          rows="3" required message [disabled]="inputDisabled"></textarea>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="checkForm">
+        <label class="form-check-label" for="checkForm">He leído y acepto la política de privacidad.</label>
+      </div>
+      <button class="submit-form-btn" type="submit" [disabled]="inputDisabled">
+          Enviar solicitud
+      </button>
+    </form>
+  </div>
+</div>
