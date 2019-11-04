@@ -23,9 +23,10 @@ import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { ContactComponent } from './components/contact/contact.component';
-// AIzaSyAiT9Bg_Ll8MvwWy90-9pAHQLvrgAJQGaY
+
 // Services
 import { DataApiService } from './services/data-api.service';
+import { OpinionsComponent } from './components/opinions/opinions.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DataApiService } from './services/data-api.service';
     WorkshopComponent,
     AboutusComponent,
     CoursesComponent,
-    ContactComponent
+    ContactComponent,
+    OpinionsComponent
   ],
   imports: [
     BrowserModule,
