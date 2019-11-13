@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  pathImgLogo: String;
+
+  constructor() {
+    this.pathImgLogo = environment.pathImage + "/logoLarge.png";
+  }
 
   ngOnInit() {
   }

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   pathImgSlider3: String;
   pathImgService: String;
 
-  private sliders: SliderInterface;
+  sliders: SliderInterface;
   loading: boolean;
 
   constructor(private dataApi: DataApiService) {

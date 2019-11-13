@@ -1,0 +1,107 @@
+.header-section img {
+  width: 100%;
+  height: 300px;
+}
+
+.content-courses {
+  padding: 20px;
+}
+
+.cssm-card-title {
+  color: #0095A6;
+  font-family: "Amatic SC", cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.card {
+  border: 1px solid #04c1c3 !important;
+  background-color: ghostwhite !important;
+}
+
+.courses-btn {
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+  max-width: 200px;
+  background-color: #04c1c3;
+  border-radius: 3px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.courses-btn:hover {
+  background-color: #0095A6;
+}
+
+.courses-badge-new {
+  display:inline;
+  position:static;
+  margin-right: 10px;
+}
+
+.badge.badge-accented {
+  border-radius:3px;
+  font-size:9px;
+  padding:1px 8px;
+  background:#14171c;
+  border:none;color:#fff;
+  min-width:inherit;
+  display:inline-block;
+  font-weight:700;
+  line-height:1.5;
+  position:relative;
+  text-align:center;
+  text-transform:uppercase;
+  top:-3px;
+  z-index:2;
+  vertical-align:baseline;
+}
+
+.badge.badge-accented:after {
+  border-radius:3px;
+  right:-4px;
+}
+
+.badge.badge-accented:after {
+  background:inherit;
+  content:'';
+  height:11px;
+  position:absolute;
+  top:2px;
+  transform:rotate(45deg);
+  width:11px;
+  z-index:1;
+  display:block;
+}
+
+.badge.badge-accented.green {
+  background:#46c28e;
+  color:#fff;
+}
+
+.progress {
+  height: 0.5rem !important;
+}
+
+.progress-bar {
+  background-color: #04c1c3 !important;
+}
