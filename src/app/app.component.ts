@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthService } from 'src/app/services/auth.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,12 +8,17 @@ import { AuthService } from 'src/app/services/auth.service';
 export class AppComponent implements OnInit {
 
   title = 'centrosanitario-santamaria';
+  showLoading = true;
 
-  constructor(private auth: AuthService){
+  constructor() {
+    console.log("Init " + this.showLoading);
+    setTimeout (() => {
+      this.showLoading = false;
+         console.log("Start " + this.showLoading);
+      }, 3000);
+    // this.showLoading = false;
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
 }

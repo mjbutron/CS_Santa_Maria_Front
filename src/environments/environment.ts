@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  pathImage: "../../assets/img"
+  pathImage: "../../assets/img",
+  urlApiRest: "http://localhost/apiRest/public"
 };
 
 /*

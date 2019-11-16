@@ -55,19 +55,19 @@ export class BrandsComponent implements OnInit {
  }
 
  slickInit(e) {
-   console.log('slick initialized');
+   // console.log('slick initialized');
  }
 
  breakpoint(e) {
-   console.log('breakpoint');
+   // console.log('breakpoint');
  }
 
  afterChange(e) {
-   console.log('afterChange');
+   // console.log('afterChange');
  }
 
  beforeChange(e) {
-   console.log('beforeChange');
+   // console.log('beforeChange');
  }
 
 }

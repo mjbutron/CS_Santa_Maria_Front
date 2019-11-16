@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 import { AuthService } from './auth.service';
 
 import { SliderInterface } from '../models/slider-interface';
@@ -10,14 +11,15 @@ import { SliderInterface } from '../models/slider-interface';
 })
 export class DataApiService {
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
-
+  private url = environment.urlApiRest;
   headers : HttpHeaders = new HttpHeaders({
     "Content-type": "application/json"
   });
 
+  constructor(private http: HttpClient, private authService: AuthService) { }
+
   getAllSlider(){
-    const url_api = 'http://localhost/apiRest/public/api/allSlider';
+    const url_api = this.url + '/api/allSlider';
     return this.http.get(url_api);
   }
 

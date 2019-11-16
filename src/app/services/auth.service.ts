@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { isNullOrUndefined } from 'util';
 
@@ -11,7 +12,7 @@ import { UserModel } from '../models/user.model';
 })
 export class AuthService {
 
-  private url = "http://localhost/apiRest/public";
+  private url = environment.urlApiRest;
   userToken: string;
 
   constructor(private http: HttpClient) {

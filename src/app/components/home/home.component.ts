@@ -38,13 +38,13 @@ export class HomeComponent implements OnInit {
       this.sliders = allSliders;
       this.loading = false;
     }, (err) => {
-      Swal.fire({
-        allowOutsideClick: false,
-        showConfirmButton: false,
-        type: 'error',
-        title: 'Ups!',
-        text: "Parece que tenemos un problema. Intentelo de nuevo pasado unos minutos."
-      });
+      // Swal.fire({
+      //   allowOutsideClick: false,
+      //   showConfirmButton: false,
+      //   type: 'error',
+      //   title: 'Ups!',
+      //   text: "Parece que tenemos un problema. Intentelo de nuevo pasado unos minutos."
+      // });
     });
   }
 
