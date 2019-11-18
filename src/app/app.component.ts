@@ -8,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   title = 'centrosanitario-santamaria';
-  showLoading = true;
+  showLoading = false;
 
   constructor() {
-    console.log("Init " + this.showLoading);
-    setTimeout (() => {
-      this.showLoading = false;
-         console.log("Start " + this.showLoading);
-      }, 3000);
+    // console.log("Init " + this.showLoading);
+    // setTimeout (() => {
+    //   this.showLoading = false;
+    //      console.log("Start " + this.showLoading);
+    //   }, 3000);
     // this.showLoading = false;
   }
 

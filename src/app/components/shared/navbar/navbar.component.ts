@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +7,16 @@ import { environment } from 'src/environments/environment';
 })
 export class NavbarComponent implements OnInit {
 
-  pathImgLogo: String;
+  public navbarOpen = false;
 
   constructor() {
-    this.pathImgLogo = environment.pathImage + "/logoLarge.png";
   }
 
   ngOnInit() {
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }

@@ -35,11 +35,11 @@
 
     <form (ngSubmit)="onSubmit( contactForm )" #contactForm="ngForm" class="validate-form contact-form">
 
-      <div class="cssm-rgpd mb-3">
+      <!-- <div class="cssm-rgpd mb-3">
         <input type="checkbox" id="checkRGPD" name="checkAcceptRGPD"
           [(ngModel)]="checkAcceptRGPD" (change)="checkValue(checkAcceptRGPD ? 'true':'false', contactForm)">
         He leído y acepto el reglamento general de protección de datos (RGPD).
-      </div>
+      </div> -->
 
       <!-- <span *ngIf="contactForm.submitted && contactForm.controls['name'].errors"
             class="text-danger animated fadeIn">El nombre es obligatorio</span> -->
