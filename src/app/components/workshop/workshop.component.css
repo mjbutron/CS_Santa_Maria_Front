@@ -7,7 +7,7 @@
   padding: 20px;
 }
 
-@media all{
+ @media all{
   *,::after,::before{
     box-sizing:border-box;
   }
@@ -54,8 +54,6 @@
     border-radius:.25rem;
     transition:all 1s;
   }
-
-
 }
 
 .card {
@@ -96,4 +94,4 @@
   font-size: 28px;
   font-weight: 600;
   color: #fff;
-}
+} 

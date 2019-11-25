@@ -54,11 +54,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Handlee', cursive;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1.5;
-  color: #212529;
+  color: #638699;
   text-align: left;
   background-color: #fff;
 }

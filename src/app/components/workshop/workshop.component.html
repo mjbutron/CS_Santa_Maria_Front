@@ -5,6 +5,9 @@
     </div>
   </div>
 </div>
+
+
+
 <div class="content-workshop">
 <!--Grid row-->
 <div class="row">
@@ -35,19 +38,29 @@
 
         <!-- Content -->
         <div class="card-body cssm-body-card-color">
-          <nav>
-            <div class="nav nav-tabs md-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-desc-tab-1" data-toggle="tab" href="#nav-desc-1" role="tab"
-                aria-controls="nav-home" aria-selected="true">Descripción</a>
-              <a class="nav-item nav-link" id="nav-location-tab-1" data-toggle="tab" href="#nav-location-1" role="tab"
-                aria-controls="nav-home" aria-selected="true">Ubicación</a>
-              <a class="nav-item nav-link" id="nav-sessions-tab-1" data-toggle="tab" href="#nav-sessions-1" role="tab"
-                aria-controls="nav-profile" aria-selected="false">Sesiones</a>
-              <a class="nav-item nav-link" id="nav-timer-tab-1" data-toggle="tab" href="#nav-timer-1" role="tab"
-                aria-controls="nav-contact" aria-selected="false">Horarios</a>
+          <div class="row">
+            <div class="col-md-6 pb-2">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              El Puerto de Santa María
             </div>
-          </nav>
-          <div class="tab-content pt-5" id="nav-tabContent">
+            <div class="col-md-6 pb-2">
+              <i class="fas  fa-tasks" aria-hidden="true"></i>
+              1 Sesión
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 pb-2">
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              28/11/2019
+            </div>
+            <div class="col-md-6 pb-2">
+              <i class="far fa-clock"></i>
+              18:00 - 20:00
+            </div>
+          </div>
+
+          <hr class="my-4">
+          <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-desc-1" role="tabpanel" aria-labelledby="nav-desc-tab-1">
                 <p>¿Sabes lo que debes evitar comer para no contraer enfermedades que pueden ser perjudiciales para tu bebé?
                   ¿Es verdad que hay que evitar comer jamón? ¿Y atún? ¿Y si eres vegetariana?</p>
@@ -89,7 +102,7 @@
           </div>
 
         </div>
-        <a href="#">
+        <a [routerLink]="['../contacto']">
         <div class="card-footer cssm-bg-footer text-center">
           <div class="cssm-card-footer-text">
             <img src="../../../assets/img/logoIcon.png" width="50px" alt="">INSCRIBIRSE

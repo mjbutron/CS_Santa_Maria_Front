@@ -13,9 +13,12 @@ export class ContactComponent implements OnInit {
   checkAcceptRGPD = false;
   inputDisabled = false;
 
-  constructor() { }
+  constructor() {
+    console.log("Const Contact");
+  }
 
   ngOnInit() {
+    console.log("OnInit Contact");
   }
 
   onSubmit(form: NgForm){

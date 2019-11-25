@@ -1,7 +1,9 @@
 /* Welcome-->  */
 p {
   color: #638699;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  /* line-height: 1.5; */
 }
 .my-6 {
   margin-top: 1.5rem !important;
