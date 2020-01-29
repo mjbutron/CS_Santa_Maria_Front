@@ -9,7 +9,6 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AuthGuard } from './guards/auth.guard';
 
-
 const APP_ROUTES: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'servicios', component: ServicesComponent },
