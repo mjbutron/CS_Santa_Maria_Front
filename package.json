@@ -22,6 +22,8 @@
     "@angular/router": "^8.2.14",
     "animate.css": "^3.7.2",
     "jquery": "^3.5.1",
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.3",
     "ngx-slick-carousel": "^0.4.7",
     "rxjs": "~6.4.0",
     "slick-carousel": "^1.8.1",
