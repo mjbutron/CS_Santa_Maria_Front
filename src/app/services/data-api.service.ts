@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
-import { AuthService } from './auth.service';
+
+import { of, throwError } from 'rxjs';
+import { delay, mergeMap, catchError, retry, retryWhen, shareReplay } from 'rxjs/operators';
 
 import { SliderInterface } from '../models/slider-interface';
+
+const DEFAULT_MAX_RETRIES = 5;
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +16,42 @@ import { SliderInterface } from '../models/slider-interface';
 export class DataApiService {
 
   private url = environment.urlApiRest;
-  headers : HttpHeaders = new HttpHeaders({
-    "Content-type": "application/json"
-  });
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
+  constructor(private http: HttpClient) { }
 
+// Headers
+  getHeadersOptions(){
+    return {
+    headers: new HttpHeaders({
+      "Content-type": "application/json"
+      })
+    };
+  }
+
+// Delay retry
+  delayRetry(delayMs: number, maxRetry = DEFAULT_MAX_RETRIES){
+    let retries = maxRetry;
+
+    return (src:Observable<any>) =>
+    src.pipe(
+      retryWhen((errors: Observable<any>) => errors.pipe(
+        delay(delayMs),
+        mergeMap(error => retries-- > 0 ? of(error) : throwError(of(error)))
+      ))
+    );
+  }
+
+// Slider
   getAllSlider(){
     const url_api = this.url + '/api/allSlider';
-    return this.http.get(url_api);
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
   }
 
   /*getHomeServices(){

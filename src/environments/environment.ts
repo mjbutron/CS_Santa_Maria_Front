@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
+  urlBackEnd: "http://localhost:4300",
   pathImage: "../../assets/img",
-  urlApiRest: "http://localhost/apiRest/public"
+  urlApiRest: "http://localhost/apiRest/public",
+  imageRootPath: "http://localhost/apiRest/uploads/",
+  pathServerImage: "C:/xampp/htdocs/apiRest/uploads/"
 };
 
 /*

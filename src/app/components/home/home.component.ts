@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import Swal from 'sweetalert2';
 
 import { DataApiService } from 'src/app/services/data-api.service';
+
 import { SliderInterface } from '../../models/slider-interface';
 
 @Component({
@@ -11,23 +13,25 @@ import { SliderInterface } from '../../models/slider-interface';
 })
 export class HomeComponent implements OnInit {
 
-  sliders: SliderInterface;
-  loading: boolean;
+  // Path
+  path = environment.imageRootPath;
+  // Sliders
+  sliders: SliderInterface[] = [];
+  // Load
+  isLoaded: boolean;
 
   constructor(private dataApi: DataApiService) {
-
   }
 
   ngOnInit() {
-    this.loading = true;
+    this.isLoaded = true;
     this.getSlider();
   }
 
   getSlider(){
-    this.dataApi.getAllSlider()
-    .subscribe((allSliders: SliderInterface) => {
-      this.sliders = allSliders;
-      this.loading = false;
+    this.dataApi.getAllSlider().subscribe((data) =>{
+      this.sliders = data.allSliders;
+      // this.isLoaded = false;
     }, (err) => {
       // Swal.fire({
       //   allowOutsideClick: false,

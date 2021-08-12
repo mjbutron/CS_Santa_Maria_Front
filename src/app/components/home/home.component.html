@@ -1,5 +1,6 @@
 <!-- Loading -->
-<!-- <app-loading *ngIf="loading"></app-loading> -->
+<!-- <app-loading *ngIf="isLoaded"></app-loading> -->
+
 <!-- Slider -->
 <div class="carousel slide animated fadeInUp" id="slider" data-ride="carousel">
   <ul class="carousel-indicators">
@@ -9,10 +10,10 @@
     <li data-target="#slider" data-slide-to="2"></li> -->
   </ul>
   <div class="carousel-inner" role="listbox">
-    <div *ngFor="let slider of sliders; let j = index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'" [style.background-image]="'url('+slider.image+')'">
+    <div *ngFor="let slider of sliders; let j = index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'" [style.background-image]="'url('+path+slider.image+')'">
       <div class="carousel-caption d-md-block">
-          <h2 class="display-4" style="color: #638699;">{{slider.title}}</h2>
-          <p class="lead" style="color: #638699;">{{slider.description}}</p>
+          <h2 class="display-4" [style.color]="slider.color_text">{{slider.title}}</h2>
+          <p class="lead" [style.color]="slider.color_text">{{slider.description}}</p>
         </div>
     </div>
   </div>
