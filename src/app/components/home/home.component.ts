@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 import { DataApiService } from 'src/app/services/data-api.service';
 
-import { SliderInterface } from '../../models/slider-interface';
+import { SliderInterface } from 'src/app/models/slider-interface';
 
 @Component({
   selector: 'app-home',
@@ -24,22 +24,20 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isLoaded = true;
+    // this.isLoaded = false;
     this.getSlider();
   }
 
   getSlider(){
     this.dataApi.getAllSlider().subscribe((data) =>{
-      this.sliders = data.allSliders;
-      // this.isLoaded = false;
-    }, (err) => {
-      // Swal.fire({
-      //   allowOutsideClick: false,
-      //   showConfirmButton: false,
-      //   type: 'error',
-      //   title: 'Ups!',
-      //   text: "Parece que tenemos un problema. Intentelo de nuevo pasado unos minutos."
-      // });
+      if (200 == data.cod){
+        this.sliders = data.allSliders;
+        // this.isLoaded = true;
+      }
+      else{
+        // this.isLoaded = true;
+        // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
+      }
     });
   }
 

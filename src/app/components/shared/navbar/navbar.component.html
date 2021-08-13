@@ -2,14 +2,16 @@
 <div class="upper-bar animated fadeInDown">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm">
-        <i class="fas fa-phone-alt"></i> Contactanos al 640 195 160 ó 664 535 460
+      <div class="col-sm" *ngIf="hasPhones">
+        <i class="fas fa-phone-alt"></i>
+        {{phonesStr}}
       </div>
-      <div class="col-sm text-right">
-        Redes sociales: <a href="https://es-es.facebook.com/" class="lnks-facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        | <a href="https://www.youtube.com/" class="lnks-youtube" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-        | <a href="https://www.instagram.com/?hl=es" class="lnks-instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a> |
-        <a [routerLink]="['login']"><span class="login">Acceder</span></a>
+      <div class="col-sm text-right" *ngIf="hasSocialLinks">
+        Redes sociales:
+        <a [href]="informationObj.home_fcbk" *ngIf="hasFbk" class="lnks-facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a [href]="informationObj.home_ytube" *ngIf="hasYtb" class="lnks-youtube" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a [href]="informationObj.home_insta" *ngIf="hasItg" class="lnks-instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- | <a [routerLink]="['login']"><i class="fas fa-sign-in-alt"></i></a> -->
       </div>
     </div>
   </div>

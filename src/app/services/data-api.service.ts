@@ -54,13 +54,16 @@ export class DataApiService {
     )
   }
 
-  /*getHomeServices(){
-    const url_api = 'url_del_servicio/api/homeServices';
-    return this.http.get(url_api);
+// Contact information
+  getInfoHome(){
+    const url_api = this.url + '/api/home/info';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
   }
-
-  getAllServices(){
-    const url_api = 'url_del_servicio/api/allServices';
-    return this.http.get(url_api);
-  }*/
 }
