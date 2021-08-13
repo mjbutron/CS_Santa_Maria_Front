@@ -66,4 +66,17 @@ export class DataApiService {
       shareReplay()
     )
   }
+
+  getInfoFooter(){
+    const url_api = this.url + '/api/footer/info';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
 }

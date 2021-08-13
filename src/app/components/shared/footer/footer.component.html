@@ -21,16 +21,16 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Menú</h6>
           <p>
-            <a [routerLink]="['talleres']" class="lnks-footer-cssm">Talleres</a>
+            <a [routerLink]="['servicios']" class="lnks-footer-cssm">Servicios</a>
           </p>
           <p>
             <a [routerLink]="['nosotras']" class="lnks-footer-cssm">Quiénes somos</a>
           </p>
           <p>
-            <a [routerLink]="['servicios']" class="lnks-footer-cssm">Servicios</a>
+            <a [routerLink]="['talleres']" class="lnks-footer-cssm">Talleres</a>
           </p>
           <p>
-            <a href="#!" class="lnks-footer-cssm">Blog</a>
+            <a [routerLink]="['cursos']" class="lnks-footer-cssm">Cursos</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -41,7 +41,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Enlaces</h6>
           <p>
-            <a href="#" class="lnks-footer-cssm">Acceder</a>
+            <a [href]="pathBackEnd" class="lnks-footer-cssm" target="_blank">Administración</a>
           </p>
           <p>
             <a [routerLink]="['contacto']" class="lnks-footer-cssm">Contacto</a>
@@ -58,16 +58,16 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
           <p>
-             <i class="fas fa-home margin-icon"></i> Calle Aurora, 18, El Puerto de Santa María (Cádiz)
+             <i class="fas fa-home margin-icon"></i> {{informationObj.footer_address}}
           </p>
           <p>
-             <i class="fas fa-envelope-open-text margin-icon"></i> info@cs-santamaria.es
+             <i class="fas fa-envelope-open-text margin-icon"></i> {{informationObj.footer_email}}
           </p>
           <p>
-             <i class="fas fa-phone-alt margin-icon"></i> +34 640 195 160
+             <i class="fas fa-phone-alt margin-icon"></i> {{informationObj.footer_ph}}
           </p>
           <p>
-             <i class="fas fa-clock"></i> Lunes - Viernes de 9:00-14:00 / 17:30-20:30
+             <i class="fas fa-clock"></i> {{informationObj.footer_schdl}}
           </p>
         </div>
         <!-- Grid column -->
@@ -84,8 +84,8 @@
         <div class="col-md-7 col-lg-8">
 
           <!--Copyright-->
-          <p class="text-center text-md-left">©2019
-            <strong> centrosanitariosantamaria.es</strong>
+          <p class="text-center text-md-left">©2021
+            <strong> Centro Sanitario Santa Maria</strong>
           </p>
 
         </div>
