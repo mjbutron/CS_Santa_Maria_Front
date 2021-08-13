@@ -27,6 +27,8 @@ import { ContactComponent } from './components/contact/contact.component';
 // Services
 import { DataApiService } from './services/data-api.service';
 import { OpinionsComponent } from './components/opinions/opinions.component';
+// Pipes
+import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { OpinionsComponent } from './components/opinions/opinions.component';
     AboutusComponent,
     CoursesComponent,
     ContactComponent,
-    OpinionsComponent
+    OpinionsComponent,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,10 @@ import { OpinionsComponent } from './components/opinions/opinions.component';
     }),
     APP_ROUTING
   ],
-  providers: [DataApiService, {provide : LocationStrategy , useClass: HashLocationStrategy}],
+  providers: [
+    DataApiService,
+    PhoneFormatPipe,
+    {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

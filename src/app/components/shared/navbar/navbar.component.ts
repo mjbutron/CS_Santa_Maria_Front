@@ -4,6 +4,8 @@ import { DataApiService } from 'src/app/services/data-api.service';
 
 import { ContactInterface } from 'src/app/models/contact-interface';
 
+import { PhoneFormatPipe } from 'src/app/pipes/phone-format.pipe';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -24,7 +26,7 @@ export class NavbarComponent implements OnInit {
   hasYtb: boolean;
   hasItg: boolean;
 
-  constructor(private dataApi: DataApiService) {
+  constructor(private dataApi: DataApiService, private pipe: PhoneFormatPipe) {
     this.informationObj = new ContactInterface();
   }
 
@@ -64,13 +66,13 @@ export class NavbarComponent implements OnInit {
     this.hasPhones = true;
     if((null != this.informationObj.home_first_ph) && (null != this.informationObj.home_second_ph)){
       this.phonesStr = this.phonesStr
-      + this.formatPhones(this.informationObj.home_first_ph)
-      + " | " + this.formatPhones(this.informationObj.home_second_ph);
+      + this.pipe.transform(this.informationObj.home_first_ph)
+      + " | " + this.pipe.transform(this.informationObj.home_second_ph);
     }
     else if((null != this.informationObj.home_first_ph) || (null != this.informationObj.home_second_ph)){
       this.phonesStr = this.phonesStr
-      + this.formatPhones(this.informationObj.home_first_ph)
-      + this.formatPhones(this.informationObj.home_second_ph);
+      + this.pipe.transform(this.informationObj.home_first_ph)
+      + this.pipe.transform(this.informationObj.home_second_ph);
     }
     else{
       this.hasPhones = false;
@@ -90,20 +92,6 @@ export class NavbarComponent implements OnInit {
     }
     if(!this.hasFbk && !this.hasYtb && !this.hasItg){
       this.hasSocialLinks = false;
-    }
-  }
-
-// Format number - Crear pipe
-  formatPhones(phone: number): string {
-    if(null != phone){
-      // Format
-      var splitted = phone.toString().split('');
-      return splitted[0]+splitted[1]+splitted[2]+" - "
-      +splitted[3]+splitted[4]+splitted[5]+" - "
-      +splitted[6]+splitted[7]+splitted[8];
-    }
-    else {
-      return "";
     }
   }
 

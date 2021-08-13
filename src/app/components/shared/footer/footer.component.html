@@ -55,18 +55,18 @@
         <hr class="w-100 clearfix d-md-none">
 
         <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" *ngIf="hasContactInfo">
           <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-          <p>
+          <p *ngIf="hasAdress">
              <i class="fas fa-home margin-icon"></i> {{informationObj.footer_address}}
           </p>
-          <p>
+          <p *ngIf="hasEmail">
              <i class="fas fa-envelope-open-text margin-icon"></i> {{informationObj.footer_email}}
           </p>
-          <p>
-             <i class="fas fa-phone-alt margin-icon"></i> {{informationObj.footer_ph}}
+          <p *ngIf="hasPhone">
+             <i class="fas fa-phone-alt margin-icon"></i> {{informationObj.footer_ph | phoneFormat}}
           </p>
-          <p>
+          <p *ngIf="hasSchedule">
              <i class="fas fa-clock"></i> {{informationObj.footer_schdl}}
           </p>
         </div>
