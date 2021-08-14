@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.isLoaded = false;
+    this.isLoaded = false;
     this.getSlider();
   }
 
@@ -32,10 +32,10 @@ export class HomeComponent implements OnInit {
     this.dataApi.getAllSlider().subscribe((data) =>{
       if (200 == data.cod){
         this.sliders = data.allSliders;
-        // this.isLoaded = true;
+        this.isLoaded = true;
       }
       else{
-        // this.isLoaded = true;
+        this.isLoaded = true;
         // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
       }
     });
