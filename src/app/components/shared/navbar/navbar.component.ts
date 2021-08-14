@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as globalsConstants from 'src/app/common/globals';
 
 import { DataApiService } from 'src/app/services/data-api.service';
 
@@ -44,7 +45,7 @@ export class NavbarComponent implements OnInit {
 
   getHomeInfo(){
     this.dataApi.getInfoHome().subscribe((data) =>{
-      if (200 == data.cod && 0 < data.homeInfo.length){
+      if (globalsConstants.K_COD_OK == data.cod && 0 < data.homeInfo.length){
         for(let i = 0; i < data.homeInfo.length; i++){
           this.informationObj.home_first_ph = data.homeInfo[i].home_first_ph;
           this.informationObj.home_second_ph = data.homeInfo[i].home_second_ph;

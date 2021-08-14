@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import * as globalsConstants from 'src/app/common/globals';
 
 import { DataApiService } from 'src/app/services/data-api.service';
 
@@ -37,7 +38,7 @@ export class FooterComponent implements OnInit {
 
   getFooterInfo(){
     this.dataApi.getInfoFooter().subscribe((data) =>{
-      if (200 == data.cod && 0 < data.footerInfo.length){
+      if (globalsConstants.K_COD_OK == data.cod && 0 < data.footerInfo.length){
         for(let i = 0; i < data.footerInfo.length; i++){
           this.informationObj.footer_address = data.footerInfo[i].footer_address;
           this.informationObj.footer_email = data.footerInfo[i].footer_email;

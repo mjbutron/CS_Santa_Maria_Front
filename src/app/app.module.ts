@@ -6,6 +6,9 @@ import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AgmCoreModule } from '@agm/core';
 
+// Utils
+import { Globals } from './common/globals';
+
 // Routes
 import { APP_ROUTING } from './app.routes';
 
@@ -58,6 +61,7 @@ import { PhoneFormatPipe } from './pipes/phone-format.pipe';
   ],
   providers: [
     DataApiService,
+    Globals,
     PhoneFormatPipe,
     {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

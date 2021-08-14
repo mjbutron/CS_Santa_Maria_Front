@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import Swal from 'sweetalert2';
+import * as globalsConstants from 'src/app/common/globals';
 
 import { DataApiService } from 'src/app/services/data-api.service';
 
@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
 
   getSlider(){
     this.dataApi.getAllSlider().subscribe((data) =>{
-      if (200 == data.cod){
+      if (globalsConstants.K_COD_OK == data.cod){
         this.sliders = data.allSliders;
         this.isLoaded = true;
       }
