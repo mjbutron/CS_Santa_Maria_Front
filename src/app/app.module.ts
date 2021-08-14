@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
-import { LoadingComponent } from './components/shared/loading/loading.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -36,7 +35,6 @@ import { PhoneFormatPipe } from './pipes/phone-format.pipe';
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
-    LoadingComponent,
     LoginComponent,
     FooterComponent,
     DashboardComponent,
