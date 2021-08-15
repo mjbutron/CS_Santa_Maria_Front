@@ -2,6 +2,21 @@
 .cssm-footer-color {
   background-color: #0e94a0;
   color: #ffffff;
+  background-image: url(src\assets\img\girls3_drw_sm_o20.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .cssm-footer-color {
+    background-color: #0e94a0;
+    color: #ffffff;
+    background-image: url(src\assets\img\girls3_drw_sm_o20.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
 }
 
 .margin-icon {
