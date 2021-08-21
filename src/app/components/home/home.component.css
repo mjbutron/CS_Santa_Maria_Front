@@ -154,6 +154,32 @@ section {
 .cssm-colorWhite {
   color: #ffffff;
 }
+
+.css-bb-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cssm-fruit-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .css-bb-image {
+    background-image: url(src\assets\img\bebe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .cssm-fruit-image {
+    background-image: url(src\assets\img\fruta.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right;
+    background-position-y: inherit;
+  }
+}
 /* <--Others */
 
 /* Services--> */
