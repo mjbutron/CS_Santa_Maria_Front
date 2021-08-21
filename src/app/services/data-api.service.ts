@@ -79,4 +79,17 @@ export class DataApiService {
     )
   }
 
+// Workshops
+  getAllWorkshops(){
+    const url_api = this.url + '/api/allWorkshops';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
 }

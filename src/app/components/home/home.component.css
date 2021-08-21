@@ -15,6 +15,14 @@ p {
 /* <--Welcome */
 
 /* Cards--> */
+.cssm-background-card {
+  background-color: #5fbcb1;
+}
+
+.cssm-background-footer-card {
+  background-color: #0e94a0;
+}
+
 .cssm-lead {
   font-size: 1.00rem;
   font-weight: 300;

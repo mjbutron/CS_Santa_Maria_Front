@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -31,6 +31,11 @@ import { DataApiService } from './services/data-api.service';
 import { OpinionsComponent } from './components/opinions/opinions.component';
 // Pipes
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+// Date
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
@@ -63,7 +68,9 @@ import { PhoneFormatPipe } from './pipes/phone-format.pipe';
     DataApiService,
     Globals,
     PhoneFormatPipe,
-    {provide : LocationStrategy , useClass: HashLocationStrategy}],
+    {provide : LocationStrategy , useClass: HashLocationStrategy},
+    {provide: LOCALE_ID, useValue: 'es'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

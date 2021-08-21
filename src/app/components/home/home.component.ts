@@ -5,6 +5,7 @@ import * as globalsConstants from 'src/app/common/globals';
 import { DataApiService } from 'src/app/services/data-api.service';
 
 import { SliderInterface } from 'src/app/models/slider-interface';
+import { WorkshopInterface } from 'src/app/models/workshop-interface';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,12 @@ import { SliderInterface } from 'src/app/models/slider-interface';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   // Path
   path = environment.imageRootPath;
   // Sliders
   sliders: SliderInterface[] = [];
+  // Workshops
+  wspInHome: WorkshopInterface[] = [];
   // Load
   isLoaded: boolean;
 
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.isLoaded = false;
     this.getSlider();
+    this.getAllWorkshops();
   }
 
   getSlider(){
@@ -40,5 +43,20 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+  getAllWorkshops(){
+    this.dataApi.getAllWorkshops().subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod){
+        if(0 < data.allWorkshops.length){
+          for(let wspHome of data.allWorkshops){
+            if(wspHome.home == 1){
+              this.wspInHome.push(wspHome);
+            }
+          }
+        }
+      }
+    });
+  }
+
 
 }
