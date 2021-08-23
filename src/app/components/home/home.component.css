@@ -23,6 +23,20 @@ p {
   background-color: #0e94a0;
 }
 
+.cssm-background-card-center {
+  background-color: #0e94a0;
+  background-image: url(src\assets\img\fruta.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.cssm-lnks-card-center {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .cssm-lead {
   font-size: 1.00rem;
   font-weight: 300;

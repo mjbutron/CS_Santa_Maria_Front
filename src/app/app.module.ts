@@ -31,6 +31,7 @@ import { DataApiService } from './services/data-api.service';
 import { OpinionsComponent } from './components/opinions/opinions.component';
 // Pipes
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
+import { TimeWithoutSecPipe } from './pipes/time-without-sec.pipe';
 // Date
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
@@ -52,7 +53,8 @@ registerLocaleData(localeEs);
     CoursesComponent,
     ContactComponent,
     OpinionsComponent,
-    PhoneFormatPipe
+    PhoneFormatPipe,
+    TimeWithoutSecPipe
   ],
   imports: [
     BrowserModule,
@@ -68,6 +70,7 @@ registerLocaleData(localeEs);
     DataApiService,
     Globals,
     PhoneFormatPipe,
+    TimeWithoutSecPipe,
     {provide : LocationStrategy , useClass: HashLocationStrategy},
     {provide: LOCALE_ID, useValue: 'es'}
   ],

@@ -62,7 +62,7 @@
 <!-- Blq1 Services -->
 <div class="jumbotron animated fadeInUp">
   <div class="css-bb-image">
-    <h1 class="cssm-display-5">Nuestros Servicios</h1>
+    <h1 class="cssm-display-5">Servicios</h1>
     <p class="cssm-lead text-center">Estos son nuestros principales servicios. Podrá encontrar más información en la sección de servicios.</p>
     <hr class="my-4">
   </div>
@@ -186,13 +186,16 @@
         <p class="card-text cssm-colorWhite">{{workshop.description_home}}</p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
-        <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} - {{workshop.session_start}}</small>
+        <small *ngIf="workshop.session_date" class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
+        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">Fecha: Consultar</small>
       </div>
     </div>
-    <div *ngIf="wspInHome.length > 3" class="card text-white text-center p-3 cssm-background-footer-card">
-      <blockquote class="blockquote mb-0">
-        <p class="cssm-colorWhite">No lo dudes, ven y apúntate a nuestros próximos talleres.</p>
-      </blockquote>
+    <div *ngIf="wspInHome.length > 3" class="card text-white text-center p-3 cssm-background-card-center">
+      <a [routerLink]="['/talleres']" class="cssm-lnks-card-center">
+        <blockquote class="blockquote mb-0">
+          <p class="cssm-colorWhite">No lo dudes, ven y apúntate a nuestros próximos talleres.</p>
+        </blockquote>
+      </a>
     </div>
     <div *ngFor="let workshop of wspInHome | slice:3:6; let i=index" class="card cssm-background-card">
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
@@ -201,7 +204,7 @@
         <p class="card-text cssm-colorWhite">{{workshop.description_home}}</p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
-        <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} - {{workshop.session_start}}</small>
+        <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
       </div>
     </div>
   </div>
