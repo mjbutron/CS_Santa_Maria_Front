@@ -177,7 +177,12 @@ section {
   color: #ffffff;
 }
 
-.css-bb-image {
+.cssm-bb-image {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cssm-testimonials-image {
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -188,8 +193,14 @@ section {
 }
 
 @media (min-width: 768px) {
-  .css-bb-image {
+  .cssm-bb-image {
     background-image: url(src\assets\img\bebe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .cssm-testimonials-image {
+    background-image: url(src\assets\img\testimonios.png);
     background-repeat: no-repeat;
     background-size: contain;
   }
