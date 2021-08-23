@@ -1,3 +1,29 @@
 /* Opinions--> */
+.testimonial-section .avatar img {
+  max-width:200px;
+  height:auto;
+}
 
+.testimonial-section .avatar img.rounded-circle {
+  max-width:100px;
+}
+
+.testimonial .star-text {
+  font-size: 1em;
+  color: gold;
+}
+
+.testimonial-header-text {
+  color: #0e94a0;
+}
+
+.z-depth-1 {
+  -webkit-box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+.img-fluid {
+  max-width:100%;
+  height:auto;
+}
 /* <--Opinions */
