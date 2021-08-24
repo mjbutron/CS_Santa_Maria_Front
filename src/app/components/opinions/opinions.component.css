@@ -26,4 +26,14 @@
   max-width:100%;
   height:auto;
 }
+
+.testimonial-lnks-plus {
+  text-decoration: none;
+  background-color: transparent;
+  color: #0e94a0;
+}
+
+.testimonial-comment-bl {
+  border-left-style: solid;
+}
 /* <--Opinions */

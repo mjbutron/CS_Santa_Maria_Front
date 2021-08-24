@@ -1,97 +1,53 @@
 <!-- Opinions -->
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div>
 <!-- Section: Testimonials -->
 <section class="testimonial-section text-center my-5">
   <!--Grid row-->
   <div class="row text-center">
-
     <!--Grid column-->
-    <div class="col-md-4 mb-md-0 mb-5">
-
+    <div *ngFor="let opinion of opnInHome | slice:0:3; let i=index" [class]="classColumn">
       <div class="testimonial">
         <!--Avatar-->
         <div class="avatar mx-auto">
-          <img src="../../assets/img/avatar.png" class="rounded-circle z-depth-1 img-fluid">
+          <img [src]="path+opinion.image" class="rounded-circle z-depth-1 img-fluid">
         </div>
         <!--Content-->
-        <h4 class="font-weight-bold mt-4 testimonial-header-text">Web User</h4>
-        <!-- <h6 class="font-weight-bold blue-text my-3">Web Designer</h6> -->
+        <h4 class="font-weight-bold mt-4 testimonial-header-text">{{opinion.name}}</h4>
+        <!-- <h6 class="font-weight-bold blue-text my-3">Mama</h6> -->
         <p class="font-weight-normal">
-        <i class="fas fa-quote-left testimonial-header-text"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-          eos id
-          officiis hic tenetur quae quaerat
-          ad velit ab hic tenetur.</p>
-        <!--Review-->
-        <div class="star-text">
-          <!-- <span style="font-size: 1em; color: gold;"> -->
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          <!-- </span> -->
-        </div>
-      </div>
-
-    </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-md-4 mb-md-0 mb-5">
-
-      <div class="testimonial">
-        <!--Avatar-->
-        <div class="avatar mx-auto">
-          <img src="../../assets/img/avatar.png" class="rounded-circle z-depth-1 img-fluid">
-        </div>
-        <!--Content-->
-        <h4 class="font-weight-bold mt-4 testimonial-header-text">Web User</h4>
-        <!-- <h6 class="font-weight-bold blue-text my-3">Web Developer</h6> -->
-        <p class="font-weight-normal">
-        <i class="fas fa-quote-left testimonial-header-text"></i> Ut enim ad minima veniam, quis nostrum exercitationem ullam
-          corporis
-          suscipit laboriosam, nisi ut
-          aliquid commodi.
+        <i class="fas fa-quote-left testimonial-header-text"></i>
+        {{(opinion.commentary.length>250)? (opinion.commentary | slice:0:250)+'...':(opinion.commentary)}}
+        </p>
+        <p *ngIf="opinion.commentary.length>250" class="font-weight-normal">
+          <a class="testimonial-lnks-plus" [routerLink]="" (click)="openComment(opinion.name, opinion.commentary)">Leer más</a>
         </p>
         <!--Review-->
         <div class="star-text">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+          <span *ngFor='let in of counter(opinion.rating);let i = index'>
+            <i class="fas fa-star"></i>
+          </span>
         </div>
       </div>
 
     </div>
     <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-md-4">
-
-      <div class="testimonial">
-        <!--Avatar-->
-        <div class="avatar mx-auto">
-          <img src="../../assets/img/avatar.png" class="rounded-circle z-depth-1 img-fluid">
-        </div>
-        <!--Content-->
-        <h4 class="font-weight-bold mt-4 testimonial-header-text">Web User</h4>
-        <!-- <h6 class="font-weight-bold blue-text my-3">Photographer</h6> -->
-        <p class="font-weight-normal">
-        <i class="fas fa-quote-left testimonial-header-text"></i> At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum
-          deleniti atque corrupti.</p>
-        <!--Review-->
-        <div class="star-text">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-      </div>
-
-    </div>
-    <!--Grid column-->
-
   </div>
   <!--Grid row-->
 
+  <!-- Commentary -->
+  <div #userComment id="userComm"></div>
+  <!--Grid row-->
+    <div *ngIf="testContent" [class]="classComment">
+      <div class="col-sm-11">
+        <p class="font-weight-normal">{{testContent}}</p>
+      </div>
+      <div class="col-sm-1">
+        <a class="testimonial-lnks-plus" title="Ocultar" [routerLink]="" (click)="onCloseComment()">X</a>
+      </div>
+    </div>
+  <!--Grid row-->
 </section>
-<!-- Section: Testimonials v.3 -->
+<!-- Section: Testimonials -->
