@@ -21,6 +21,7 @@ export class BrandsComponent implements OnInit {
   slideConfig = {
    "slidesToShow": 1,
    "slidesToScroll": 1,
+   "centerMode": true,
    "autoplay": true,
    "autoplaySpeed": 5000,
    "arrows": false,
@@ -31,12 +32,14 @@ export class BrandsComponent implements OnInit {
    "responsive": [{
             "breakpoint": 768,
             "settings": {
-                "slidesToShow": 4
+              "slidesToShow": 1,
+              "slidesToScroll": 1
             }
         }, {
             "breakpoint": 520,
             "settings": {
-                "slidesToShow": 3
+                "slidesToShow": 1,
+                "slidesToScroll": 1
             }
         }]
   };
