@@ -25,6 +25,7 @@ import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PrivacypolicyComponent } from './components/privacypolicy/privacypolicy.component';
 
 // Services
 import { DataApiService } from './services/data-api.service';
@@ -54,7 +55,8 @@ registerLocaleData(localeEs);
     ContactComponent,
     OpinionsComponent,
     PhoneFormatPipe,
-    TimeWithoutSecPipe
+    TimeWithoutSecPipe,
+    PrivacypolicyComponent
   ],
   imports: [
     BrowserModule,

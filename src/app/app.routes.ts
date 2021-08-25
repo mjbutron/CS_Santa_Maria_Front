@@ -7,6 +7,7 @@ import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PrivacypolicyComponent } from './components/privacypolicy/privacypolicy.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const APP_ROUTES: Routes = [
@@ -16,6 +17,7 @@ const APP_ROUTES: Routes = [
   { path: 'nosotras', component: AboutusComponent },
   { path: 'cursos', component: CoursesComponent },
   { path: 'contacto', component: ContactComponent },
+  { path: 'politica_privacidad', component: PrivacypolicyComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // TODO only users auth
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
