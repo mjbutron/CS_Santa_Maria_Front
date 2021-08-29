@@ -16,12 +16,18 @@ export class ContactComponent implements OnInit {
   // Coordinates
   lat = 0.0;
   lon = 0.0;
-  // Check PD
-  checkAcceptPD = false;
-  inputDisabled = false;
   // Information
   informationObj: ContactInterface;
   formatEmails: string;
+  // request
+  infoRequest = {
+    name: "",
+    surname: "",
+    email: "",
+    subject: "",
+    message: "",
+    acceptRGPD: false
+  };
   // Load
   isLoaded: boolean;
 
@@ -67,14 +73,15 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log("Formulario");
-    console.log(form);
+    this.isLoaded = false;
+    if(form.invalid){
+      this.isLoaded = true;
+      return;
+    }
+    console.log("DATA: " + JSON.stringify(this.infoRequest));
+    // TODO: Send email (serv)
+    form.resetForm();
+    this.isLoaded = true;
   }
-
-  checkValue(event: any, form: NgForm){
-   this.inputDisabled = !event;
-   console.log("evento:" + event);
-   console.log("active:" + this.inputDisabled);
-}
 
 }
