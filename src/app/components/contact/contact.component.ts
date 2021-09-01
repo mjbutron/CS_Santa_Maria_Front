@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 
@@ -31,7 +32,7 @@ export class ContactComponent implements OnInit {
   // Load
   isLoaded: boolean;
 
-  constructor(private dataApi: DataApiService) {
+  constructor(private dataApi: DataApiService, public toastr: ToastrService) {
     this.informationObj = new ContactInterface();
     this.formatEmails = "";
   }
@@ -82,6 +83,10 @@ export class ContactComponent implements OnInit {
     // TODO: Send email (serv)
     form.resetForm();
     this.isLoaded = true;
+    this.toastr.success("Responderemos a su solicitud lo antes posible.", "¡Solicitud enviada!", {
+      progressBar: true,
+      positionClass: 'toast-top-full-width'
+    });
   }
 
 }

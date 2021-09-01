@@ -84,3 +84,13 @@
     }
 }
 /* --- ** End Loader ** --- */
+
+/* --- ** Start Toast ** --- */
+.toast {
+  opacity: 1;
+}
+
+#toast-container > div {
+   opacity: 1;
+}
+/* --- ** End Toast ** --- */

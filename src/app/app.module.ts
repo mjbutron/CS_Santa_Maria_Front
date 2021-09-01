@@ -4,6 +4,8 @@ import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
 
 // Utils
@@ -65,6 +67,8 @@ registerLocaleData(localeEs);
     HttpClientModule,
     FormsModule,
     SlickCarouselModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: ''
     }),
