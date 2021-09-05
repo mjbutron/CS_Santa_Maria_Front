@@ -79,7 +79,6 @@ export class ContactComponent implements OnInit {
       this.isLoaded = true;
       return;
     }
-    console.log("DATA: " + JSON.stringify(this.infoRequest));
     // TODO: Send email (serv)
     form.resetForm();
     this.isLoaded = true;

@@ -117,4 +117,19 @@ export class DataApiService {
     )
   }
 
+// Courses
+  getAllCourses(){
+    const url_api = this.url + '/api/courses';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
+// Service for send email
+
 }

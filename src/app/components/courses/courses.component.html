@@ -1,12 +1,87 @@
-<div class="row">
-  <div class="col-xs|sm|md|lg|xl-1-12">
+<!-- Loading -->
+<!-- <div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div> -->
+
+<!-- Header -->
+<div class="row animated fadeInUp">
+  <!-- <div class="col-xs|sm|md|lg|xl-1-12"> -->
+    <!-- <div class="header-section"> -->
     <div class="header-section">
       <img src="../../assets/img/courses-header.png" alt="">
     </div>
+  <!-- </div> -->
+</div>
+
+<!-- prueba grid -->
+<div class="content-courses animated fadeInUp">
+  <div class="card shadow p-3 bg-white rounded">
+    <div class="row no-gutters">
+      <div class="col-md-4 align-self-center">
+        <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="row ml-1">
+            <div>
+              <h5 class="card-title cssm-card-title">Nombre de curso 1</h5>
+            </div>
+            <div class="courses-price">
+              Precio: 20€
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 pl-0">
+              <p class="card-text">
+                <small class="text-muted">
+                  <span class="courses-badge-new">
+                    <span data-purpose="badge" class="badge badge-accented green">
+                      <span class="badge-text">Nuevo</span>
+                    </span>
+                  </span>
+                  22/10/2021 - 10:00 a 12:00
+                </small>
+              </p>
+            </div>
+            <div class="col-md-4 pl-0">
+              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases</small></p>
+            </div>
+            <div class="col-md-3 align-self-center pl-0">
+              <!-- <small class="text-muted">Plazas 7/10</small> -->
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" title="Plazas libres: 7/10" style="width: 25%;"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <p class="card-text">Vestibulum ex justo, tincidunt nec eleifend fermentum, maximus non tortor. Suspendisse fermentum leo eget iaculis fermentum. Ut vel placerat tortor. Phasellus mollis nulla pellentesque magna molestie, aliquam tempor ligula porttitor. Integer varius commodo volutpat.</p>
+          <div class="row">
+            <div class="col-md-3 pl-0">
+              <p class="card-text">
+                <small class="text-muted">Impartido por: Laura Feria</small>
+              </p>
+            </div>
+            <div class="col-md-5 pl-0">
+              <p class="card-text">
+                <small class="text-muted">Lugar: Calle Aurora, 18, El Puerto de Santa María (Cádiz)</small>
+              </p>
+            </div>
+            <div class="col-md-4">
+              <button class="courses-btn float-right" type="submit">
+                  Inscribirse
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="content-courses">
-  <div class="card shadow p-3 mb-5 bg-white rounded">
+
+
+<!-- Content -->
+<div class="content-courses animated fadeInUp">
+  <div class="card shadow p-3 bg-white rounded">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
@@ -23,15 +98,17 @@
                       <span class="badge-text">Nuevo</span>
                     </span>
                   </span>
-                  Última actualización octubre 2019
+                  22/10/2021 - 10:00 a 12:00
                 </small>
               </p>
             </div>
-            <div class="col-md-4">
-              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases · Todos los niveles</small></p>
-            </div>
             <div class="col-md-3">
+              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases</small></p>
+            </div>
+            <div class="col-md-2">
               <small class="text-muted">Plazas 7/10</small>
+            </div>
+            <div class="col-md-2">
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 25%;"
                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -40,17 +117,17 @@
           </div>
           <p class="card-text">Vestibulum ex justo, tincidunt nec eleifend fermentum, maximus non tortor. Suspendisse fermentum leo eget iaculis fermentum. Ut vel placerat tortor. Phasellus mollis nulla pellentesque magna molestie, aliquam tempor ligula porttitor. Integer varius commodo volutpat.</p>
           <div class="row">
-            <div class="col-md-6">
-              <p class="card-text"><small class="text-muted">
-                Valoración:
-                <span style="color: gold;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i> </span>
-                4 (20 calificaciones)</small></p>
+            <div class="col-md-3">
+              <p class="card-text">
+                <small class="text-muted">Impartido por: <br> Laura Feria</small>
+              </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
+              <p class="card-text">
+                <small class="text-muted">Lugar: <br> Calle Aurora, 18, El Puerto de Santa María (Cádiz)</small>
+              </p>
+            </div>
+            <div class="col-md-4">
               <button class="courses-btn float-right" type="submit">
                   Inscribirse
               </button>
@@ -61,8 +138,9 @@
     </div>
   </div>
 </div>
-<div class="content-courses">
-  <div class="card shadow p-3 mb-5 bg-white rounded">
+
+<div class="content-courses animated fadeInUp">
+  <div class="card shadow p-3 bg-white rounded">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
@@ -75,8 +153,8 @@
               <p class="card-text">
                 <small class="text-muted">
                   <span class="courses-badge-new">
-                    <span data-purpose="badge" class="badge badge-accented green">
-                      <span class="badge-text">Nuevo</span>
+                    <span data-purpose="badge" class="badge badge-accented orange">
+                      <span class="badge-text">Oferta</span>
                     </span>
                   </span>
                   Última actualización octubre 2019

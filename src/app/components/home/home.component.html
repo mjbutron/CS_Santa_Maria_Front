@@ -4,7 +4,7 @@
 </div>
 
 <!-- Slider -->
-<div class="carousel slide animated fadeInUp" id="slider" data-ride="carousel">
+<div class="animated fadeInUp carousel slide" id="slider" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#slider" *ngFor="let x of sliders;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>
     <!-- <li data-target="#slider" data-slide-to="0" class="active"></li>
