@@ -74,6 +74,7 @@ export class CoursesComponent implements OnInit {
       html: "Para realizar la inscripción pongase en contacto con nosotras a través de teléfono o solicitud.<br><br>"
       +"<b>(*)</b>En la solicitud, recuerde indicar en el asunto 'Inscripción' y especificar el nombre del curso o taller en el mensaje.",
       showCancelButton: true,
+      background: '#f1f1f1',
       confirmButtonColor: K_CANCEL_BUTTON_COLOR,
       cancelButtonColor: K_CONFIRM_BUTTON_COLOR,
       confirmButtonText: K_OK_BUTTON_STR,
