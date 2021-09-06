@@ -13,179 +13,149 @@
   <!-- </div> -->
 </div>
 
-<!-- prueba grid -->
-<div class="content-courses animated fadeInUp">
+<!-- Modal -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left cssm-card-title">{{courseDetail.title}}</h4>
+    <!-- <img src="../../assets/img/classPrenatal.png" class="card-img" alt="..."> -->
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+        <img [src]="path+courseDetail.image" class="card-img" alt="...">
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <i class="fas fa-info-circle cssm-icon-color"></i>
+        {{courseDetail.description}}
+      </div>
+    </div>
+    <div class="separator">{{courseDetail.price}}€</div>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="far fa-calendar-alt cssm-icon-color"></i>
+        <small class="text-muted">
+          {{courseDetail.session_date}}
+        </small>
+      </div>
+      <div class="col-md-4">
+        <i class="far fa-clock cssm-icon-color"></i>
+        <small class="text-muted">
+          {{courseDetail.session_start | timeWithoutSec}} - {{courseDetail.session_end | timeWithoutSec}}
+        </small>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-graduation-cap cssm-icon-color"></i>
+        <small class="text-muted">
+          {{courseDetail.sessions}} Clases · {{courseDetail.hours}} Horas
+        </small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fas fa-map-marker-alt cssm-icon-color"></i>
+        <small class="text-muted">
+          {{courseDetail.address}}
+        </small>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-chalkboard-teacher cssm-icon-color"></i>
+        <small class="text-muted">
+          {{courseDetail.impart}}
+        </small>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-chair cssm-icon-color"></i>
+        <small *ngIf="courseDetail.free_places!=0" class="text-muted">
+          {{courseDetail.free_places}} Plazas libres
+        </small>
+        <small *ngIf="courseDetail.free_places==0" class="text-muted">
+          Completo
+        </small>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Content -->
+<div *ngFor="let course of courses" class="content-courses animated fadeInUp">
   <div class="card shadow p-3 bg-white rounded">
     <div class="row no-gutters">
       <div class="col-md-4 align-self-center">
-        <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
+        <img [src]="path+course.image" class="card-img" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <div class="row ml-1">
             <div>
-              <h5 class="card-title cssm-card-title">Nombre de curso 1</h5>
+              <h5 class="card-title cssm-cursor cssm-card-title" (click)="openModal(course, template)">{{course.title}}</h5>
             </div>
             <div class="courses-price">
-              Precio: 20€
+              Precio: {{(course.price==0)? 'Consultar':(course.price)+'€'}}
             </div>
           </div>
           <div class="row">
             <div class="col-md-5 pl-0">
               <p class="card-text">
-                <small class="text-muted">
+                <small *ngIf="course.new_course==1" class="text-muted">
                   <span class="courses-badge-new">
                     <span data-purpose="badge" class="badge badge-accented green">
                       <span class="badge-text">Nuevo</span>
                     </span>
                   </span>
-                  22/10/2021 - 10:00 a 12:00
                 </small>
-              </p>
-            </div>
-            <div class="col-md-4 pl-0">
-              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases</small></p>
-            </div>
-            <div class="col-md-3 align-self-center pl-0">
-              <!-- <small class="text-muted">Plazas 7/10</small> -->
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" title="Plazas libres: 7/10" style="width: 25%;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-          <p class="card-text">Vestibulum ex justo, tincidunt nec eleifend fermentum, maximus non tortor. Suspendisse fermentum leo eget iaculis fermentum. Ut vel placerat tortor. Phasellus mollis nulla pellentesque magna molestie, aliquam tempor ligula porttitor. Integer varius commodo volutpat.</p>
-          <div class="row">
-            <div class="col-md-3 pl-0">
-              <p class="card-text">
-                <small class="text-muted">Impartido por: Laura Feria</small>
-              </p>
-            </div>
-            <div class="col-md-5 pl-0">
-              <p class="card-text">
-                <small class="text-muted">Lugar: Calle Aurora, 18, El Puerto de Santa María (Cádiz)</small>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <button class="courses-btn float-right" type="submit">
-                  Inscribirse
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Content -->
-<div class="content-courses animated fadeInUp">
-  <div class="card shadow p-3 bg-white rounded">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title cssm-card-title">Nombre de curso 1</h5>
-          <div class="row">
-            <div class="col-md-5">
-              <p class="card-text">
-                <small class="text-muted">
-                  <span class="courses-badge-new">
-                    <span data-purpose="badge" class="badge badge-accented green">
-                      <span class="badge-text">Nuevo</span>
-                    </span>
-                  </span>
-                  22/10/2021 - 10:00 a 12:00
-                </small>
-              </p>
-            </div>
-            <div class="col-md-3">
-              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases</small></p>
-            </div>
-            <div class="col-md-2">
-              <small class="text-muted">Plazas 7/10</small>
-            </div>
-            <div class="col-md-2">
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-          <p class="card-text">Vestibulum ex justo, tincidunt nec eleifend fermentum, maximus non tortor. Suspendisse fermentum leo eget iaculis fermentum. Ut vel placerat tortor. Phasellus mollis nulla pellentesque magna molestie, aliquam tempor ligula porttitor. Integer varius commodo volutpat.</p>
-          <div class="row">
-            <div class="col-md-3">
-              <p class="card-text">
-                <small class="text-muted">Impartido por: <br> Laura Feria</small>
-              </p>
-            </div>
-            <div class="col-md-5">
-              <p class="card-text">
-                <small class="text-muted">Lugar: <br> Calle Aurora, 18, El Puerto de Santa María (Cádiz)</small>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <button class="courses-btn float-right" type="submit">
-                  Inscribirse
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="content-courses animated fadeInUp">
-  <div class="card shadow p-3 bg-white rounded">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img src="../../assets/img/classPrenatal.png" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title cssm-card-title">Nombre de curso 1</h5>
-          <div class="row">
-            <div class="col-md-5">
-              <p class="card-text">
-                <small class="text-muted">
+                <small *ngIf="course.offer==1" class="text-muted">
                   <span class="courses-badge-new">
                     <span data-purpose="badge" class="badge badge-accented orange">
                       <span class="badge-text">Oferta</span>
                     </span>
                   </span>
-                  Última actualización octubre 2019
+                </small>
+                <small *ngIf="course.session_date" class="text-muted">
+                  {{course.session_date | date}} | {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
+                </small>
+                <small *ngIf="!course.session_date" class="text-muted">
+                  Consultar
+                </small>
+              </p>
+            </div>
+            <div class="col-md-4 pl-0">
+              <p class="card-text"><small class="text-muted">
+                {{course.sessions}} Clases · {{course.hours}} Horas
+              </small></p>
+            </div>
+            <div class="col-md-3 align-self-center pl-0">
+              <div class="progress">
+                <div *ngIf="course.free_places!=0" class="progress-bar" title="Plazas libres: {{course.free_places}}/{{course.places}}"
+                [style.width]="(course.free_places/course.places)*100+'%'"></div>
+                <div *ngIf="course.free_places==0" class="progress-bar pb-danger"
+                style="width: 100%;">Completo</div>
+              </div>
+            </div>
+          </div>
+          <p class="card-text">
+            {{(course.description.length>350)? (course.description | slice:0:350)+'...':(course.description)}}
+          </p>
+          <div class="row">
+            <div class="col-md-3 pl-0">
+              <p class="card-text">
+                <small class="text-muted">
+                  Impartido por: {{course.impart}}
+                </small>
+              </p>
+            </div>
+            <div class="col-md-5 pl-0">
+              <p class="card-text">
+                <small class="text-muted">
+                  Lugar: {{course.address}}
                 </small>
               </p>
             </div>
             <div class="col-md-4">
-              <p class="card-text"><small class="text-muted">5 Horas · 5 Clases · Todos los niveles</small></p>
-            </div>
-            <div class="col-md-3">
-              <small class="text-muted">Plazas 7/10</small>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%;"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-          <p class="card-text">Vestibulum ex justo, tincidunt nec eleifend fermentum, maximus non tortor. Suspendisse fermentum leo eget iaculis fermentum. Ut vel placerat tortor. Phasellus mollis nulla pellentesque magna molestie, aliquam tempor ligula porttitor. Integer varius commodo volutpat.</p>
-          <div class="row">
-            <div class="col-md-6">
-              <p class="card-text"><small class="text-muted">
-                Valoración:
-                <span style="color: gold;">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i> </span>
-                4 (20 calificaciones)</small></p>
-            </div>
-            <div class="col-md-6">
-              <button class="courses-btn float-right" type="submit">
+              <button (click)="onInscription()" class="courses-btn float-right">
                   Inscribirse
               </button>
             </div>

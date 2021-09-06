@@ -7,6 +7,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 // Utils
 import { Globals } from './common/globals';
@@ -68,6 +69,7 @@ registerLocaleData(localeEs);
     FormsModule,
     SlickCarouselModule,
     BrowserAnimationsModule,
+    ModalModule.forRoot(),
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: ''

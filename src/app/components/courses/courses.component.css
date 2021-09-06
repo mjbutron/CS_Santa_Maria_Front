@@ -104,16 +104,49 @@
 }
 
 .progress {
-  height: 0.5rem !important;
+  height: 0.6rem !important;
 }
 
 .progress-bar {
   background-color: #04c1c3 !important;
 }
 
+.pb-danger {
+  background-color: #dc3545 !important;
+}
+
 .courses-price {
   /* margin-left: auto; */
   margin-right: 1rem;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.separator:not(:empty)::before {
+  margin-right: 1em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 1em;
+}
+
+.cssm-icon-color {
+  color: #04C1C3;
+}
+
+.cssm-cursor {
+  cursor: pointer;
 }
 
 @media (min-width: 395px) {
