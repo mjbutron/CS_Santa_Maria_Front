@@ -1,163 +1,172 @@
 <!-- Loading -->
-<!-- <div id="preloader" *ngIf="!isLoaded">
+<div id="preloader" *ngIf="!isLoaded">
   <div id="loader"></div>
-</div> -->
-
-<!-- Header -->
-<div class="row animated fadeInUp">
-  <!-- <div class="col-xs|sm|md|lg|xl-1-12"> -->
-    <!-- <div class="header-section"> -->
-    <div class="header-section">
-      <img src="../../assets/img/courses-header.png" alt="">
-    </div>
-  <!-- </div> -->
+</div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
 </div>
 
-<!-- Modal -->
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left cssm-card-title">{{courseDetail.title}}</h4>
-    <!-- <img src="../../assets/img/classPrenatal.png" class="card-img" alt="..."> -->
-    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-      <span aria-hidden="true" class="visually-hidden">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <div class="row">
-        <img [src]="path+courseDetail.image" class="card-img" alt="...">
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <i class="fas fa-info-circle cssm-icon-color"></i>
-        {{courseDetail.description}}
-      </div>
-    </div>
-    <div class="separator">{{courseDetail.price}}€</div>
-    <div class="row">
-      <div class="col-md-4">
-        <i class="far fa-calendar-alt cssm-icon-color"></i>
-        <small class="text-muted">
-          {{courseDetail.session_date}}
-        </small>
-      </div>
-      <div class="col-md-4">
-        <i class="far fa-clock cssm-icon-color"></i>
-        <small class="text-muted">
-          {{courseDetail.session_start | timeWithoutSec}} - {{courseDetail.session_end | timeWithoutSec}}
-        </small>
-      </div>
-      <div class="col-md-4">
-        <i class="fas fa-graduation-cap cssm-icon-color"></i>
-        <small class="text-muted">
-          {{courseDetail.sessions}} Clases · {{courseDetail.hours}} Horas
-        </small>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <i class="fas fa-map-marker-alt cssm-icon-color"></i>
-        <small class="text-muted">
-          {{courseDetail.address}}
-        </small>
-      </div>
-      <div class="col-md-4">
-        <i class="fas fa-chalkboard-teacher cssm-icon-color"></i>
-        <small class="text-muted">
-          {{courseDetail.impart}}
-        </small>
-      </div>
-      <div class="col-md-4">
-        <i class="fas fa-chair cssm-icon-color"></i>
-        <small *ngIf="courseDetail.free_places!=0" class="text-muted">
-          {{courseDetail.free_places}} Plazas libres
-        </small>
-        <small *ngIf="courseDetail.free_places==0" class="text-muted">
-          Completo
-        </small>
-      </div>
-    </div>
-  </div>
-</ng-template>
-
 <!-- Content -->
-<div *ngFor="let course of courses" class="content-courses animated fadeInUp">
-  <div class="card shadow p-3 bg-white rounded">
-    <div class="row no-gutters">
-      <div class="col-md-4 align-self-center">
-        <img [src]="path+course.image" class="card-img" alt="...">
+<div *ngIf="isLoaded" class="animated fadeInUp">
+  <!-- Header -->
+  <div class="row">
+      <div class="header-section">
+        <img src="../../assets/img/courses-header.png" alt="">
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <div class="row ml-1">
-            <div>
-              <h5 class="card-title cssm-cursor cssm-card-title" (click)="openModal(course, template)">{{course.title}}</h5>
-            </div>
-            <div class="courses-price">
-              Precio: {{(course.price==0)? 'Consultar':(course.price)+'€'}}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5 pl-0">
-              <p class="card-text">
-                <small *ngIf="course.new_course==1" class="text-muted">
-                  <span class="courses-badge-new">
-                    <span data-purpose="badge" class="badge badge-accented green">
-                      <span class="badge-text">Nuevo</span>
-                    </span>
-                  </span>
-                </small>
-                <small *ngIf="course.offer==1" class="text-muted">
-                  <span class="courses-badge-new">
-                    <span data-purpose="badge" class="badge badge-accented orange">
-                      <span class="badge-text">Oferta</span>
-                    </span>
-                  </span>
-                </small>
-                <small *ngIf="course.session_date" class="text-muted">
-                  {{course.session_date | date}} | {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
-                </small>
-                <small *ngIf="!course.session_date" class="text-muted">
-                  Consultar
-                </small>
-              </p>
-            </div>
-            <div class="col-md-4 pl-0">
-              <p class="card-text"><small class="text-muted">
-                {{course.sessions}} Clases · {{course.hours}} Horas
-              </small></p>
-            </div>
-            <div class="col-md-3 align-self-center pl-0">
-              <div class="progress">
-                <div *ngIf="course.free_places!=0" class="progress-bar" title="Plazas libres: {{course.free_places}}/{{course.places}}"
-                [style.width]="(course.free_places/course.places)*100+'%'"></div>
-                <div *ngIf="course.free_places==0" class="progress-bar pb-danger"
-                style="width: 100%;">Completo</div>
+  </div>
+
+  <!-- Active courses -->
+  <div class="pr-3 mt-3">
+    <p class="font-weight-normal text-right">Mostrando {{courses.length}} cursos activos</p>
+  </div>
+  <hr>
+
+  <!-- Modal -->
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left cssm-card-title">{{courseDetail.title}}</h4>
+      <!-- <img src="../../assets/img/classPrenatal.png" class="card-img" alt="..."> -->
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+          <img [src]="path+courseDetail.image" class="card-img" alt="...">
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <i class="fas fa-info-circle cssm-icon-color"></i>
+          {{courseDetail.description}}
+        </div>
+      </div>
+      <div class="separator">{{courseDetail.price}}€</div>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="far fa-calendar-alt cssm-icon-color"></i>
+          <small class="text-muted">
+            {{courseDetail.session_date}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="far fa-clock cssm-icon-color"></i>
+          <small class="text-muted">
+            {{courseDetail.session_start | timeWithoutSec}} - {{courseDetail.session_end | timeWithoutSec}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-graduation-cap cssm-icon-color"></i>
+          <small class="text-muted">
+            {{courseDetail.sessions}} Clases · {{courseDetail.hours}} Horas
+          </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-map-marker-alt cssm-icon-color"></i>
+          <small class="text-muted">
+            {{courseDetail.address}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-chalkboard-teacher cssm-icon-color"></i>
+          <small class="text-muted">
+            {{courseDetail.impart}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-chair cssm-icon-color"></i>
+          <small *ngIf="courseDetail.free_places!=0" class="text-muted">
+            {{courseDetail.free_places}} Plazas libres
+          </small>
+          <small *ngIf="courseDetail.free_places==0" class="text-muted">
+            Completo
+          </small>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Courses -->
+  <div *ngFor="let course of courses" class="content-courses">
+    <div class="card shadow p-3 bg-white rounded">
+      <div class="row no-gutters">
+        <div class="col-md-4 align-self-center">
+          <img [src]="path+course.image" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row ml-1">
+              <div>
+                <h5 class="card-title cssm-cursor cssm-card-title" (click)="openModal(course, template)">{{course.title}}</h5>
+              </div>
+              <div class="courses-price">
+                Precio: {{(course.price==0)? 'Consultar':(course.price)+'€'}}
               </div>
             </div>
-          </div>
-          <p class="card-text">
-            {{(course.description.length>350)? (course.description | slice:0:350)+'...':(course.description)}}
-          </p>
-          <div class="row">
-            <div class="col-md-3 pl-0">
-              <p class="card-text">
-                <small class="text-muted">
-                  Impartido por: {{course.impart}}
-                </small>
-              </p>
+            <div class="row">
+              <div class="col-md-5 pl-0">
+                <p class="card-text">
+                  <small *ngIf="course.new_course==1" class="text-muted">
+                    <span class="courses-badge-new">
+                      <span data-purpose="badge" class="badge badge-accented green">
+                        <span class="badge-text">Nuevo</span>
+                      </span>
+                    </span>
+                  </small>
+                  <small *ngIf="course.offer==1" class="text-muted">
+                    <span class="courses-badge-new">
+                      <span data-purpose="badge" class="badge badge-accented orange">
+                        <span class="badge-text">Oferta</span>
+                      </span>
+                    </span>
+                  </small>
+                  <small *ngIf="course.session_date" class="text-muted">
+                    {{course.session_date | date}} | {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
+                  </small>
+                  <small *ngIf="!course.session_date" class="text-muted">
+                    Consultar
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-4 pl-0">
+                <p class="card-text"><small class="text-muted">
+                  {{course.sessions}} Clases · {{course.hours}} Horas
+                </small></p>
+              </div>
+              <div class="col-md-3 align-self-center pl-0">
+                <div class="progress">
+                  <div *ngIf="course.free_places!=0" class="progress-bar" title="Plazas libres: {{course.free_places}}/{{course.places}}"
+                  [style.width]="(course.free_places/course.places)*100+'%'"></div>
+                  <div *ngIf="course.free_places==0" class="progress-bar pb-danger"
+                  style="width: 100%;">Completo</div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-5 pl-0">
-              <p class="card-text">
-                <small class="text-muted">
-                  Lugar: {{course.address}}
-                </small>
-              </p>
-            </div>
-            <div class="col-md-4">
-              <button (click)="onInscription()" class="courses-btn float-right">
-                  Inscribirse
-              </button>
+            <p class="card-text">
+              {{(course.description.length>350)? (course.description | slice:0:350)+'...':(course.description)}}
+            </p>
+            <div class="row">
+              <div class="col-md-3 pl-0">
+                <p class="card-text">
+                  <small class="text-muted">
+                    Impartido por: {{course.impart}}
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-5 pl-0">
+                <p class="card-text">
+                  <small class="text-muted">
+                    Lugar: {{course.address}}
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <button (click)="onInscription()" class="courses-btn float-right">
+                    Inscribirse
+                </button>
+              </div>
             </div>
           </div>
         </div>

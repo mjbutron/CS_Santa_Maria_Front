@@ -39,6 +39,19 @@ export class CoursesComponent implements OnInit {
     this.getCourses();
   }
 
+  getCourses(){
+    this.dataApi.getAllActiveCourses().subscribe((data) =>{
+      if (globalsConstants.K_COD_OK == data.cod){
+        this.courses = data.allCourses;
+        this.isLoaded = true;
+      }
+      else{
+        this.isLoaded = true;
+        // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
+      }
+    });
+  }
+
   openModal(course: CourseInterface, template: TemplateRef<any>) {
     this.courseDetail.title = course.title;
     this.courseDetail.image = course.image;
@@ -55,24 +68,11 @@ export class CoursesComponent implements OnInit {
     this.modalRef = this.modalService.show(template);
   }
 
-  getCourses(){
-    this.dataApi.getAllActiveCourses().subscribe((data) =>{
-      if (globalsConstants.K_COD_OK == data.cod){
-        this.courses = data.allCourses;
-        this.isLoaded = true;
-      }
-      else{
-        this.isLoaded = true;
-        // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
-      }
-    });
-  }
-
   onInscription(){
     Swal.fire({
       title: "Inscripción",
       html: "Para realizar la inscripción pongase en contacto con nosotras a través de teléfono o solicitud.<br><br>"
-      +"<b>(*)</b>En la solicitud, recuerde indicar en el asunto 'Inscripción' y especificar el nombre del curso o taller en el mensaje.",
+      +"<b>(*)</b>En la solicitud, recuerde indicar en el asunto 'Inscripción' y especificar el nombre del curso o taller en el mensaje.<br>Gracias.",
       showCancelButton: true,
       background: '#f1f1f1',
       confirmButtonColor: K_CANCEL_BUTTON_COLOR,
