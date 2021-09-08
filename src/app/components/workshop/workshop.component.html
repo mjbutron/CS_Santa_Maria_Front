@@ -1,414 +1,172 @@
-<div class="row">
-  <div class="col-xs|sm|md|lg|xl-1-12">
-    <div class="header-section">
-      <img src="http://www.jmata.es/wp-content/uploads/2019/06/default-1920x400.jpg" alt="">
-    </div>
-  </div>
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
 </div>
 
+<!-- Content -->
+<div *ngIf="isLoaded" class="animated fadeInUp">
 
-
-<div class="content-workshop">
-<!--Grid row-->
-<div class="row">
-  <!--Grid column-->
-  <div class="col-md-6 mb-4">
-    <!-- Card -->
-    <div class="card gradient-card">
-        <!-- <div class="card-image" style="background-image: url(../../../assets/img/massagePrenatal.jpg)"> -->
-        <div class="card-title-bg">
-          <!-- Content -->
-            <div class="text-white d-flex h-100 mask blue-gradient-rgba">
-              <div class="first-content align-self-center p-3">
-                <h3 class="card-title">ALIMENTACIÓN DURANTE EL EMBARAZO</h3>
-                <p class="lead mb-0">Aprenderás cómo alimentarte en cada fase.</p>
-              </div>
-              <div class="second-content align-self-center mx-auto text-center">
-                Precio: 00.0 €
-              </div>
-            </div>
-
-        </div>
-
-        <!-- Data -->
-        <!-- <div class="third-content ml-auto mr-4 mb-2">
-          <p class="text-uppercase text-muted">Today's sale</p>
-          <h4 class="font-weight-bold float-right">2000$</h4>
-        </div> -->
-
-        <!-- Content -->
-        <div class="card-body cssm-body-card-color">
-          <div class="row">
-            <div class="col-md-6 pb-2">
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-              El Puerto de Santa María
-            </div>
-            <div class="col-md-6 pb-2">
-              <i class="fas  fa-tasks" aria-hidden="true"></i>
-              1 Sesión
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 pb-2">
-              <i class="far fa-calendar-alt" aria-hidden="true"></i>
-              28/11/2019
-            </div>
-            <div class="col-md-6 pb-2">
-              <i class="far fa-clock"></i>
-              18:00 - 20:00
-            </div>
-          </div>
-
-          <hr class="my-4">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-desc-1" role="tabpanel" aria-labelledby="nav-desc-tab-1">
-                <p>¿Sabes lo que debes evitar comer para no contraer enfermedades que pueden ser perjudiciales para tu bebé?
-                  ¿Es verdad que hay que evitar comer jamón? ¿Y atún? ¿Y si eres vegetariana?</p>
-                  <p>Desde que sabes que estás embarazada quieres hacer lo mejor para tu bebé,
-                  por eso hemos creado para ti este taller, donde aprenderás cómo alimentarte
-                  en esta etapa tan importante.</p> <p>¿Te apuntas?</p>
-            </div>
-            <div class="tab-pane fade" id="nav-location-1" role="tabpanel" aria-labelledby="nav-location-tabv">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-map-marked-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Ubicación del taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-sessions-1" role="tabpanel" aria-labelledby="nav-sessions-tab-1">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-tasks fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Número de sesiones en las que se divide el taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-timer-1" role="tabpanel" aria-labelledby="nav-timer-tab-1-1-1">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="far fa-calendar-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Fecha: XX de xxxxxxx de 20XX</p>
-                  <p>Hora: XX:XX a XX:XX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <a [routerLink]="['../contacto']">
-        <div class="card-footer cssm-bg-footer text-center">
-          <div class="cssm-card-footer-text">
-            <img src="../../../assets/img/logoIcon.png" width="50px" alt="">INSCRIBIRSE
-          </div>
-        </div>
-        </a>
-    </div>
-    <!-- Card -->
-
+  <!-- Header -->
+  <div class="row">
+      <div class="header-section">
+        <img src="../../assets/img/workshop-header.png" alt="">
+      </div>
   </div>
-  <!--Grid column-->
 
-  <div class="col-md-6 mb-4">
-    <!-- Card -->
-    <div class="card gradient-card">
-        <!-- <div class="card-image" style="background-image: url(../../../assets/img/massagePrenatal.jpg)"> -->
-        <div class="card-title-bg">
-          <!-- Content -->
-            <div class="text-white d-flex h-100 mask blue-gradient-rgba">
-              <div class="first-content align-self-center p-3">
-                <h3 class="card-title">ALIMENTACIÓN INFANTIL DE 0 A 1 AÑO</h3>
-                <p class="lead mb-0">La alimentación durante su primer año.</p>
-              </div>
-              <div class="second-content align-self-center mx-auto text-center">
-                Precio: 00.0 €
-              </div>
-            </div>
-
-        </div>
-
-        <!-- Data -->
-        <!-- <div class="third-content ml-auto mr-4 mb-2">
-          <p class="text-uppercase text-muted">Today's sale</p>
-          <h4 class="font-weight-bold float-right">2000$</h4>
-        </div> -->
-
-        <!-- Content -->
-        <div class="card-body cssm-body-card-color">
-          <nav>
-            <div class="nav nav-tabs md-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-desc-tab-2" data-toggle="tab" href="#nav-desc-2" role="tab"
-                aria-controls="nav-home" aria-selected="true">Descripción</a>
-              <a class="nav-item nav-link" id="nav-location-tab-2" data-toggle="tab" href="#nav-location-2" role="tab"
-                aria-controls="nav-home" aria-selected="true">Ubicación</a>
-              <a class="nav-item nav-link" id="nav-sessions-tab-2" data-toggle="tab" href="#nav-sessions-2" role="tab"
-                aria-controls="nav-profile" aria-selected="false">Sesiones</a>
-              <a class="nav-item nav-link" id="nav-timer-tab-2" data-toggle="tab" href="#nav-timer-2" role="tab"
-                aria-controls="nav-contact" aria-selected="false">Horarios</a>
-            </div>
-          </nav>
-          <div class="tab-content pt-5" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-desc-2" role="tabpanel" aria-labelledby="nav-desc-tab-2">
-                <p>La alimentación de los bebés durante su primer año es vital para su crecimiento.
-                En la actualidad, la Organización Mundial de la Salud (OMS) recomienda lactancia materna
-                exclusiva hasta los seis meses de edad y a partir de ahí incorporar nuevos alimentos.
-                Pero... ¿es mejor empezar con la fruta o la verdura? ¿Tendrá falta de hierro?
-                ¿Cuando le podré dar cereales con gluten?</p>
-                <p>Si estas dudas asaltan tu cabeza este taller es perfecto para ti,
-                  porque vamos a resolver todas tus dudas y a darte toda la información
-                  más actualizada sobre cómo alimentar a tu bebé hasta que cumpla su primer añito.</p>
-            </div>
-            <div class="tab-pane fade" id="nav-location-2" role="tabpanel" aria-labelledby="nav-location-tab-2">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-map-marked-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Ubicación del taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-sessions-2" role="tabpanel" aria-labelledby="nav-sessions-tab-2">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-tasks fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Número de sesiones en las que se divide el taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-timer-2" role="tabpanel" aria-labelledby="nav-timer-tab-2">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="far fa-calendar-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Fecha: XX de xxxxxxx de 20XX</p>
-                  <p>Hora: XX:XX a XX:XX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <a href="#">
-        <div class="card-footer cssm-bg-footer text-center">
-          <div class="cssm-card-footer-text">
-            <img src="../../../assets/img/logoIcon.png" width="50px" alt="">INSCRIBIRSE
-          </div>
-        </div>
-        </a>
-    </div>
-    <!-- Card -->
+  <!-- Active workshops -->
+  <div class="pr-3 mt-3">
+    <p class="font-weight-normal text-right">Mostrando {{workshops.length}} talleres activos</p>
   </div>
-  <!--Grid column-->
+  <hr>
 
-  <div class="col-md-6 mb-4">
-    <!-- Card -->
-    <div class="card gradient-card">
-        <!-- <div class="card-image" style="background-image: url(../../../assets/img/massagePrenatal.jpg)"> -->
-        <div class="card-title-bg">
-          <!-- Content -->
-            <div class="text-white d-flex h-100 mask blue-gradient-rgba">
-              <div class="first-content align-self-center p-3">
-                <h3 class="card-title">ALIMENTACIÓN BLW/BLISS</h3>
-                <p class="lead mb-0">Alimentación complementaria a demanda.</p>
-              </div>
-              <div class="second-content align-self-center mx-auto text-center">
-                Precio: 00.0 €
-              </div>
-            </div>
-
-        </div>
-
-        <!-- Data -->
-        <!-- <div class="third-content ml-auto mr-4 mb-2">
-          <p class="text-uppercase text-muted">Today's sale</p>
-          <h4 class="font-weight-bold float-right">2000$</h4>
-        </div> -->
-
-        <!-- Content -->
-        <div class="card-body cssm-body-card-color">
-          <nav>
-            <div class="nav nav-tabs md-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-desc-tab-3" data-toggle="tab" href="#nav-desc-3" role="tab"
-                aria-controls="nav-home" aria-selected="true">Descripción</a>
-              <a class="nav-item nav-link" id="nav-location-tab-3" data-toggle="tab" href="#nav-location-3" role="tab"
-                aria-controls="nav-home" aria-selected="true">Ubicación</a>
-              <a class="nav-item nav-link" id="nav-sessions-tab-3" data-toggle="tab" href="#nav-sessions-3" role="tab"
-                aria-controls="nav-profile" aria-selected="false">Sesiones</a>
-              <a class="nav-item nav-link" id="nav-timer-tab-3" data-toggle="tab" href="#nav-timer-3" role="tab"
-                aria-controls="nav-contact" aria-selected="false">Horarios</a>
-            </div>
-          </nav>
-          <div class="tab-content pt-5" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-desc-3" role="tabpanel" aria-labelledby="nav-desc-tab-3">
-              <p>El baby led weaning (BLW) que podría traducirse como “alimentación complementaria a
-              demanda”, es una manera de incorporar los alimentos sólidos en la alimentación del
-              bebé en lugar de triturados, con el tamaño y la forma adecuadas, para que sea el
-              propio bebé el que lo coja con sus manitas y se lo lleve a la boca en función de
-              su apetito y preferencias.</p>
-              <p>De esta manera, se le permite al bebé descubrir sabores, texturas, colores y
-              olores en la comida y le ayuda a desarrollar la coordinación ojo-mano y la masticación.</p>
-              <p>El método BLISS podríamos describirlo como el método BLW pero mejorado, ya que hace más
-                hincapié en los alimentos ricos en hierro y energía.</p>
-              <p>Si te resultan interesantes estos métodos pero tienes dudas de cómo hacerlo, ven a vernos y te ayudamos.</p>
-
-            </div>
-            <div class="tab-pane fade" id="nav-location-3" role="tabpanel" aria-labelledby="nav-location-tab-3">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-map-marked-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <div class="row">
-                    <div class="col-md-2 cssm-icon-color">
-                      <i class="fas fa-tasks fa-5x" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-md-10 mt-3">
-                      <p>Número de sesiones en las que se divide el taller.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-sessions-3" role="tabpanel" aria-labelledby="nav-sessions-tab-3">
-              <p>sesiones</p>
-            </div>
-            <div class="tab-pane fade" id="nav-timer-3" role="tabpanel" aria-labelledby="nav-timer-tab-3">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="far fa-calendar-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Fecha: XX de xxxxxxx de 20XX</p>
-                  <p>Hora: XX:XX a XX:XX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <a href="#">
-        <div class="card-footer cssm-bg-footer text-center">
-          <div class="cssm-card-footer-text">
-            <img src="../../../assets/img/logoIcon.png" width="50px" alt="">INSCRIBIRSE
-          </div>
-        </div>
-        </a>
+  <!-- Modal -->
+  <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left cssm-card-title">{{workshopDetail.title}}</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
     </div>
-    <!-- Card -->
-  </div>
-  <!--Grid column-->
-
-  <div class="col-md-6 mb-4">
-    <!-- Card -->
-    <div class="card gradient-card">
-        <!-- <div class="card-image" style="background-image: url(../../../assets/img/massagePrenatal.jpg)"> -->
-        <div class="card-title-bg">
-          <!-- Content -->
-            <div class="text-white d-flex h-100 mask blue-gradient-rgba">
-              <div class="first-content align-self-center p-3">
-                <h3 class="card-title">FISIOTERAPIA RESPIRATORIA</h3>
-                <p class="lead mb-0">Abordamos problemas asociados al exceso de mocos.</p>
-              </div>
-              <div class="second-content align-self-center mx-auto text-center">
-                Precio: 00.0 €
-              </div>
-            </div>
-
+    <div class="modal-body">
+      <div class="row">
+          <img [src]="path+workshopDetail.image" class="card-img" alt="...">
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <i class="fas fa-info-circle cssm-icon-color"></i>
+          {{workshopDetail.description}}
         </div>
-
-        <!-- Data -->
-        <!-- <div class="third-content ml-auto mr-4 mb-2">
-          <p class="text-uppercase text-muted">Today's sale</p>
-          <h4 class="font-weight-bold float-right">2000$</h4>
-        </div> -->
-
-        <!-- Content -->
-        <div class="card-body cssm-body-card-color">
-          <nav>
-            <div class="nav nav-tabs md-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-desc-tab-4" data-toggle="tab" href="#nav-desc-4" role="tab"
-                aria-controls="nav-home" aria-selected="true">Descripción</a>
-              <a class="nav-item nav-link" id="nav-location-tab-4" data-toggle="tab" href="#nav-location-4" role="tab"
-                aria-controls="nav-home" aria-selected="true">Ubicación</a>
-              <a class="nav-item nav-link" id="nav-sessions-tab-4" data-toggle="tab" href="#nav-sessions-4" role="tab"
-                aria-controls="nav-profile" aria-selected="false">Sesiones</a>
-              <a class="nav-item nav-link" id="nav-timer-tab-4" data-toggle="tab" href="#nav-timer-4" role="tab"
-                aria-controls="nav-contact" aria-selected="false">Horarios</a>
-            </div>
-          </nav>
-          <div class="tab-content pt-5" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-desc-4" role="tabpanel" aria-labelledby="nav-desc-tab-4">
-              <p>Con la llegada del frío llegan a casa los temibles mocos que acompañan a nuestros
-              hijos desde septiembre hasta junio.</p>
-              <p>Debido a las particularidades estructurales de su aparato respiratorio los
-              niños están muy expuestos a infecciones respiratorias (bronquitis, bronquiolitis.…)
-              A esto hay que sumarle que los bebés no tienen capacidad para expectorar de
-              forma autónoma y que hasta aproximadamente los 2 años no saben sonarse.</p>
-              <p>La presencia de mocos es necesaria para el buen funcionamiento de nuestras
-              vías respiratorias, ya que actúan atrapando las impurezas y posibles agentes
-              agresores evitando que lleguen a nuestros pulmones, pero un exceso puede
-              producir una obstrucción y reducir la capacidad respiratoria, por lo que es
-              muy importante identificar el exceso de moco como un problema y trabajar para
-              expulsarlo a través de la limpieza de las vías respiratorias.</p>
-              <p>En este taller aprenderás a limpiar las vías respiratorias de tu bebé de
-              forma eficaz para evitar problemas asociados al exceso de mocos.</p>
-            </div>
-            <div class="tab-pane fade" id="nav-location-4" role="tabpanel" aria-labelledby="nav-location-tab-4">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-map-marked-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Ubicación del taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-sessions-4" role="tabpanel" aria-labelledby="nav-sessions-tab-4">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="fas fa-tasks fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Número de sesiones en las que se divide el taller.</p>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="nav-timer-4" role="tabpanel" aria-labelledby="nav-timer-tab-4">
-              <div class="row">
-                <div class="col-md-2 cssm-icon-color">
-                  <i class="far fa-calendar-alt fa-5x" aria-hidden="true"></i>
-                </div>
-                <div class="col-md-10 mt-3">
-                  <p>Fecha: XX de xxxxxxx de 20XX</p>
-                  <p>Hora: XX:XX a XX:XX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      </div>
+      <div class="separator">{{workshopDetail.price}}€</div>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="far fa-calendar-alt cssm-icon-color"></i>
+          <small class="text-muted">
+            {{workshopDetail.session_date | date}}
+          </small>
         </div>
-        <a href="#">
-        <div class="card-footer cssm-bg-footer text-center">
-          <div class="cssm-card-footer-text">
-            <img src="../../../assets/img/logoIcon.png" width="50px" alt="">INSCRIBIRSE
-          </div>
+        <div class="col-md-4">
+          <i class="far fa-clock cssm-icon-color"></i>
+          <small class="text-muted">
+            {{workshopDetail.session_start | timeWithoutSec}} - {{workshopDetail.session_end | timeWithoutSec}}
+          </small>
         </div>
-        </a>
+        <div class="col-md-4">
+          <i class="fas fa-graduation-cap cssm-icon-color"></i>
+          <small class="text-muted">
+            Taller de {{(workshopDetail.hours==1)? (workshopDetail.hours)+' hora':(workshopDetail.hours)+' horas'}}
+          </small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-map-marker-alt cssm-icon-color"></i>
+          <small class="text-muted">
+            {{workshopDetail.address}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-chalkboard-teacher cssm-icon-color"></i>
+          <small class="text-muted">
+            {{workshopDetail.impart}}
+          </small>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-chair cssm-icon-color"></i>
+          <small *ngIf="workshopDetail.free_places!=0" class="text-muted">
+            {{workshopDetail.free_places}} Plazas libres
+          </small>
+          <small *ngIf="workshopDetail.free_places==0" class="text-muted">
+            Completo
+          </small>
+        </div>
+      </div>
     </div>
-    <!-- Card -->
+  </ng-template>
 
+  <!-- Workshops -->
+  <div *ngFor="let workshop of workshops" class="content-workshop">
+    <div class="card shadow p-3 bg-white rounded">
+      <div class="row no-gutters">
+        <div class="col-md-4 align-self-center">
+          <img [src]="path+workshop.image" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <div class="row ml-1">
+              <div>
+                <h5 class="card-title cssm-cursor cssm-card-title" (click)="openModal(workshop, template)">{{workshop.title}}</h5>
+              </div>
+              <div class="workshop-price">
+                Precio: {{(workshop.price==0)? 'Consultar':(workshop.price)+'€'}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5 pl-0">
+                <p class="card-text">
+                  <small *ngIf="workshop.new_workshop==1" class="text-muted">
+                    <span class="workshop-badge-new">
+                      <span data-purpose="badge" class="badge badge-accented green">
+                        <span class="badge-text">Nuevo</span>
+                      </span>
+                    </span>
+                  </small>
+                  <small *ngIf="workshop.session_date" class="text-muted">
+                    {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}} - {{workshop.session_end | timeWithoutSec}}
+                  </small>
+                  <small *ngIf="!workshop.session_date" class="text-muted">
+                    Consultar
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-4 pl-0">
+                <p class="card-text">
+                  <small class="text-muted">
+                    Taller de {{(workshop.hours==1)? (workshop.hours)+' hora':(workshop.hours)+' horas'}}
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-3 align-self-center pl-0">
+                <div class="progress">
+                  <div *ngIf="workshop.free_places!=0" class="progress-bar" title="Plazas libres: {{workshop.free_places}}/{{workshop.places}}"
+                  [style.width]="(workshop.free_places/workshop.places)*100+'%'"></div>
+                  <div *ngIf="workshop.free_places==0" class="progress-bar pb-danger"
+                  style="width: 100%;">Completo</div>
+                </div>
+              </div>
+            </div>
+            <p class="card-text">
+              {{(workshop.description.length>350)? (workshop.description | slice:0:350)+'...':(workshop.description)}}
+            </p>
+            <div class="row">
+              <div class="col-md-3 pl-0">
+                <p class="card-text">
+                  <small class="text-muted">
+                    Impartido por: {{workshop.impart}}
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-5 pl-0">
+                <p class="card-text">
+                  <small class="text-muted">
+                    Lugar: {{workshop.address}}
+                  </small>
+                </p>
+              </div>
+              <div class="col-md-4">
+                <button (click)="onInscription()" class="workshop-btn float-right">
+                    Inscribirse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <!--Grid column-->
-</div>
-<!--Grid row-->
+
 </div>

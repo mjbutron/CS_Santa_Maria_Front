@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef  } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -22,7 +22,7 @@ const K_CANCEL_BUTTON_STR = 'Cancelar';
 export class CoursesComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
-  // Sliders
+  // Courses
   courses: CourseInterface[] = [];
   courseDetail: CourseInterface;
   // Load

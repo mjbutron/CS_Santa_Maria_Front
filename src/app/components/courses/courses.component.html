@@ -46,7 +46,7 @@
         <div class="col-md-4">
           <i class="far fa-calendar-alt cssm-icon-color"></i>
           <small class="text-muted">
-            {{courseDetail.session_date}}
+            {{courseDetail.session_date | date}}
           </small>
         </div>
         <div class="col-md-4">
@@ -58,7 +58,8 @@
         <div class="col-md-4">
           <i class="fas fa-graduation-cap cssm-icon-color"></i>
           <small class="text-muted">
-            {{courseDetail.sessions}} Clases · {{courseDetail.hours}} Horas
+            {{(courseDetail.sessions==1)? (courseDetail.sessions)+' Clase':(courseDetail.sessions)+' Clases'}} ·
+            {{(courseDetail.hours==1)? (courseDetail.hours)+' Hora':(courseDetail.hours)+' Horas'}}
           </small>
         </div>
       </div>
@@ -131,9 +132,12 @@
                 </p>
               </div>
               <div class="col-md-4 pl-0">
-                <p class="card-text"><small class="text-muted">
-                  {{course.sessions}} Clases · {{course.hours}} Horas
-                </small></p>
+                <p class="card-text">
+                  <small class="text-muted">
+                    {{(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
+                    {{(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
+                  </small>
+                </p>
               </div>
               <div class="col-md-3 align-self-center pl-0">
                 <div class="progress">
