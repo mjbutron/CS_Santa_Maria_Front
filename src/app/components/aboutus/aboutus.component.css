@@ -2,6 +2,20 @@
   width: 100%;
 }
 
+.cssm-imagecorp {
+  width: 100%;
+}
+
+@media (min-width: 1150px) {
+  .cssm-imagecorp {
+    width: 50%;
+  }
+}
+
+.cssm-separator {
+  border-left-style: groove;
+}
+
 .cssm-card-title {
   color: #fff;
   font-family: "Amatic SC", cursive;
