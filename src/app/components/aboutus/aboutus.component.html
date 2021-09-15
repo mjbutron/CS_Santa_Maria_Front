@@ -1,55 +1,60 @@
-<div class="row">
-  <div class="col-xs|sm|md|lg|xl-1-12">
-    <div class="header-section">
-      <img src="http://www.jmata.es/wp-content/uploads/2019/06/default-1920x400.jpg" alt="">
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+</div>
+
+<!-- Content -->
+<div *ngIf="isLoaded" class="animated fadeInUp">
+  <!-- Header -->
+  <div class="row">
+      <div class="header-section">
+        <img src="../../assets/img/aboutus-header.png" alt="">
+      </div>
+  </div>
+
+  <!-- History -->
+  <div class="row pt-5 pb-5 ml-5 mr-5">
+    <div class="col-md-6 mt-2 mb-2">
+     <!-- <img src="../../assets/img/logoLarge.png" alt="" width="100%"> -->
+     <p class="cssm-display-5">Santa María</p>
+     <p class="cssm-lead">Centro Sanitario</p>
+    </div>
+    <div class="col-md-6 mb-2">
+      <p>Tras varios años de formación fuera de España* volvemos a casa y, como matronas, queremos aportar nuestro granito de
+      arena compartiendo todo lo aprendido para ofrecer una visión más global de la maternidad.</p>
+      <p>Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo,
+      parto, puerperio, lactancia y crianza, facilitando la toma de decisiones desde la más actualizada evidencia científica
+      sin perder el lado humano.</p>
+      <p>Actualmente compaginamos nuestra actividad laboral entre el sector público y privado.</p>
+      <p>* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).</p>
     </div>
   </div>
-</div>
-<div class="row pt-5 pb-5 ml-5 mr-5">
-  <div class="col-md-6 mt-2 mb-2">
-   <!-- <img src="../../assets/img/logoLarge.png" alt="" width="100%"> -->
-   <p class="cssm-display-5">Santa María</p>
-   <p class="cssm-lead">Centro Sanitario</p>
-  </div>
-  <div class="col-md-6 mb-2">
-    <p>Tras varios años de formación fuera de España* volvemos a casa y, como matronas, queremos aportar nuestro granito de
-    arena compartiendo todo lo aprendido para ofrecer una visión más global de la maternidad.</p>
-    <p>Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo,
-    parto, puerperio, lactancia y crianza, facilitando la toma de decisiones desde la más actualizada evidencia científica
-    sin perder el lado humano.</p>
-    <p>Actualmente compaginamos nuestra actividad laboral entre el sector público y privado.</p>
-    <p>* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).</p>
-  </div>
-</div>
-<div class="row padding animated fadeInUp">
-  <div class="col-sm-12 col-md-12 col-lg-12">
-    <h1 class="cssm-display-3">Nuestro equipo</h1>
-    <hr class="my-4">
-    <div class="card-deck">
-      <div class="card text-center">
-        <img src="../../assets/img/girl.png" class="card-img-top img-format" alt="...">
-        <div class="card-body">
-          <h5 class="card-title cssm-card-title">Nombre Apellido1 Apellido2</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+
+  <!-- Team -->
+  <div class="team-boxed">
+      <div class="container">
+        <h1 class="cssm-display-5 pt-3">Nuestro equipo</h1>
+        <hr class="my-4">
+          <div class="row people">
+              <div *ngFor="let aboutus of aboutusList" class="col-md-6 col-lg-4 item">
+                  <div class="box"><img class="rounded-circle" [src]="path+aboutus.image">
+                      <h5 class="cssm-card-title name">{{aboutus.name}} {{aboutus.surname1}}</h5>
+                      <p class="cssm-card-subtitle">{{aboutus.position}}</p>
+                      <p class="cssm-card-description">
+                        {{(aboutus.description.length>350)? (aboutus.description | slice:0:350)+'...':(aboutus.description)}}
+                      </p>
+                      <div class="social">
+                        <a [href]="aboutus.user_fcbk" *ngIf="aboutus.user_fcbk" title="Facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a [href]="aboutus.user_ytube" *ngIf="aboutus.user_ytube" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a [href]="aboutus.user_insta" *ngIf="aboutus.user_insta" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="card text-center">
-        <img src="../../assets/img/girl.png" class="card-img-top img-format" alt="...">
-        <div class="card-body">
-          <h5 class="card-title cssm-card-title">Nombre Apellido1 Apellido2</h5>
-          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-      <div class="card text-center">
-        <img src="../../assets/img/girl.png" class="card-img-top img-format" alt="...">
-        <div class="card-body">
-          <h5 class="card-title cssm-card-title">Nombre Apellido1 Apellido2</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-      </div>
-    </div>
   </div>
+
 </div>
