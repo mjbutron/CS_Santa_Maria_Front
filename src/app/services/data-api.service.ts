@@ -167,6 +167,32 @@ export class DataApiService {
     )
   }
 
+// Services
+  getAllServices(){
+    const url_api = this.url + '/api/allServices';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
+  getAllActiveServices(){
+    const url_api = this.url + '/api/activeServices';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
+
 // Service for send email
 
 }

@@ -1,70 +1,44 @@
-<div class="row">
-  <div class="col-xs|sm|md|lg|xl-1-12">
-    <div class="header-section">
-      <img src="http://www.jmata.es/wp-content/uploads/2019/06/default-1920x400.jpg" alt="">
-    </div>
-  </div>
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
 </div>
-<div class="row p-3" style="justify-content: center;">
-  <div class="col-md-1-12">
-    <p class="cssm-subtitle">Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.</p>
-    <p class="cssm-title" style="text-align: center;">¡Ven a vernos a nuestro centro!</p>
-    <hr class="my-4">
-  </div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
 </div>
-<div class="content-services">
+
+<!-- Content -->
+<div  class="animated fadeInUp">
+  <!-- Header -->
   <div class="row">
-    <div class="col-md-4 p-3">
-      <div class="div-img" >
-        <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
-        <div class="text">Periodo perinatal</div>
+      <div class="header-section">
+        <img src="../../assets/img/services-header.png" alt="">
       </div>
+  </div>
+
+  <!-- subheader -->
+  <div class="row p-3" style="justify-content: center;">
+    <div class="col-md-1-12">
+      <p class="cssm-subtitle text-center">Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.</p>
+      <p class="cssm-title text-center">¡Ven a vernos a nuestro centro!</p>
     </div>
-    <div class="col-md-4 p-3">
-      <div class="div-img" >
-        <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
-        <div class="text">RCTG (Monitores)</div>
-      </div>
-    </div>
-    <div class="col-md-4 p-3">
-      <div class="div-img" >
-        <img class="img" src="https://www.interactius.com/wp-content/uploads/2017/09/foto10.png" title="Foto10" alt="Foto10">
-        <div class="text">Moxibustión</div>
+  </div>
+
+  <hr class="separator separator--dots" />
+
+  <div class="service-content">
+    <div class="container">
+      <div class="row text-center">
+        <div *ngFor="let service of services" class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4">
+            <img [src]="path+service.image" alt="" class="img-fluid mb-3 img-thumbnail shadow-sm">
+            <h5 class="service-title mb-0"><b>{{service.title}}</b></h5>
+            <!-- <hr *ngIf="service.subtitle" class="separator separator--dots" />
+            <span class="text-muted">
+              {{service.subtitle}}
+            </span> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-<!-- <div class="content-services">
-  <div class="card-group vgr-cards">
-    <div class="card">
-      <div class="card-img-body">
-      <img class="card-img" src="https://picsum.photos/500/230" alt="Card image cap">
-      </div>
-      <div class="card-body">
-        <h4 class="card-title cssm-card-title">Seguimiento durante el periodo perinatal</h4>
-        <p class="card-text">Embarazo, parto, posparto y lactancia. Si te encuentras en alguna de estas etapas y necesitas que te asesoren además de que te mimen, ven a vernos!</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-body">
-        <img class="card-img" src="https://picsum.photos/400/200" alt="Card image cap"></div>
-      <div class="card-body">
-        <h4 class="card-title cssm-card-title">RCTG (Monitores)</h4>
-        <p class="card-text">Seguramente hayas escuchado hablar de las famosas “correas”. No son más que unas cintas elásticas que se utilizan para fijar dos traductores sobre la piel del abdomen, uno sirve para evaluar la presión uterina y el otro capta la presencia de los latidos cardiacos fetales.
-          </p><p>Está aconsejado realizarlo durante las últimas semanas de gestación.</p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-img-body">
-        <img class="card-img" src="https://picsum.photos/450/250" alt="Card image cap"></div>
-      <div class="card-body">
-        <h4 class="card-title cssm-card-title">Moxibustión</h4>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. This is a wider card with supporting text below as a natural lead-in
-          to additional content. This content is a little bit longer.</p>
-        <a href="#" class="btn btn-outline-primary">Primary</a>
-      </div>
-    </div>
-  </div>
-</div> -->
