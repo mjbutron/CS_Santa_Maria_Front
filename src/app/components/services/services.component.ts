@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 
+// Services
 import { DataApiService } from 'src/app/services/data-api.service';
-
+// Interfaces
 import { ServiceInterface } from 'src/app/models/service-interface';
 
 @Component({
@@ -14,7 +15,7 @@ import { ServiceInterface } from 'src/app/models/service-interface';
 export class ServicesComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
-  // About us
+  // Services list
   services: ServiceInterface[] = [];
   // Load
   isLoaded: boolean;
@@ -37,5 +38,4 @@ export class ServicesComponent implements OnInit {
       }
     });
   }
-
 }

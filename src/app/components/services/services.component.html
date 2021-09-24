@@ -18,13 +18,15 @@
   <!-- subheader -->
   <div class="row p-3" style="justify-content: center;">
     <div class="col-md-1-12">
-      <p class="cssm-subtitle text-center">Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.</p>
-      <p class="cssm-title text-center">¡Ven a vernos a nuestro centro!</p>
+      <p class="service-page-title text-center">¡Ven a vernos a nuestro centro!</p>
+      <p class="service-page-subtitle text-center">Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.</p>
     </div>
   </div>
 
+  <!-- Separator -->
   <hr class="separator separator--dots" />
 
+  <!-- Services -->
   <div class="service-content">
     <div class="container">
       <div class="row text-center">
@@ -32,10 +34,6 @@
           <div class="bg-white rounded shadow-sm py-5 px-4">
             <img [src]="path+service.image" alt="" class="img-fluid mb-3 img-thumbnail shadow-sm">
             <h5 class="service-title mb-0"><b>{{service.title}}</b></h5>
-            <!-- <hr *ngIf="service.subtitle" class="separator separator--dots" />
-            <span class="text-muted">
-              {{service.subtitle}}
-            </span> -->
           </div>
         </div>
       </div>

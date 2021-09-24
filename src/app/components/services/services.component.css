@@ -1,20 +1,15 @@
-/* body {
-    background: #e8cbc0;
-    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-    background: linear-gradient(to right, #e8cbc0, #636fa4);
-    min-height: 100vh;
-} */
+/* Service CSS Style */
+
+.header-section img {
+  width: 100%;
+}
 
 .service-content {
   padding: 20px;
   background-color: #f1f1f1;
 }
 
-.header-section img {
-  width: 100%;
-}
-
-.cssm-title {
+.service-page-title {
   color: #0095A6;
   font-family: "Amatic SC", cursive;
   font-size: 2.5rem;
@@ -23,7 +18,7 @@
   line-height: 1.2;
 }
 
-.cssm-subtitle {
+.service-page-subtitle {
   color: #0095A6;
   font-family: "Amatic SC", cursive;
   font-size: 1.5rem;

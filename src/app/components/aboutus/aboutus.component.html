@@ -8,6 +8,7 @@
 
 <!-- Content -->
 <div *ngIf="isLoaded" class="animated fadeInUp">
+
   <!-- Header -->
   <div class="row">
       <div class="header-section">
@@ -18,9 +19,9 @@
   <!-- History -->
   <div class="row pt-5 pb-5 ml-5 mr-5">
     <div class="col-md-6 mt-2 mb-2 text-center">
-     <img src="../../assets/img/logo.png" alt="" class="cssm-imagecorp">
+     <img src="../../assets/img/logo.png" alt="" class="imagecorp">
     </div>
-    <div class="col-md-6 mb-2 cssm-separator">
+    <div class="col-md-6 mb-2 aboutus-separator">
       <p>Tras varios años de formación fuera de España* volvemos a casa y, como matronas, queremos aportar nuestro granito de
       arena compartiendo todo lo aprendido para ofrecer una visión más global de la maternidad.</p>
       <p>Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo,
@@ -32,16 +33,16 @@
   </div>
 
   <!-- Team -->
-  <div class="team-boxed">
+  <div class="aboutus-team-boxed">
       <div class="container">
-        <h1 class="cssm-display-5 pt-3">Nuestro equipo</h1>
+        <h1 class="aboutus-section-title pt-3">Nuestro equipo</h1>
         <hr class="my-4">
           <div class="row people">
               <div *ngFor="let aboutus of aboutusList" class="col-md-6 col-lg-4 item">
                   <div class="box"><img class="rounded-circle" [src]="path+aboutus.image">
-                      <h5 class="cssm-card-title name">{{aboutus.name}} {{aboutus.surname1}}</h5>
-                      <p class="cssm-card-subtitle">{{aboutus.position}}</p>
-                      <p class="cssm-card-description">
+                      <h5 class="aboutus-card-title name">{{aboutus.name}} {{aboutus.surname1}}</h5>
+                      <p class="aboutus-card-subtitle">{{aboutus.position}}</p>
+                      <p class="aboutus-card-description">
                         {{(aboutus.description.length>350)? (aboutus.description | slice:0:350)+'...':(aboutus.description)}}
                       </p>
                       <div class="social">
