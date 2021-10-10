@@ -62,8 +62,9 @@ export class OpinionsComponent implements OnInit {
   openComment(name: string, content: string) {
     this.scrollToCommentary();
     this.classComment = this.classCommentDefault + "fadeInUp";
-    this.testContent = name + ": " + content;
+    this.testContent = "<b>" + name + ":</b> " + content;
   }
+
   onCloseComment() {
     this.classComment = this.classCommentDefault + "fadeOutDown";
     setTimeout (() => {

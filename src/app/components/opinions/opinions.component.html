@@ -16,11 +16,9 @@
         </div>
         <!--Content-->
         <h4 class="font-weight-bold mt-4 testimonial-header-text">{{opinion.name}}</h4>
-        <!-- <h6 class="font-weight-bold blue-text my-3">Mama</h6> -->
-        <p class="font-weight-normal">
-        <i class="fas fa-quote-left testimonial-header-text"></i>
-        {{(opinion.commentary.length>250)? (opinion.commentary | slice:0:250)+'...':(opinion.commentary)}}
-        </p>
+        <div class="font-weight-normal">
+          <span [innerHTML]="(opinion.commentary.length>250)? (opinion.commentary | slice:0:250)+'...':(opinion.commentary)"></span>
+        </div>
         <p *ngIf="opinion.commentary.length>250" class="font-weight-normal">
           <a class="testimonial-lnks-plus" [routerLink]="" (click)="openComment(opinion.name, opinion.commentary)">Leer más</a>
         </p>
@@ -42,7 +40,7 @@
   <!--Grid row-->
     <div *ngIf="testContent" [class]="classComment">
       <div class="col-sm-11">
-        <p class="font-weight-normal">{{testContent}}</p>
+        <p class="font-weight-normal" [innerHTML]="testContent"></p>
       </div>
       <div class="col-sm-1">
         <a class="testimonial-lnks-plus" title="Ocultar" [routerLink]="" (click)="onCloseComment()">X</a>
