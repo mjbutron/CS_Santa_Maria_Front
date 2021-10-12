@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
+import { Router } from '@angular/router';
 
 // Services
 import { DataApiService } from 'src/app/services/data-api.service';
@@ -20,7 +21,7 @@ export class ServicesComponent implements OnInit {
   // Load
   isLoaded: boolean;
 
-  constructor(private dataApi: DataApiService) { }
+  constructor(private dataApi: DataApiService, private router: Router) { }
 
   ngOnInit() {
     this.isLoaded = false;
@@ -37,5 +38,9 @@ export class ServicesComponent implements OnInit {
         this.isLoaded = true;
       }
     });
+  }
+
+  onServiceDetail(id:number){
+    this.router.navigate(['/servicio', id]);
   }
 }

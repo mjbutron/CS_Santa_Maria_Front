@@ -33,7 +33,9 @@
         <div *ngFor="let service of services" class="col-xl-3 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4">
             <img [src]="path+service.image" alt="" class="img-fluid mb-3 img-thumbnail shadow-sm">
-            <h5 class="service-title mb-0"><b>{{service.title}}</b></h5>
+            <h5 class="service-title mb-0"><b>
+              <a class="lnks-service-cssm" [routerLink]="" (click)="onServiceDetail(service.id)">{{service.title}}</a>
+            </b></h5>
           </div>
         </div>
       </div>

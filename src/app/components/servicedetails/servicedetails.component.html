@@ -1,0 +1,19 @@
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+</div>
+
+<!-- Content -->
+<div  class="animated fadeInUp">
+  <!-- Header -->
+  <!-- <div class="row">
+      <div class="header-section">
+        <img src="../../assets/img/services-header.png" alt="">
+      </div>
+  </div> -->
+  {{service[0].id}}{{service[0].title}}
+
+</div>

@@ -30,6 +30,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PrivacypolicyComponent } from './components/privacypolicy/privacypolicy.component';
 import { LegalComponent } from './components/legal/legal.component';
+import { ServicedetailsComponent } from './components/servicedetails/servicedetails.component';
 
 // Services
 import { DataApiService } from './services/data-api.service';
@@ -61,7 +62,8 @@ registerLocaleData(localeEs);
     PhoneFormatPipe,
     TimeWithoutSecPipe,
     PrivacypolicyComponent,
-    LegalComponent
+    LegalComponent,
+    ServicedetailsComponent
   ],
   imports: [
     BrowserModule,
