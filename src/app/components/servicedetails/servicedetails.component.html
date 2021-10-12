@@ -9,11 +9,21 @@
 <!-- Content -->
 <div  class="animated fadeInUp">
   <!-- Header -->
-  <!-- <div class="row">
+  <div class="row">
       <div class="header-section">
-        <img src="../../assets/img/services-header.png" alt="">
+        <h1 class="title-display-5 mt-5 mb-5">{{service.title}}</h1>
       </div>
-  </div> -->
-  {{service[0].id}}{{service[0].title}}
+  </div>
+  <!-- Section back -->
+  <div class="section-back pl-3 mt-3">
+    <a [routerLink]="['/servicios']" class="font-weight-normal text-left">
+      <i class="fas fa-arrow-left"></i> Volver a servicios
+    </a>
+  </div>
+  <hr>
+
+  <div class="ck-content m-5">
+    {{service.description}}
+  </div>
 
 </div>
