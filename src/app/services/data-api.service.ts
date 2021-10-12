@@ -104,6 +104,18 @@ export class DataApiService {
     )
   }
 
+  getWorkshopById(id: number){
+    const url_api = this.url + '/api/workshop/' + id;
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
   getAllActiveWorkshops(){
     const url_api = this.url + '/api/activeWorkshops';
     return this.http.get(url_api)
@@ -132,6 +144,18 @@ export class DataApiService {
 // Courses
   getAllCourses(){
     const url_api = this.url + '/api/courses';
+    return this.http.get(url_api)
+    .pipe(
+      this.delayRetry(2000, 3),
+      catchError( err => {
+        return of( err.value.error );
+      }),
+      shareReplay()
+    )
+  }
+
+  getCourseById(id: number){
+    const url_api = this.url + '/api/course/' + id;
     return this.http.get(url_api)
     .pipe(
       this.delayRetry(2000, 3),
