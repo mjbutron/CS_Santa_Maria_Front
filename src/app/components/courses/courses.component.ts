@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
@@ -24,15 +23,10 @@ export class CoursesComponent implements OnInit {
   path = environment.imageRootPath;
   // Courses
   courses: CourseInterface[] = [];
-  courseDetail: CourseInterface;
   // Load
   isLoaded: boolean;
-  // Modal
-  modalRef?: BsModalRef;
 
-  constructor(private dataApi: DataApiService, private modalService: BsModalService, private router: Router) {
-    this.courseDetail = new CourseInterface();
-  }
+  constructor(private dataApi: DataApiService, private router: Router) {}
 
   ngOnInit() {
     this.isLoaded = false;
@@ -47,25 +41,12 @@ export class CoursesComponent implements OnInit {
       }
       else{
         this.isLoaded = true;
-        // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
       }
     });
   }
 
-  openModal(course: CourseInterface, template: TemplateRef<any>) {
-    this.courseDetail.title = course.title;
-    this.courseDetail.image = course.image;
-    this.courseDetail.description = course.description;
-    this.courseDetail.price = course.price;
-    this.courseDetail.session_date = course.session_date;
-    this.courseDetail.session_start = course.session_start;
-    this.courseDetail.session_end = course.session_end;
-    this.courseDetail.sessions = course.sessions;
-    this.courseDetail.hours = course.hours;
-    this.courseDetail.address = course.address;
-    this.courseDetail.impart = course.impart;
-    this.courseDetail.free_places = course.free_places;
-    this.modalRef = this.modalService.show(template);
+  onCourseDetail(id:number){
+    this.router.navigate(['/curso', id]);
   }
 
   onInscription(){

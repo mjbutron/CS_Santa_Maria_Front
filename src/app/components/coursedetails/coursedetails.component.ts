@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 // Services
 import { DataApiService } from 'src/app/services/data-api.service';
 // Interfaces
-import { WorkshopInterface } from 'src/app/models/workshop-interface';
+import { CourseInterface } from 'src/app/models/course-interface';
 
 const K_CONFIRM_BUTTON_COLOR = '#d33';
 const K_CANCEL_BUTTON_COLOR = '#0095A6';
@@ -16,25 +16,25 @@ const K_OK_BUTTON_STR = 'Enviar solicitud';
 const K_CANCEL_BUTTON_STR = 'Cancelar';
 
 @Component({
-  selector: 'app-workshopdetails',
-  templateUrl: './workshopdetails.component.html',
-  styleUrls: ['./workshopdetails.component.css']
+  selector: 'app-coursedetails',
+  templateUrl: './coursedetails.component.html',
+  styleUrls: ['./coursedetails.component.css']
 })
-export class WorkshopdetailsComponent implements OnInit {
+export class CoursedetailsComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
-  // Workshop
-  workshop: WorkshopInterface;
+  // Course
+  course: CourseInterface;
   // Load
   isLoaded: boolean;
 
   constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
-    this.workshop = new WorkshopInterface();
+    this.course = new CourseInterface();
     this.activatedRoute.params.subscribe( param => {
-      this.dataApi.getWorkshopById(param['id']).subscribe((data) =>{
+      this.dataApi.getCourseById(param['id']).subscribe((data) =>{
         if (globalsConstants.K_COD_OK == data.cod){
-          this.workshop = data.workshop[0];
+          this.course = data.course[0];
           this.isLoaded = true;
         }
         else{

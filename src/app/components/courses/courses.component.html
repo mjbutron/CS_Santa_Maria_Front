@@ -21,74 +21,6 @@
   </div>
   <hr>
 
-  <!-- Modal -->
-  <ng-template #template>
-    <div class="modal-header">
-      <h4 class="modal-title pull-left cssm-card-title">{{courseDetail.title}}</h4>
-      <!-- <img src="../../assets/img/classPrenatal.png" class="card-img" alt="..."> -->
-      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-        <span aria-hidden="true" class="visually-hidden">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="row">
-          <img [src]="path+courseDetail.image" class="card-img" alt="...">
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-12">
-          <i class="fas fa-info-circle cssm-icon-color"></i>
-          {{courseDetail.description}}
-        </div>
-      </div>
-      <div class="separator">{{courseDetail.price}}€</div>
-      <div class="row">
-        <div class="col-md-4">
-          <i class="far fa-calendar-alt cssm-icon-color"></i>
-          <small class="text-muted">
-            {{courseDetail.session_date | date}}
-          </small>
-        </div>
-        <div class="col-md-4">
-          <i class="far fa-clock cssm-icon-color"></i>
-          <small class="text-muted">
-            {{courseDetail.session_start | timeWithoutSec}} - {{courseDetail.session_end | timeWithoutSec}}
-          </small>
-        </div>
-        <div class="col-md-4">
-          <i class="fas fa-graduation-cap cssm-icon-color"></i>
-          <small class="text-muted">
-            {{(courseDetail.sessions==1)? (courseDetail.sessions)+' Clase':(courseDetail.sessions)+' Clases'}} ·
-            {{(courseDetail.hours==1)? (courseDetail.hours)+' Hora':(courseDetail.hours)+' Horas'}}
-          </small>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <i class="fas fa-map-marker-alt cssm-icon-color"></i>
-          <small class="text-muted">
-            {{courseDetail.address}}
-          </small>
-        </div>
-        <div class="col-md-4">
-          <i class="fas fa-chalkboard-teacher cssm-icon-color"></i>
-          <small class="text-muted">
-            {{courseDetail.impart}}
-          </small>
-        </div>
-        <div class="col-md-4">
-          <i class="fas fa-chair cssm-icon-color"></i>
-          <small *ngIf="courseDetail.free_places!=0" class="text-muted">
-            {{courseDetail.free_places}} Plazas libres
-          </small>
-          <small *ngIf="courseDetail.free_places==0" class="text-muted">
-            Completo
-          </small>
-        </div>
-      </div>
-    </div>
-  </ng-template>
-
   <!-- Courses -->
   <div *ngFor="let course of courses" class="content-courses">
     <div class="card shadow p-3 bg-white rounded">
@@ -100,7 +32,7 @@
           <div class="card-body">
             <div class="row ml-1">
               <div>
-                <h5 class="card-title cssm-cursor cssm-card-title" (click)="openModal(course, template)">{{course.title}}</h5>
+                <h5 class="card-title cssm-cursor cssm-card-title" (click)="onCourseDetail(course.id)">{{course.title}}</h5>
               </div>
               <div class="courses-price">
                 Precio: {{(course.price==0)? 'Consultar':(course.price)+'€'}}

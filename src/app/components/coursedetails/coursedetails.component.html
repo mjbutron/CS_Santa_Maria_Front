@@ -1,0 +1,77 @@
+<!-- Loading -->
+<div id="preloader" *ngIf="!isLoaded">
+  <div id="loader"></div>
+</div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+</div>
+
+<!-- Content -->
+<div *ngIf="isLoaded"  class="animated fadeInUp">
+  <!-- Header -->
+  <div class="row">
+      <div class="header-section">
+        <h1 class="title-display-5 mt-5 mb-5">{{course.title}}</h1>
+      </div>
+  </div>
+  <!-- Section back -->
+  <div class="row section-back pl-3 mt-3">
+    <div class="col-md-2 text-left">
+      <a [routerLink]="['/cursos']" class="font-weight-normal">
+        <i class="fas fa-arrow-left"></i> Volver a cursos
+      </a>
+    </div>
+    <div class="col-md-10 text-right">
+      <i class="fas fa-euro-sign icon-color"></i>
+      <small class="text-muted mr-1">
+        {{course.price}}
+      </small>
+      |
+      <i class="far fa-calendar-alt icon-color ml-1"></i>
+      <small class="text-muted mr-1">
+        {{course.session_date | date}}
+      </small>
+       |
+       <i class="far fa-clock icon-color ml-1"></i>
+       <small class="text-muted mr-1">
+         {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
+       </small>
+       |
+       <i class="fas fa-graduation-cap icon-color ml-1"></i>
+       <small class="text-muted mr-1">
+         {{(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
+         {{(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
+       </small>
+       |
+       <i class="fas fa-map-marker-alt icon-color ml-1"></i>
+       <small class="text-muted mr-1">
+         {{course.address}}
+       </small>
+       |
+       <i class="fas fa-chalkboard-teacher icon-color ml-1"></i>
+       <small class="text-muted mr-1">
+         {{course.impart}}
+       </small>
+       |
+       <i class="fas fa-chair icon-color ml-1"></i>
+       <small *ngIf="course.free_places!=0" class="text-muted mr-1">
+         {{course.free_places}} Plazas libres
+       </small>
+       <small *ngIf="course.free_places==0" class="text-muted mr-1">
+         Completo
+       </small>
+    </div>
+  </div>
+  <hr>
+
+  <div class="ck-content m-5">
+    {{course.description}}
+  </div>
+  <hr>
+  <div class="row justify-content-center">
+      <button (click)="onInscription()" class="course-btn m-3">
+          Inscribirse
+      </button>
+  </div>
+
+</div>
