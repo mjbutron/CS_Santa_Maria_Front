@@ -21,9 +21,5 @@
     </a>
   </div>
   <hr>
-
-  <div class="ck-content m-5">
-    {{service.description}}
-  </div>
-
+  <div class="ck-content m-5" [innerHTML]="service.description | safe: 'html'"></div>
 </div>

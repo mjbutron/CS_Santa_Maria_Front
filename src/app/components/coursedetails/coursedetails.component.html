@@ -63,10 +63,7 @@
     </div>
   </div>
   <hr>
-
-  <div class="ck-content m-5">
-    {{course.description}}
-  </div>
+  <div class="ck-content m-5" [innerHTML]="course.description | safe: 'html'"></div>
   <hr>
   <div class="row justify-content-center">
       <button (click)="onInscription()" class="course-btn m-3">

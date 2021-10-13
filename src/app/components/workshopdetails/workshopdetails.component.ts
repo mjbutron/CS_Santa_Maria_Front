@@ -4,6 +4,7 @@ import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-custom';
 
 // Services
 import { DataApiService } from 'src/app/services/data-api.service';
@@ -21,6 +22,8 @@ const K_CANCEL_BUTTON_STR = 'Cancelar';
   styleUrls: ['./workshopdetails.component.css']
 })
 export class WorkshopdetailsComponent implements OnInit {
+  // Editor
+  public Editor = ClassicEditor;
   // Path
   path = environment.imageRootPath;
   // Workshop

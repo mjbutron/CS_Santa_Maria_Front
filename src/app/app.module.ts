@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 // Utils
 import { Globals } from './common/globals';
@@ -40,6 +41,7 @@ import { OpinionsComponent } from './components/opinions/opinions.component';
 // Pipes
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 import { TimeWithoutSecPipe } from './pipes/time-without-sec.pipe';
+import { SafePipe } from './pipes/safe.pipe';
 // Date
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
@@ -67,7 +69,8 @@ registerLocaleData(localeEs);
     LegalComponent,
     ServicedetailsComponent,
     CoursedetailsComponent,
-    WorkshopdetailsComponent
+    WorkshopdetailsComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ registerLocaleData(localeEs);
     AgmCoreModule.forRoot({
       apiKey: ''
     }),
-    APP_ROUTING
+    APP_ROUTING,
+    CKEditorModule
   ],
   providers: [
     DataApiService,

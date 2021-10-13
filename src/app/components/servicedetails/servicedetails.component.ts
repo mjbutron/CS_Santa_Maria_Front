@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-custom';
+
 // Services
 import { DataApiService } from 'src/app/services/data-api.service';
 // Interfaces
@@ -13,6 +15,8 @@ import { ServiceInterface } from 'src/app/models/service-interface';
   styleUrls: ['./servicedetails.component.css']
 })
 export class ServicedetailsComponent implements OnInit {
+  // Editor
+  public Editor = ClassicEditor;
   // Path
   path = environment.imageRootPath;
   // Services
