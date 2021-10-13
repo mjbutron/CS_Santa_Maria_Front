@@ -31,6 +31,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PrivacypolicyComponent } from './components/privacypolicy/privacypolicy.component';
 import { LegalComponent } from './components/legal/legal.component';
 import { ServicedetailsComponent } from './components/servicedetails/servicedetails.component';
+import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
+import { WorkshopdetailsComponent } from './components/workshopdetails/workshopdetails.component';
 
 // Services
 import { DataApiService } from './services/data-api.service';
@@ -63,7 +65,9 @@ registerLocaleData(localeEs);
     TimeWithoutSecPipe,
     PrivacypolicyComponent,
     LegalComponent,
-    ServicedetailsComponent
+    ServicedetailsComponent,
+    CoursedetailsComponent,
+    WorkshopdetailsComponent
   ],
   imports: [
     BrowserModule,

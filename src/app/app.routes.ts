@@ -10,6 +10,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { PrivacypolicyComponent } from './components/privacypolicy/privacypolicy.component';
 import { LegalComponent } from './components/legal/legal.component';
 import { ServicedetailsComponent } from './components/servicedetails/servicedetails.component';
+import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
+import { WorkshopdetailsComponent } from './components/workshopdetails/workshopdetails.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const APP_ROUTES: Routes = [
@@ -22,6 +24,8 @@ const APP_ROUTES: Routes = [
   { path: 'politica_privacidad', component: PrivacypolicyComponent },
   { path: 'aviso_legal', component: LegalComponent },
   { path: 'servicio/:id', component: ServicedetailsComponent },
+  { path: 'taller/:id', component: WorkshopdetailsComponent },
+  { path: 'curso/:id', component: CoursedetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // TODO only users auth
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }

@@ -1,11 +1,13 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
+import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
+// Services
 import { DataApiService } from 'src/app/services/data-api.service';
-
+// Interfaces
 import { WorkshopInterface } from 'src/app/models/workshop-interface';
 
 const K_CONFIRM_BUTTON_COLOR = '#d33';
@@ -14,39 +16,35 @@ const K_OK_BUTTON_STR = 'Enviar solicitud';
 const K_CANCEL_BUTTON_STR = 'Cancelar';
 
 @Component({
-  selector: 'app-workshop',
-  templateUrl: './workshop.component.html',
-  styleUrls: ['./workshop.component.css']
+  selector: 'app-workshopdetails',
+  templateUrl: './workshopdetails.component.html',
+  styleUrls: ['./workshopdetails.component.css']
 })
-export class WorkshopComponent implements OnInit {
+export class WorkshopdetailsComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
-  // Workshops
-  workshops: WorkshopInterface[] = [];
+  // Services
+  workshop: WorkshopInterface;
   // Load
   isLoaded: boolean;
 
-  constructor(private dataApi: DataApiService, private router: Router) {}
-
-  ngOnInit() {
+  constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
-    this.getWorkshops();
-  }
-
-  getWorkshops(){
-    this.dataApi.getAllActiveWorkshops().subscribe((data) =>{
-      if (globalsConstants.K_COD_OK == data.cod){
-        this.workshops = data.allWorkshops;
-        this.isLoaded = true;
-      }
-      else{
-        this.isLoaded = true;
-      }
+    this.workshop = new WorkshopInterface();
+    this.activatedRoute.params.subscribe( param => {
+      this.dataApi.getWorkshopById(param['id']).subscribe((data) =>{
+        if (globalsConstants.K_COD_OK == data.cod){
+          this.workshop = data.workshop[0];
+          this.isLoaded = true;
+        }
+        else{
+          this.isLoaded = true;
+        }
+      });
     });
   }
 
-  onWorkshopDetail(id:number){
-    this.router.navigate(['/taller', id]);
+  ngOnInit() {
   }
 
   onInscription(){
