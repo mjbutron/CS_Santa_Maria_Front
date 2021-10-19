@@ -183,7 +183,7 @@
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title cssm-colorWhite">{{workshop.title}}</h5>
-        <p class="card-text cssm-colorWhite">{{workshop.description_home}}</p>
+        <p class="card-text cssm-colorWhite">{{workshop.short_description}}</p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
         <small *ngIf="workshop.session_date" class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
@@ -201,7 +201,7 @@
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title cssm-colorWhite">{{workshop.title}}</h5>
-        <p class="card-text cssm-colorWhite">{{workshop.description_home}}</p>
+        <p class="card-text cssm-colorWhite">{{workshop.short_description}}</p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
         <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
