@@ -12,6 +12,11 @@ p {
   color: #0e94a0;
   height: 2px;
 }
+
+.cssm-cursor {
+  cursor: pointer;
+}
+
 /* <--Welcome */
 
 /* Cards--> */

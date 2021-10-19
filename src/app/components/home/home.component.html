@@ -182,8 +182,10 @@
     <div *ngFor="let workshop of wspInHome | slice:0:3; let i=index" class="card cssm-background-card">
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title cssm-colorWhite">{{workshop.title}}</h5>
-        <p class="card-text cssm-colorWhite">{{workshop.short_description}}</p>
+        <p class="fw-bold cssm-colorWhite cssm-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
+        <p class="card-text cssm-colorWhite" style="font-weight: initial;">
+          {{(workshop.short_description.length>150)? (workshop.short_description | slice:0:150)+'...':(workshop.short_description)}}
+        </p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
         <small *ngIf="workshop.session_date" class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
@@ -200,8 +202,10 @@
     <div *ngFor="let workshop of wspInHome | slice:3:6; let i=index" class="card cssm-background-card">
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title cssm-colorWhite">{{workshop.title}}</h5>
-        <p class="card-text cssm-colorWhite">{{workshop.short_description}}</p>
+        <p class="fw-bold cssm-colorWhite cssm-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
+        <p class="card-text cssm-colorWhite" style="font-weight: initial;">
+          {{(workshop.short_description.length>150)? (workshop.short_description | slice:0:150)+'...':(workshop.short_description)}}
+        </p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
         <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
