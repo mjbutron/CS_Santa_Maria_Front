@@ -37,8 +37,13 @@ export class CoursedetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe( param => {
       this.dataApi.getCourseById(param['id']).subscribe((data) =>{
         if (globalsConstants.K_COD_OK == data.cod){
-          this.course = data.course[0];
-          this.isLoaded = true;
+          if(data.course.length > 0 && data.course[0].active == 1){
+            this.course = data.course[0];
+            this.isLoaded = true;
+          }
+          else{
+              this.router.navigateByUrl('/cursos');
+          }
         }
         else{
           this.isLoaded = true;

@@ -37,8 +37,13 @@ export class WorkshopdetailsComponent implements OnInit {
     this.activatedRoute.params.subscribe( param => {
       this.dataApi.getWorkshopById(param['id']).subscribe((data) =>{
         if (globalsConstants.K_COD_OK == data.cod){
-          this.workshop = data.workshop[0];
-          this.isLoaded = true;
+          if(data.workshop.length > 0 && data.workshop[0].active == 1){
+            this.workshop = data.workshop[0];
+            this.isLoaded = true;
+          }
+          else{
+            this.router.navigateByUrl('/talleres');
+          }
         }
         else{
           this.isLoaded = true;
