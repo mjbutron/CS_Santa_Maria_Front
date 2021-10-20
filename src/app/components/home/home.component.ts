@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
       if (globalsConstants.K_COD_OK == data.cod){
         if(0 < data.allWorkshops.length){
           for(let wspHome of data.allWorkshops){
-            if(wspHome.home == 1){
+            if(wspHome.home == 1 && wspHome.active == 1){
               this.wspInHome.push(wspHome);
             }
           }
