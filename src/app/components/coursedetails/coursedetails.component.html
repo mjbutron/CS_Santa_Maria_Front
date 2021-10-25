@@ -22,40 +22,40 @@
       </a>
     </div>
     <div class="col-md-10 text-right">
-      <i class="fas fa-euro-sign icon-color"></i>
+      <i class="fas fa-euro-sign icon-color" title="Precio"></i>
       <small class="text-muted mr-1">
-        {{course.price}}
+        {{(course.price==0 || course.price==null)? 'Consultar':(course.price)}}
       </small>
       |
-      <i class="far fa-calendar-alt icon-color ml-1"></i>
+      <i class="far fa-calendar-alt icon-color ml-1" title="Fecha"></i>
       <small class="text-muted mr-1">
         {{course.session_date | date}}
       </small>
        |
-       <i class="far fa-clock icon-color ml-1"></i>
+       <i class="far fa-clock icon-color ml-1" title="Horario"></i>
        <small class="text-muted mr-1">
          {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
        </small>
        |
-       <i class="fas fa-graduation-cap icon-color ml-1"></i>
+       <i class="fas fa-graduation-cap icon-color ml-1" title="Duración"></i>
        <small class="text-muted mr-1">
-         {{(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
-         {{(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
+         {{(course.sessions==null)?(0)+' Clases':(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
+         {{(course.hours==null)?(0)+' Horas':(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
        </small>
        |
-       <i class="fas fa-map-marker-alt icon-color ml-1"></i>
+       <i class="fas fa-map-marker-alt icon-color ml-1" title="Ubicación"></i>
        <small class="text-muted mr-1">
          {{course.address}}
        </small>
        |
-       <i class="fas fa-chalkboard-teacher icon-color ml-1"></i>
+       <i class="fas fa-chalkboard-teacher icon-color ml-1" title="Impartido"></i>
        <small class="text-muted mr-1">
          {{course.impart}}
        </small>
        |
-       <i class="fas fa-chair icon-color ml-1"></i>
+       <i class="fas fa-chair icon-color ml-1" title="Plazas"></i>
        <small *ngIf="course.free_places!=0" class="text-muted mr-1">
-         {{course.free_places}} Plazas libres
+         {{(course.free_places == null)? (0):(course.free_places)}} Plazas libres
        </small>
        <small *ngIf="course.free_places==0" class="text-muted mr-1">
          Completo

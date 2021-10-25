@@ -54,7 +54,7 @@
                 <h5 class="card-title cssm-cursor cssm-card-title" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</h5>
               </div>
               <div class="workshop-price">
-                Precio: {{(workshop.price==0)? 'Consultar':(workshop.price)+'€'}}
+                Precio: {{(workshop.price==0 || workshop.price==null)? 'Consultar':(workshop.price)+'€'}}
               </div>
             </div>
             <div class="row">
@@ -78,7 +78,7 @@
               <div class="col-md-4 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    Taller de {{(workshop.hours==1)? (workshop.hours)+' hora':(workshop.hours)+' horas'}}
+                    Taller de {{(workshop.hours == null)? (0)+' horas':(workshop.hours==1)? (workshop.hours)+' hora':(workshop.hours)+' horas'}}
                   </small>
                 </p>
               </div>

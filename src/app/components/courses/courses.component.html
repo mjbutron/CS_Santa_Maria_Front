@@ -35,7 +35,7 @@
                 <h5 class="card-title cssm-cursor cssm-card-title" (click)="onCourseDetail(course.id)">{{course.title}}</h5>
               </div>
               <div class="courses-price">
-                Precio: {{(course.price==0)? 'Consultar':(course.price)+'€'}}
+                Precio: {{(course.price==0 || course.price==null)? 'Consultar':(course.price)+'€'}}
               </div>
             </div>
             <div class="row">
@@ -66,8 +66,8 @@
               <div class="col-md-4 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    {{(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
-                    {{(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
+                    {{(course.sessions==null)?(0)+' Clases':(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
+                    {{(course.hours==null)?(0)+' Horas':(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
                   </small>
                 </p>
               </div>
