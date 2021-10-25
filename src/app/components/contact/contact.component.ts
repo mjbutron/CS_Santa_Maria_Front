@@ -56,7 +56,9 @@ export class ContactComponent implements OnInit {
         }
         this.lat = +this.informationObj.cnt_lat;
         this.lon = +this.informationObj.cnt_lon;
-        this.checkEmails(this.informationObj.cnt_emails);
+        if(this.informationObj.cnt_emails){
+          this.checkEmails(this.informationObj.cnt_emails);
+        }
         this.isLoaded = true;
       } else {
         this.isLoaded = true;

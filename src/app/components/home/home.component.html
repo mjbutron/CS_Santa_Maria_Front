@@ -60,7 +60,7 @@
 </div> -->
   <!-- End Blq0 Welcome -->
 <!-- Blq1 Services -->
-<div class="jumbotron animated fadeInUp">
+<div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
   <div class="cssm-bb-image">
     <h1 class="cssm-display-5">Servicios</h1>
     <p class="cssm-lead text-center">Estos son nuestros principales servicios. Podrá encontrar más información en la sección de servicios.</p>
@@ -215,7 +215,7 @@
 </div>
 <!-- End Blq2 Workshops -->
 <!-- Blq3 Opinions -->
-<div class="jumbotron animated fadeInUp">
+<div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
   <div class="cssm-testimonials-image">
     <h1 class="cssm-display-5">Testimonios</h1>
     <hr class="my-4">
@@ -224,8 +224,10 @@
 </div>
 <!-- End Blq3 Opinions -->
 <!-- Blq4 Brands -->
-<h1 class="cssm-display-5">Compañias</h1>
-<p class="cssm-lead text-center">Trabajamos con las principales compañias. Pacientes privados y seguros (Consultar compañias).</p>
-<hr class="my-4">
-<app-brands></app-brands>
+<div *ngIf="isLoaded">
+  <h1 class="cssm-display-5">Compañias</h1>
+  <p class="cssm-lead text-center">Trabajamos con las principales compañias. Pacientes privados y seguros (Consultar compañias).</p>
+  <hr class="my-4">
+  <app-brands></app-brands>
+</div>
 <!-- End Blq4 Brands -->
