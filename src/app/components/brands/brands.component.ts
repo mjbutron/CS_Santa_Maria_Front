@@ -7,19 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BrandsComponent implements OnInit {
 
+  // Future: Funcionalidad para gestionar esto desde backend
   slides = [
-    {img: "http://sueiro.es/wp-content/uploads/2019/03/Asisa-200x100.png"},
-    {img: "http://sueiro.es/wp-content/uploads/2019/03/Allianz-200x100.png"},
-    {img: "https://hospitalangeldelmar.com.mx/wp-content/uploads/2018/01/gnp-seguros-medicos-200x100.jpg"},
-    {img: "http://sueiro.es/wp-content/uploads/2019/03/Xurich-200x100.png"},
-    {img: "http://www.minguezsaez.com/wp-content/uploads/2018/03/reale-200x100.jpg"},
-    {img: "http://sueiro.es/wp-content/uploads/2019/03/Aegon-200x100.png"},
-    {img: "https://sueiro.es/wp-content/uploads/2019/03/Liberty-200x100.png"},
-    {img: "https://www.segurosequitacion.com/wp-content/uploads/2013/04/sponsor3-200x100.jpg"}
+    {img: "../../assets/img/asisa.png"},
+    {img: "../../assets/img/allianz.png"},
+    {img: "../../assets/img/adeslas.png"},
+    {img: "../../assets/img/zurich.png"},
+    {img: "../../assets/img/reale.png"},
+    {img: "../../assets/img/aegon.png"},
+    {img: "../../assets/img/liberty.png"},
+    {img: "../../assets/img/mapfre.png"},
+    {img: "../../assets/img/sanitas.png"}
   ];
 
   slideConfig = {
-   "slidesToShow": 1,
+   "slidesToShow": 2,
    "slidesToScroll": 1,
    "centerMode": true,
    "autoplay": true,
@@ -49,28 +51,19 @@ export class BrandsComponent implements OnInit {
 
   ngOnInit() {}
 
-  addSlide() {
-   this.slides.push({img: "http://placehold.it/350x150/777777"})
- }
-
- removeSlide() {
-   this.slides.length = this.slides.length - 1;
- }
-
- slickInit(e) {
+  slickInit(e) {
    // console.log('slick initialized');
- }
+  }
 
- breakpoint(e) {
+  breakpoint(e) {
    // console.log('breakpoint');
- }
+  }
 
- afterChange(e) {
+  afterChange(e) {
    // console.log('afterChange');
- }
+  }
 
- beforeChange(e) {
+  beforeChange(e) {
    // console.log('beforeChange');
- }
-
+  }
 }
