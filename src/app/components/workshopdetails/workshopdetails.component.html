@@ -29,7 +29,7 @@
       |
       <i class="far fa-calendar-alt icon-color ml-1" title="Fecha"></i>
       <small class="text-muted mr-1">
-        {{workshop.session_date | date}}
+        {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}}
       </small>
        |
        <i class="far fa-clock icon-color ml-1" title="Horario"></i>

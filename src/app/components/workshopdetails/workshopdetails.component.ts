@@ -28,6 +28,7 @@ export class WorkshopdetailsComponent implements OnInit {
   path = environment.imageRootPath;
   // Workshop
   workshop: WorkshopInterface;
+  noDate = globalsConstants.K_NO_DATE_STR;
   // Load
   isLoaded: boolean;
 

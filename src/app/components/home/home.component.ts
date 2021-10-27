@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   wspInHome: WorkshopInterface[] = [];
   // Load
   isLoaded: boolean;
+  // No date
+  noDate = globalsConstants.K_NO_DATE_STR;
 
   constructor(private dataApi: DataApiService, private router: Router) {
   }

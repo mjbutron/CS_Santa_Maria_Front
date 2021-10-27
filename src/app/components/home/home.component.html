@@ -188,8 +188,12 @@
         </p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
-        <small *ngIf="workshop.session_date" class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
-        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">Fecha: Consultar</small>
+        <small *ngIf="workshop.session_date" class="cssm-colorWhite">
+          Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}
+        </small>
+        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">
+          Fecha: Consultar
+        </small>
       </div>
     </div>
     <div *ngIf="wspInHome.length > 3" class="card text-white text-center p-3 cssm-background-card-center">
@@ -208,7 +212,12 @@
         </p>
       </div>
       <div class="card-footer text-center cssm-background-footer-card">
-        <small class="cssm-colorWhite">Fecha: {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}</small>
+        <small *ngIf="workshop.session_date" class="cssm-colorWhite">
+          Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}
+        </small>
+        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">
+          Fecha: Consultar
+        </small>
       </div>
     </div>
   </div>

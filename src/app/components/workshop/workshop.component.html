@@ -68,7 +68,7 @@
                     </span>
                   </small>
                   <small *ngIf="workshop.session_date" class="text-muted">
-                    {{workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}} - {{workshop.session_end | timeWithoutSec}}
+                    Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}} a {{workshop.session_end | timeWithoutSec}}
                   </small>
                   <small *ngIf="!workshop.session_date" class="text-muted">
                     Consultar
