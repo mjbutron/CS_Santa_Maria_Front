@@ -28,6 +28,7 @@ export class CoursedetailsComponent implements OnInit {
   path = environment.imageRootPath;
   // Course
   course: CourseInterface;
+  noDate = globalsConstants.K_NO_DATE_STR;
   // Load
   isLoaded: boolean;
 

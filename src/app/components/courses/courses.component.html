@@ -56,7 +56,7 @@
                     </span>
                   </small>
                   <small *ngIf="course.session_date" class="text-muted">
-                    {{course.session_date | date}} | {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
+                    Fecha: {{(course.session_date == noDate)? 'Consultar':course.session_date | date}} | {{course.session_start | timeWithoutSec}} a {{course.session_end | timeWithoutSec}}
                   </small>
                   <small *ngIf="!course.session_date" class="text-muted">
                     Consultar

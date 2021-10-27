@@ -23,6 +23,7 @@ export class CoursesComponent implements OnInit {
   path = environment.imageRootPath;
   // Courses
   courses: CourseInterface[] = [];
+  noDate = globalsConstants.K_NO_DATE_STR;
   // Load
   isLoaded: boolean;
 

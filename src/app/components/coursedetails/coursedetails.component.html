@@ -29,12 +29,12 @@
       |
       <i class="far fa-calendar-alt icon-color ml-1" title="Fecha"></i>
       <small class="text-muted mr-1">
-        {{course.session_date | date}}
+        {{(course.session_date == noDate)? 'Consultar':course.session_date | date}}
       </small>
        |
        <i class="far fa-clock icon-color ml-1" title="Horario"></i>
        <small class="text-muted mr-1">
-         {{course.session_start | timeWithoutSec}} - {{course.session_end | timeWithoutSec}}
+         {{course.session_start | timeWithoutSec}} a {{course.session_end | timeWithoutSec}}
        </small>
        |
        <i class="fas fa-graduation-cap icon-color ml-1" title="Duración"></i>
