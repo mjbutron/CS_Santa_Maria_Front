@@ -81,12 +81,22 @@ export class ContactComponent implements OnInit {
       this.isLoaded = true;
       return;
     }
-    // TODO: Send email (serv)
-    form.resetForm();
-    this.isLoaded = true;
-    this.toastr.success("Responderemos a su solicitud lo antes posible.", "¡Solicitud enviada!", {
-      progressBar: true,
-      positionClass: 'toast-top-full-width'
+    this.dataApi.sendEmailContact(this.infoRequest).subscribe((data) =>{
+      if (globalsConstants.K_COD_OK == data.cod){
+        form.resetForm();
+        this.isLoaded = true;
+        this.toastr.success("Responderemos a su solicitud lo antes posible.", "¡Solicitud enviada!", {
+          progressBar: true,
+          positionClass: 'toast-top-full-width'
+        });
+      }
+      else{
+        this.isLoaded = true;
+        this.toastr.error("No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.", "¡Error!", {
+          progressBar: true,
+          positionClass: 'toast-top-full-width'
+        });
+      }
     });
   }
 

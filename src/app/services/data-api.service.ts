@@ -229,6 +229,18 @@ export class DataApiService {
   }
 
 
-// Service for send email
+// Send email
+sendEmailContact(infoRequest: any){
+  const url_api = this.url + '/api/sendEmail';
+  return this.http.post(url_api, JSON.stringify(infoRequest), this.getHeadersOptions())
+  .pipe(
+    this.delayRetry(2000, 3),
+    catchError( err => {
+      return of( err.value.error );
+    }),
+    shareReplay()
+  )
+}
+
 
 }
