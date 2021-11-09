@@ -2,7 +2,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CoursesComponent } from './components/courses/courses.component';
@@ -27,7 +26,6 @@ const APP_ROUTES: Routes = [
   { path: 'taller/:id', component: WorkshopdetailsComponent },
   { path: 'curso/:id', component: CoursedetailsComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // TODO only users auth
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 

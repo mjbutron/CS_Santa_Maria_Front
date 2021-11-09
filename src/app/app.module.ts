@@ -23,7 +23,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
@@ -56,7 +55,6 @@ registerLocaleData(localeEs);
     ServicesComponent,
     LoginComponent,
     FooterComponent,
-    DashboardComponent,
     BrandsComponent,
     WorkshopComponent,
     AboutusComponent,
