@@ -11,7 +11,6 @@ import { LegalComponent } from './components/legal/legal.component';
 import { ServicedetailsComponent } from './components/servicedetails/servicedetails.component';
 import { CoursedetailsComponent } from './components/coursedetails/coursedetails.component';
 import { WorkshopdetailsComponent } from './components/workshopdetails/workshopdetails.component';
-import { AuthGuard } from './guards/auth.guard';
 
 // Routes
 const APP_ROUTES: Routes = [
