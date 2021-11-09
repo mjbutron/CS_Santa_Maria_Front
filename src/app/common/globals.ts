@@ -20,8 +20,6 @@ export const K_NO_DATE = '--/--/----';
 export const K_FORMAT_DATE = 'yyyy-MM-dd';
 export const K_LOCALE_EN = 'en';
 export const K_NO_DATE_STR = '0000-00-00';
-
-
 // Colors
 export const K_CONFIRM_BUTTON_COLOR = '#d33';
 export const K_CANCEL_BUTTON_COLOR = '#0095A6';
@@ -32,5 +30,4 @@ export class Globals {
   // URLs
   imgRootPath: string = environment.imageRootPath;
   pathBackEnd: string = environment.urlBackEnd;
-
 }

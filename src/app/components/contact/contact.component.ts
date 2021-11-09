@@ -42,10 +42,10 @@ export class ContactComponent implements OnInit {
     this.getContactInfo();
   }
 
-  getContactInfo(){
-    this.dataApi.getInfoContact().subscribe((data) =>{
-      if (globalsConstants.K_COD_OK == data.cod && 0 < data.contactInfo.length){
-        for(let i = 0; i < data.contactInfo.length; i++){
+  getContactInfo() {
+    this.dataApi.getInfoContact().subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod && 0 < data.contactInfo.length) {
+        for (let i = 0; i < data.contactInfo.length; i++) {
           this.informationObj.cnt_address = data.contactInfo[i].cnt_address;
           this.informationObj.cnt_ph_appo = data.contactInfo[i].cnt_ph_appo;
           this.informationObj.cnt_emails = data.contactInfo[i].cnt_emails;
@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
         }
         this.lat = +this.informationObj.cnt_lat;
         this.lon = +this.informationObj.cnt_lon;
-        if(this.informationObj.cnt_emails){
+        if (this.informationObj.cnt_emails) {
           this.checkEmails(this.informationObj.cnt_emails);
         }
         this.isLoaded = true;
@@ -67,7 +67,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  checkEmails(dataEmails: string){
+  checkEmails(dataEmails: string) {
     var splitted = dataEmails.split(";");
     for (var email of splitted) {
       this.formatEmails += email + "<br>";
@@ -75,14 +75,14 @@ export class ContactComponent implements OnInit {
 
   }
 
-  onSubmit(form: NgForm){
+  onSubmit(form: NgForm) {
     this.isLoaded = false;
-    if(form.invalid){
+    if (form.invalid) {
       this.isLoaded = true;
       return;
     }
-    this.dataApi.sendEmailContact(this.infoRequest).subscribe((data) =>{
-      if (globalsConstants.K_COD_OK == data.cod){
+    this.dataApi.sendEmailContact(this.infoRequest).subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod) {
         form.resetForm();
         this.isLoaded = true;
         this.toastr.success("Responderemos a su solicitud lo antes posible.", "¡Solicitud enviada!", {
@@ -90,7 +90,7 @@ export class ContactComponent implements OnInit {
           positionClass: 'toast-top-full-width'
         });
       }
-      else{
+      else {
         this.isLoaded = true;
         this.toastr.error("No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.", "¡Error!", {
           progressBar: true,
@@ -99,5 +99,4 @@ export class ContactComponent implements OnInit {
       }
     });
   }
-
 }

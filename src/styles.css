@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ Global Style
+ */
 
 .padding {
   padding: 20px;
@@ -6,10 +8,6 @@
 
 /* --- ** Start Loader ** --- */
 #preloader {
-    /* top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
 		position:fixed;
 		width:100%;
 		left:0;right:0;top:0;bottom:0;
@@ -95,6 +93,7 @@
 }
 /* --- ** End Toast ** --- */
 
+/* --- ** Start Style CSSM Font ** --- */
 h3.fancy, .ck.ck-button.ckeditor-title {
   color: #fff;
   font-family: "Amatic SC", cursive;
@@ -104,3 +103,4 @@ h3.fancy, .ck.ck-button.ckeditor-title {
   line-height: 1.2;
   color: #0e94a0;
 }
+/* --- ** End Style CSSM Font ** --- */
