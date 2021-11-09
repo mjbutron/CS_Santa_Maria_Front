@@ -13,6 +13,7 @@ import { CoursedetailsComponent } from './components/coursedetails/coursedetails
 import { WorkshopdetailsComponent } from './components/workshopdetails/workshopdetails.component';
 import { AuthGuard } from './guards/auth.guard';
 
+// Routes
 const APP_ROUTES: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'servicios', component: ServicesComponent },

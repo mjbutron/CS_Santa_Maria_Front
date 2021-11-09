@@ -37,10 +37,12 @@ import { WorkshopdetailsComponent } from './components/workshopdetails/workshopd
 // Services
 import { DataApiService } from './services/data-api.service';
 import { OpinionsComponent } from './components/opinions/opinions.component';
+
 // Pipes
 import { PhoneFormatPipe } from './pipes/phone-format.pipe';
 import { TimeWithoutSecPipe } from './pipes/time-without-sec.pipe';
 import { SafePipe } from './pipes/safe.pipe';
+
 // Date
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
