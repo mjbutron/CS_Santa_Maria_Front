@@ -3,7 +3,7 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">{{loadingStr}}</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
   <p class="text-center aboutus-load-space">...</p>
 </div>
 
@@ -21,16 +21,16 @@
       <img src="../../assets/img/logo.png" alt="" class="imagecorp">
     </div>
     <div class="col-md-6 mb-2 aboutus-separator">
-      <p>{{historyP1}}</p>
-      <p>{{historyP2}}</p>
-      <p>{{historyP3}}</p>
-      <p>{{historyP4}}</p>
+      <p>{{globalCnstns.K_ABOUT_US_HISTORY_ONE}}</p>
+      <p>{{globalCnstns.K_ABOUT_US_HISTORY_TWO}}</p>
+      <p>{{globalCnstns.K_ABOUT_US_HISTORY_THREE}}</p>
+      <p>{{globalCnstns.K_ABOUT_US_HISTORY_FOUR}}</p>
     </div>
   </div>
   <!-- Team -->
   <div class="aboutus-team-boxed">
       <div class="container">
-        <h1 class="aboutus-section-title pt-3">{{sectionTitle}}</h1>
+        <h1 class="aboutus-section-title pt-3">{{globalCnstns.K_ABOUT_US_SECTION_TITLE}}</h1>
         <hr class="my-4">
           <div class="row people">
               <div *ngFor="let aboutus of aboutusList" class="col-md-6 col-lg-4 item">

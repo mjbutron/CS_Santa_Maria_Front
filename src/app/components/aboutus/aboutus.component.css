@@ -4,6 +4,15 @@
   width: 100%;
 }
 
+.content-load p {
+  color: #0095A6;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
 .imagecorp {
   width: 100%;
 }

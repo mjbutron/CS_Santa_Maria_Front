@@ -3,9 +3,9 @@ import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
-
+// Services
 import { DataApiService } from 'src/app/services/data-api.service';
-
+// Interfaces
 import { ContactInterface } from 'src/app/models/contact-interface';
 
 @Component({
@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
   // Information
   informationObj: ContactInterface;
   formatEmails: string;
-  // request
+  // Request
   infoRequest = {
     name: "",
     surname: "",
@@ -31,17 +31,31 @@ export class ContactComponent implements OnInit {
   };
   // Load
   isLoaded: boolean;
+  // Global Constants
+  globalCnstns = globalsConstants;
 
+  /**
+   * [constructor]
+   * @param dataApi  [Data API Object]
+   * @param toastr   [Toastr service]
+   */
   constructor(private dataApi: DataApiService, public toastr: ToastrService) {
     this.informationObj = new ContactInterface();
     this.formatEmails = "";
   }
 
+  /**
+   * [ngOnInit]
+   */
   ngOnInit() {
     this.isLoaded = false;
     this.getContactInfo();
   }
 
+  /**
+   * [Get contact information]
+   * @return [Object filled with contact information]
+   */
   getContactInfo() {
     this.dataApi.getInfoContact().subscribe((data) => {
       if (globalsConstants.K_COD_OK == data.cod && 0 < data.contactInfo.length) {
@@ -62,19 +76,27 @@ export class ContactComponent implements OnInit {
         this.isLoaded = true;
       } else {
         this.isLoaded = true;
-        // this.toastr.error(data.message, globalsConstants.K_ERROR_STR);
       }
     });
   }
 
+  /**
+   * [Check if there are multiple emails]
+   * @param  dataEmails [Emails stored in data base]
+   * @return            [Email formatting]
+   */
   checkEmails(dataEmails: string) {
     var splitted = dataEmails.split(";");
     for (var email of splitted) {
       this.formatEmails += email + "<br>";
     }
-
   }
 
+  /**
+   * [Sending the request]
+   * @param  form [NgForm]
+   * @return      [It informs if the request has been sent or not.]
+   */
   onSubmit(form: NgForm) {
     this.isLoaded = false;
     if (form.invalid) {

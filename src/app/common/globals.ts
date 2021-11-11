@@ -32,6 +32,33 @@ export const K_ABOUT_US_HISTORY_ONE = 'Tras varios años de formación fuera de 
 export const K_ABOUT_US_HISTORY_TWO = 'Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo, parto, puerperio, lactancia y crianza, facilitando la toma de decisiones desde la más actualizada evidencia científica sin perder el lado humano.';
 export const K_ABOUT_US_HISTORY_THREE = 'Actualmente compaginamos nuestra actividad laboral entre el sector público y privado.';
 export const K_ABOUT_US_HISTORY_FOUR = '* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).';
+//// Contact
+export const K_CONTACT_SECTION_TITLE = 'Datos de contacto';
+export const K_CONTACT_REQUEST_SECTION_TITLE = 'Envianos tu solicitud';
+export const K_CONTACT_ADDRESS_STR = 'Dirección';
+export const K_CONTACT_EMAILS_STR = 'Emails';
+export const K_CONTACT_APPO_STR = 'Teléfono de cita previa';
+export const K_CONTACT_MWIVES_STR = 'Teléfono matrona';
+export const K_CONTACT_PHYSIO_STR = 'Teléfono fisioterapia';
+export const K_CONTACT_NAME_STR = 'Nombre *';
+export const K_CONTACT_NAME_REQUIRED_STR = 'El nombre es obligatorio';
+export const K_CONTACT_SURNAME_STR = 'Apellidos *';
+export const K_CONTACT_SURNAME_REQUIRED_STR = 'Los apellidos son obligatorios';
+export const K_CONTACT_EMAIL_STR = 'Email *';
+export const K_CONTACT_EMAIL_REQUIRED_STR = 'El email es obligatorio';
+export const K_CONTACT_EMAIL_VALID_STR = 'El email no es valido';
+export const K_CONTACT_SUBJECT_STR = 'Asunto *';
+export const K_CONTACT_SUBJECT_INFO_STR = 'Información';
+export const K_CONTACT_SUBJECT_APPO_STR = 'Cita Previa';
+export const K_CONTACT_SUBJECT_INSC_STR = 'Inscripción Taller/Curso';
+export const K_CONTACT_SUBJECT_REQUIRED_STR = 'El asunto es obligatorio';
+export const K_CONTACT_MESSAGE_STR = 'Mensaje *';
+export const K_CONTACT_MESSAGE_REQUIRED_STR = 'El mensaje es obligatorio';
+export const K_CONTACT_READ_POLICY_STR = 'He leído y acepto ';
+export const K_CONTACT_PRIVACY_POLICY_STR = 'política de privacidad';
+export const K_CONTACT_ACCEPT_PP_STR = 'Debe aceptar la política de privacidad';
+export const K_CONTACT_SEND_REQUEST_STR = 'Enviar solicitud';
+
 // End web sectios
 
 @Injectable()

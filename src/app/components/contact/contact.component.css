@@ -1,3 +1,5 @@
+/* About Us CSS Style */
+
 agm-map {
   height: 450px;
   margin-bottom: 20px;
@@ -52,17 +54,17 @@ blockquote {
   color: #04C1C3;
 }
 
-.cssm-rgpd {
-  font-size: 14px;
-}
-
-.cssm-display-5 {
+.contact-display-5 {
   font-family: 'Amatic SC', cursive;
   font-size: 2rem;
   line-height: 1.2;
   text-align: center;
   font-weight: bold;
   color: #0095A6;
+}
+
+.contact-load-space {
+  margin-top: 1000px;
 }
 
 .my-6 {

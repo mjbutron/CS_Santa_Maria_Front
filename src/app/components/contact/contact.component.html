@@ -2,118 +2,135 @@
 <div id="preloader" *ngIf="!isLoaded">
   <div id="loader"></div>
 </div>
-
-<!-- Map -->
-<div class="animated fadeInUp">
-  <agm-map [latitude]="lat" [longitude]="lon" [zoom]="17">
-    <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
-  </agm-map>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center contact-load-space">...</p>
 </div>
 
-<!-- Contact Info -->
-<div class="row mt-4 pl-3 animated fadeInUp">
-  <div class="col-md-6">
-    <h3 class="cssm-display-5">Datos de contacto</h3>
-    <hr class="my-6">
-    <p>Dirección</p>
-    <blockquote>
-      <p>{{informationObj.cnt_address}}</p>
-    </blockquote>
-    <p>Emails</p>
-    <blockquote>
-      <p [innerHTML]="formatEmails"></p>
-    </blockquote>
-    <p>Teléfono de cita previa</p>
-    <blockquote>
-      <p>{{informationObj.cnt_ph_appo}}</p>
-    </blockquote>
-    <p>Teléfono matrona</p>
-    <blockquote>
-      <p>{{informationObj.cnt_ph_mwives}}</p>
-    </blockquote>
-    <p>Teléfono fisioterapia</p>
-    <blockquote>
-      <p>{{informationObj.cnt_ph_physio}}</p>
-    </blockquote>
+<!-- Content -->
+<div *ngIf="isLoaded" class="animated fadeInUp">
+  <!-- Map -->
+  <div class="animated fadeInUp">
+    <agm-map [latitude]="lat" [longitude]="lon" [zoom]="17">
+      <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
+    </agm-map>
   </div>
 
-<!-- Contact Form -->
-  <div class="col-md-6">
-    <h3 class="cssm-display-5">Envianos tu solicitud</h3>
-    <hr class="my-6">
-    <form (ngSubmit)="onSubmit( contactForm )" #contactForm="ngForm" class="validate-form contact-form">
-      <!-- Name -->
-      <div class="form-group">
-        <label for="reqname">Nombre *</label>
-        <input name="reqname" id="reqname" type="text" [(ngModel)]="infoRequest.name" class="form-control"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqname'].errors }"
-        required>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqname'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqname'].errors.required">El nombre es obligatorio</div>
+  <!-- Contact Info -->
+  <div class="row mt-4 pl-3">
+    <div class="col-md-6">
+      <h3 class="contact-display-5">{{globalCnstns.K_CONTACT_SECTION_TITLE}}</h3>
+      <hr class="my-6">
+      <p>{{globalCnstns.K_CONTACT_ADDRESS_STR}}</p>
+      <blockquote>
+        <p>{{informationObj.cnt_address}}</p>
+      </blockquote>
+      <p>{{globalCnstns.K_CONTACT_EMAILS_STR}}</p>
+      <blockquote>
+        <p [innerHTML]="formatEmails"></p>
+      </blockquote>
+      <p>{{globalCnstns.K_CONTACT_APPO_STR}}</p>
+      <blockquote>
+        <p>{{informationObj.cnt_ph_appo}}</p>
+      </blockquote>
+      <p>{{globalCnstns.K_CONTACT_MWIVES_STR}}</p>
+      <blockquote>
+        <p>{{informationObj.cnt_ph_mwives}}</p>
+      </blockquote>
+      <p>{{globalCnstns.K_CONTACT_PHYSIO_STR}}</p>
+      <blockquote>
+        <p>{{informationObj.cnt_ph_physio}}</p>
+      </blockquote>
+    </div>
+
+  <!-- Contact Form -->
+    <div class="col-md-6">
+      <h3 class="contact-display-5">{{globalCnstns.K_CONTACT_REQUEST_SECTION_TITLE}}</h3>
+      <hr class="my-6">
+      <form (ngSubmit)="onSubmit( contactForm )" #contactForm="ngForm" class="validate-form contact-form">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="reqname">{{globalCnstns.K_CONTACT_NAME_STR}}</label>
+          <input name="reqname" id="reqname" type="text" [(ngModel)]="infoRequest.name" class="form-control"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqname'].errors }"
+          required>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqname'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqname'].errors.required">
+                {{globalCnstns.K_CONTACT_NAME_REQUIRED_STR}}
+              </div>
+          </div>
         </div>
-      </div>
-      <!-- Surname -->
-      <div class="form-group">
-        <label for="reqsurname">Apellidos *</label>
-        <input name="reqsurname" id="reqsurname" type="text" [(ngModel)]="infoRequest.surname" class="form-control"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqsurname'].errors }"
-        required>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqsurname'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqsurname'].errors.required">Los apellidos son obligatorios</div>
+        <!-- Surname -->
+        <div class="form-group">
+          <label for="reqsurname">{{globalCnstns.K_CONTACT_SURNAME_STR}}</label>
+          <input name="reqsurname" id="reqsurname" type="text" [(ngModel)]="infoRequest.surname" class="form-control"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqsurname'].errors }"
+          required>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqsurname'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqsurname'].errors.required">
+                {{globalCnstns.K_CONTACT_SURNAME_REQUIRED_STR}}
+              </div>
+          </div>
         </div>
-      </div>
-      <!-- Email -->
-      <div class="form-group">
-        <label for="reqemail">Email *</label>
-        <input name="reqemail" id="reqemail" type="email" [(ngModel)]="infoRequest.email" class="form-control"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqemail'].errors }"
-        required email>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqemail'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqemail'].errors.required">El email es obligatorio</div>
-            <div *ngIf="contactForm.controls['reqemail'].errors.email">El email no es valido</div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="reqemail">{{globalCnstns.K_CONTACT_EMAIL_STR}}</label>
+          <input name="reqemail" id="reqemail" type="email" [(ngModel)]="infoRequest.email" class="form-control"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqemail'].errors }"
+          required email>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqemail'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqemail'].errors.required">{{globalCnstns.K_CONTACT_EMAIL_REQUIRED_STR}}</div>
+              <div *ngIf="contactForm.controls['reqemail'].errors.email">{{globalCnstns.K_CONTACT_EMAIL_VALID_STR}}</div>
+          </div>
         </div>
-      </div>
-      <!-- Subject -->
-      <div class="form-group">
-        <label for="reqsubject">Asunto *</label>
-        <select name="reqsubject" id="reqsubject" [(ngModel)]="infoRequest.subject" class="form-control"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqsubject'].errors }"
-        required>
-          <option>Información</option>
-          <option>Cita Previa</option>
-          <option>Inscripción Taller/Curso</option>
-        </select>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqsubject'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqsubject'].errors.required">El asunto es obligatorio</div>
+        <!-- Subject -->
+        <div class="form-group">
+          <label for="reqsubject">{{globalCnstns.K_CONTACT_SUBJECT_STR}}</label>
+          <select name="reqsubject" id="reqsubject" [(ngModel)]="infoRequest.subject" class="form-control"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqsubject'].errors }"
+          required>
+            <option>{{globalCnstns.K_CONTACT_SUBJECT_INFO_STR}}</option>
+            <option>{{globalCnstns.K_CONTACT_SUBJECT_APPO_STR}}</option>
+            <option>{{globalCnstns.K_CONTACT_SUBJECT_INSC_STR}}</option>
+          </select>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqsubject'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqsubject'].errors.required">
+                {{globalCnstns.K_CONTACT_SUBJECT_REQUIRED_STR}}
+              </div>
+          </div>
         </div>
-      </div>
-      <!-- Message -->
-      <div class="form-group">
-        <label for="reqmessage">Mensaje *</label>
-        <textarea name="reqmessage" id="reqmessage" [(ngModel)]="infoRequest.message" class="form-control"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqmessage'].errors }"
-        rows="3" required>
-        </textarea>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqmessage'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqmessage'].errors.required">El mensaje es obligatorio</div>
+        <!-- Message -->
+        <div class="form-group">
+          <label for="reqmessage">{{globalCnstns.K_CONTACT_MESSAGE_STR}}</label>
+          <textarea name="reqmessage" id="reqmessage" [(ngModel)]="infoRequest.message" class="form-control"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqmessage'].errors }"
+          rows="3" required>
+          </textarea>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqmessage'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqmessage'].errors.required">
+                {{globalCnstns.K_CONTACT_MESSAGE_REQUIRED_STR}}
+              </div>
+          </div>
         </div>
-      </div>
-      <!-- RGPD -->
-      <div class="form-group form-check">
-        <input name="reqAcceptRGPD" id="reqAcceptRGPD" type="checkbox" [(ngModel)]="infoRequest.acceptRGPD" class="form-check-input"
-        [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqAcceptRGPD'].errors }"
-        required>
-        <label for="reqAcceptRGPD">
-          He leído y acepto <a [routerLink]="['/politica_privacidad']" target="_blank">política de privacidad</a>.
-        </label>
-        <div *ngIf="contactForm.submitted && contactForm.controls['reqAcceptRGPD'].errors" class="invalid-feedback">
-            <div *ngIf="contactForm.controls['reqAcceptRGPD'].errors.required">Debe aceptar la política de privacidad</div>
+        <!-- RGPD -->
+        <div class="form-group form-check">
+          <input name="reqAcceptRGPD" id="reqAcceptRGPD" type="checkbox" [(ngModel)]="infoRequest.acceptRGPD" class="form-check-input"
+          [ngClass]="{ 'is-invalid': contactForm.submitted && contactForm.controls['reqAcceptRGPD'].errors }"
+          required>
+          <label for="reqAcceptRGPD">
+            {{globalCnstns.K_CONTACT_READ_POLICY_STR}} <a [routerLink]="['/politica_privacidad']" target="_blank">{{globalCnstns.K_CONTACT_PRIVACY_POLICY_STR}}</a>.
+          </label>
+          <div *ngIf="contactForm.submitted && contactForm.controls['reqAcceptRGPD'].errors" class="invalid-feedback">
+              <div *ngIf="contactForm.controls['reqAcceptRGPD'].errors.required">
+                {{globalCnstns.K_CONTACT_ACCEPT_PP_STR}}
+              </div>
+          </div>
         </div>
-      </div>
-      <!-- Send -->
-      <button class="submit-form-btn" type="submit">
-          Enviar solicitud
-      </button>
-    </form>
+        <!-- Send -->
+        <button class="submit-form-btn" type="submit">
+            {{globalCnstns.K_CONTACT_SEND_REQUEST_STR}}
+        </button>
+      </form>
+    </div>
   </div>
 </div>

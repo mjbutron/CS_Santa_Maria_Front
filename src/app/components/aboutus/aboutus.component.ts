@@ -18,13 +18,8 @@ export class AboutusComponent implements OnInit {
   aboutusList: AboutUsInterface[] = [];
   // Load
   isLoaded: boolean;
-  loadingStr = globalsConstants.K_LOADING_STR;
-  // Text About Us
-  sectionTitle = globalsConstants.K_ABOUT_US_SECTION_TITLE;
-  historyP1 = globalsConstants.K_ABOUT_US_HISTORY_ONE;
-  historyP2 = globalsConstants.K_ABOUT_US_HISTORY_TWO;
-  historyP3 = globalsConstants.K_ABOUT_US_HISTORY_THREE;
-  historyP4 = globalsConstants.K_ABOUT_US_HISTORY_FOUR;
+  // Global Constants
+  globalCnstns = globalsConstants;
 
   /**
    * [constructor]
@@ -41,7 +36,7 @@ export class AboutusComponent implements OnInit {
   }
 
   /**
-   * [getAboutUs Get about us information]
+   * [Get about us information]
    * @return [List filled with team members]
    */
   getAboutUs() {
