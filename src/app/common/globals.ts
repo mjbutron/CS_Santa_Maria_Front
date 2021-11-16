@@ -25,6 +25,12 @@ export const K_LOADING_STR = 'Cargando...';
 export const K_CONFIRM_BUTTON_COLOR = '#d33';
 export const K_CANCEL_BUTTON_COLOR = '#0095A6';
 export const K_SLIDER_TEXT_COLOR = '#ffffff';
+export const K_BACKGROUND_INSC_COLOR = '#f1f1f1';
+// Inscriptions
+export const K_INSCRIPTION_STR = 'Inscripción';
+export const K_INSCRIPTION_TEXT_STR = 'Para realizar la inscripción pongase en contacto con nosotras a través de teléfono o solicitud*.<br><br>';
+export const K_INSCRIPTION_NOTE_STR = '<b>(*)</b>En la solicitud, recuerde indicar en el asunto "Inscripción" y especificar el nombre del curso o taller en el mensaje.<br>¡Gracias!';
+export const K_INSCRIPTION_OK_BUTTON_STR = 'Enviar solicitud';
 // Webs Sections
 //// About Us
 export const K_ABOUT_US_SECTION_TITLE = 'Nuestro equipo';
@@ -98,6 +104,10 @@ export const K_CONTACT_SEND_REQUEST_STR = 'Enviar solicitud';
 export const K_CONTACT_SUCCESS_REQUEST_STR = '¡Solicitud enviada!';
 export const K_CONTACT_RESP_REQUEST_STR = 'Responderemos a su solicitud lo antes posible.';
 export const K_CONTACT_ERROR_REQUEST_STR = 'No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.';
+//// Course Details
+export const K_COURSE_DTL_BACK_STR = 'Volver a cursos';
+export const K_COURSE_DTL_COMPLETE_STR = 'Completo';
+export const K_COURSE_DTL_INSCRIPTION_STR = 'Inscribirse';
 
 // End web sections
 

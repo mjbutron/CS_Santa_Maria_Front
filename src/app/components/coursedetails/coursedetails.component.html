@@ -3,7 +3,8 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center course-dtl-load-space">...</p>
 </div>
 
 <!-- Content -->
@@ -11,54 +12,55 @@
   <!-- Header -->
   <div class="row">
       <div class="header-section">
-        <h1 class="title-display-5 mt-5 mb-5">{{course.title}}</h1>
+        <h1 class="course-dtl-title-display-5 mt-5 mb-5">{{course.title}}</h1>
       </div>
   </div>
   <!-- Section back -->
-  <div class="row section-back pl-3 mt-3">
+  <div class="row course-dtl-section-back pl-3 mt-3">
     <div class="col-md-2 text-left">
       <a [routerLink]="['/cursos']" class="font-weight-normal">
-        <i class="fas fa-arrow-left"></i> Volver a cursos
+        <i class="fas fa-arrow-left"></i> {{globalCnstns.K_COURSE_DTL_BACK_STR}}
       </a>
     </div>
+    <!-- Information section -->
     <div class="col-md-10 text-right">
-      <i class="fas fa-euro-sign icon-color" title="Precio"></i>
+      <i class="fas fa-euro-sign course-dtl-icon-color" title="Precio"></i>
       <small class="text-muted mr-1">
         {{(course.price==0 || course.price==null)? 'Consultar':(course.price)}}
       </small>
       |
-      <i class="far fa-calendar-alt icon-color ml-1" title="Fecha"></i>
+      <i class="far fa-calendar-alt course-dtl-icon-color ml-1" title="Fecha"></i>
       <small class="text-muted mr-1">
         {{(course.session_date == noDate)? 'Consultar':course.session_date | date}}
       </small>
        |
-       <i class="far fa-clock icon-color ml-1" title="Horario"></i>
+       <i class="far fa-clock course-dtl-icon-color ml-1" title="Horario"></i>
        <small class="text-muted mr-1">
          {{course.session_start | timeWithoutSec}} a {{course.session_end | timeWithoutSec}}
        </small>
        |
-       <i class="fas fa-graduation-cap icon-color ml-1" title="Duración"></i>
+       <i class="fas fa-graduation-cap course-dtl-icon-color ml-1" title="Duración"></i>
        <small class="text-muted mr-1">
          {{(course.sessions==null)?(0)+' Clases':(course.sessions==1)? (course.sessions)+' Clase':(course.sessions)+' Clases'}} ·
          {{(course.hours==null)?(0)+' Horas':(course.hours==1)? (course.hours)+' Hora':(course.hours)+' Horas'}}
        </small>
        |
-       <i class="fas fa-map-marker-alt icon-color ml-1" title="Ubicación"></i>
+       <i class="fas fa-map-marker-alt course-dtl-icon-color ml-1" title="Ubicación"></i>
        <small class="text-muted mr-1">
          {{course.address}}
        </small>
        |
-       <i class="fas fa-chalkboard-teacher icon-color ml-1" title="Impartido"></i>
+       <i class="fas fa-chalkboard-teacher course-dtl-icon-color ml-1" title="Impartido"></i>
        <small class="text-muted mr-1">
          {{course.impart}}
        </small>
        |
-       <i class="fas fa-chair icon-color ml-1" title="Plazas"></i>
+       <i class="fas fa-chair course-dtl-icon-color ml-1" title="Plazas"></i>
        <small *ngIf="course.free_places!=0" class="text-muted mr-1">
          {{(course.free_places == null)? (0):(course.free_places)}} Plazas libres
        </small>
        <small *ngIf="course.free_places==0" class="text-muted mr-1">
-         Completo
+         {{globalCnstns.K_COURSE_DTL_COMPLETE_STR}}
        </small>
     </div>
   </div>
@@ -66,8 +68,11 @@
   <div class="ck-content m-5" [innerHTML]="course.description | safe: 'html'"></div>
   <hr>
   <div class="row justify-content-center">
-      <button (click)="onInscription()" class="course-btn m-3">
-          Inscribirse
+      <button *ngIf="course.free_places!=0" (click)="onInscription()" class="course-dtl-btn m-3">
+          {{globalCnstns.K_COURSE_DTL_INSCRIPTION_STR}}
+      </button>
+      <button *ngIf="course.free_places==0" (click)="onInscription()" class="course-dtl-btn m-3 not-allowed" disabled>
+          {{globalCnstns.K_COURSE_DTL_INSCRIPTION_STR}}
       </button>
   </div>
 

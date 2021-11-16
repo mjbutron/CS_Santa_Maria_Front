@@ -104,3 +104,8 @@ h3.fancy, .ck.ck-button.ckeditor-title {
   color: #0e94a0;
 }
 /* --- ** End Style CSSM Font ** --- */
+
+/* --- ** Cursor ** --- */
+.not-allowed {
+  cursor: not-allowed;
+}
