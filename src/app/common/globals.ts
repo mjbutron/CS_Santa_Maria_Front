@@ -32,6 +32,43 @@ export const K_ABOUT_US_HISTORY_ONE = 'Tras varios años de formación fuera de 
 export const K_ABOUT_US_HISTORY_TWO = 'Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo, parto, puerperio, lactancia y crianza, facilitando la toma de decisiones desde la más actualizada evidencia científica sin perder el lado humano.';
 export const K_ABOUT_US_HISTORY_THREE = 'Actualmente compaginamos nuestra actividad laboral entre el sector público y privado.';
 export const K_ABOUT_US_HISTORY_FOUR = '* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).';
+//// Brands
+export const K_BRANDS_IMG_VECTOR = [
+  { img: "../../assets/img/asisa.png" },
+  { img: "../../assets/img/allianz.png" },
+  { img: "../../assets/img/adeslas.png" },
+  { img: "../../assets/img/zurich.png" },
+  { img: "../../assets/img/reale.png" },
+  { img: "../../assets/img/aegon.png" },
+  { img: "../../assets/img/liberty.png" },
+  { img: "../../assets/img/mapfre.png" },
+  { img: "../../assets/img/sanitas.png" }
+];
+export const K_BRANDS_CAROUSEL_CONFIG = {
+  "slidesToShow": 2,
+  "slidesToScroll": 1,
+  "centerMode": true,
+  "autoplay": true,
+  "autoplaySpeed": 3000,
+  "arrows": false,
+  "dots": true,
+  "infinite": true,
+  "pauseOnHover": false,
+  "variableWidth": true,
+  "responsive": [{
+    "breakpoint": 768,
+    "settings": {
+      "slidesToShow": 1,
+      "slidesToScroll": 1
+    }
+  }, {
+    "breakpoint": 520,
+    "settings": {
+      "slidesToShow": 1,
+      "slidesToScroll": 1
+    }
+  }]
+};
 //// Contact
 export const K_CONTACT_SECTION_TITLE = 'Datos de contacto';
 export const K_CONTACT_REQUEST_SECTION_TITLE = 'Envianos tu solicitud';
@@ -62,7 +99,7 @@ export const K_CONTACT_SUCCESS_REQUEST_STR = '¡Solicitud enviada!';
 export const K_CONTACT_RESP_REQUEST_STR = 'Responderemos a su solicitud lo antes posible.';
 export const K_CONTACT_ERROR_REQUEST_STR = 'No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.';
 
-// End web sectios
+// End web sections
 
 @Injectable()
 export class Globals {

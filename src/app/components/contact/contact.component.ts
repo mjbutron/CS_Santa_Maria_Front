@@ -59,15 +59,7 @@ export class ContactComponent implements OnInit {
   getContactInfo() {
     this.dataApi.getInfoContact().subscribe((data) => {
       if (globalsConstants.K_COD_OK == data.cod && 0 < data.contactInfo.length) {
-        for (let i = 0; i < data.contactInfo.length; i++) {
-          this.informationObj.cnt_address = data.contactInfo[i].cnt_address;
-          this.informationObj.cnt_ph_appo = data.contactInfo[i].cnt_ph_appo;
-          this.informationObj.cnt_emails = data.contactInfo[i].cnt_emails;
-          this.informationObj.cnt_ph_mwives = data.contactInfo[i].cnt_ph_mwives;
-          this.informationObj.cnt_ph_physio = data.contactInfo[i].cnt_ph_physio;
-          this.informationObj.cnt_lat = data.contactInfo[i].cnt_lat;
-          this.informationObj.cnt_lon = data.contactInfo[i].cnt_lon;
-        }
+        this.informationObj = data.contactInfo[0];
         this.lat = +this.informationObj.cnt_lat;
         this.lon = +this.informationObj.cnt_lon;
         if (this.informationObj.cnt_emails) {
