@@ -58,6 +58,9 @@ export const K_CONTACT_READ_POLICY_STR = 'He leído y acepto ';
 export const K_CONTACT_PRIVACY_POLICY_STR = 'política de privacidad';
 export const K_CONTACT_ACCEPT_PP_STR = 'Debe aceptar la política de privacidad';
 export const K_CONTACT_SEND_REQUEST_STR = 'Enviar solicitud';
+export const K_CONTACT_SUCCESS_REQUEST_STR = '¡Solicitud enviada!';
+export const K_CONTACT_RESP_REQUEST_STR = 'Responderemos a su solicitud lo antes posible.';
+export const K_CONTACT_ERROR_REQUEST_STR = 'No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.';
 
 // End web sectios
 

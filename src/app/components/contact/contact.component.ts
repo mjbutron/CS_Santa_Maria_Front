@@ -107,14 +107,14 @@ export class ContactComponent implements OnInit {
       if (globalsConstants.K_COD_OK == data.cod) {
         form.resetForm();
         this.isLoaded = true;
-        this.toastr.success("Responderemos a su solicitud lo antes posible.", "¡Solicitud enviada!", {
+        this.toastr.success(globalsConstants.K_CONTACT_RESP_REQUEST_STR, K_CONTACT_SUCCESS_REQUEST_STR, {
           progressBar: true,
           positionClass: 'toast-top-full-width'
         });
       }
       else {
         this.isLoaded = true;
-        this.toastr.error("No se ha podido enviar su solicitud. Por favor, intentelo de nuevo mas tarde.", "¡Error!", {
+        this.toastr.error(globalsConstants.K_CONTACT_ERROR_REQUEST_STR, K_ERROR_EXC_STR, {
           progressBar: true,
           positionClass: 'toast-top-full-width'
         });
