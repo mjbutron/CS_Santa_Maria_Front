@@ -109,3 +109,7 @@ h3.fancy, .ck.ck-button.ckeditor-title {
 .not-allowed {
   cursor: not-allowed;
 }
+
+.pointer-cursor {
+  cursor: pointer;
+}

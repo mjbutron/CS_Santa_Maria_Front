@@ -160,7 +160,3 @@
 .separator:not(:empty)::after {
   margin-left: 1em;
 }
-
-.courses-cursor {
-  cursor: pointer;
-}
