@@ -3,15 +3,10 @@ import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
+// Services
 import { DataApiService } from 'src/app/services/data-api.service';
-
+// Interfaces
 import { CourseInterface } from 'src/app/models/course-interface';
-
-const K_CONFIRM_BUTTON_COLOR = '#d33';
-const K_CANCEL_BUTTON_COLOR = '#0095A6';
-const K_OK_BUTTON_STR = 'Enviar solicitud';
-const K_CANCEL_BUTTON_STR = 'Cancelar';
 
 @Component({
   selector: 'app-courses',
@@ -26,46 +21,65 @@ export class CoursesComponent implements OnInit {
   noDate = globalsConstants.K_NO_DATE_STR;
   // Load
   isLoaded: boolean;
+  // Global Constants
+  globalCnstns = globalsConstants;
 
-  constructor(private dataApi: DataApiService, private router: Router) {}
+  /**
+   * [constructor]
+   * @param dataApi  [Data API Object]
+   * @param router   [Router Object]
+   */
+  constructor(private dataApi: DataApiService, private router: Router) { }
 
+  /**
+   * [ngOnInit]
+   */
   ngOnInit() {
     this.isLoaded = false;
     this.getCourses();
   }
 
-  getCourses(){
-    this.dataApi.getAllActiveCourses().subscribe((data) =>{
-      if (globalsConstants.K_COD_OK == data.cod){
+  /**
+   * [Get courses information]
+   * @return [List filled with active courses]
+   */
+  getCourses() {
+    this.dataApi.getAllActiveCourses().subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod) {
         this.courses = data.allCourses;
         this.isLoaded = true;
       }
-      else{
+      else {
         this.isLoaded = true;
       }
     });
   }
 
-  onCourseDetail(id:number){
+  /**
+   * [Redirection to course details.]
+   * @param  id [Id course]
+   */
+  onCourseDetail(id: number) {
     this.router.navigate(['/curso', id]);
   }
 
-  onInscription(){
+  /**
+   * [Inscription to the course]
+   */
+  onInscription() {
     Swal.fire({
-      title: "Inscripción",
-      html: "Para realizar la inscripción pongase en contacto con nosotras a través de teléfono o solicitud.<br><br>"
-      +"<b>(*)</b>En la solicitud, recuerde indicar en el asunto 'Inscripción' y especificar el nombre del curso o taller en el mensaje.<br>Gracias.",
+      title: globalsConstants.K_INSCRIPTION_STR,
+      html: globalsConstants.K_INSCRIPTION_TEXT_STR + globalsConstants.K_INSCRIPTION_NOTE_STR,
       showCancelButton: true,
-      background: '#f1f1f1',
-      confirmButtonColor: K_CANCEL_BUTTON_COLOR,
-      cancelButtonColor: K_CONFIRM_BUTTON_COLOR,
-      confirmButtonText: K_OK_BUTTON_STR,
-      cancelButtonText: K_CANCEL_BUTTON_STR
+      background: globalsConstants.K_BACKGROUND_INSC_COLOR,
+      confirmButtonColor: globalsConstants.K_CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: globalsConstants.K_CANCEL_BUTTON_COLOR,
+      confirmButtonText: globalsConstants.K_INSCRIPTION_OK_BUTTON_STR,
+      cancelButtonText: globalsConstants.K_CANCEL_BUTTON_STR
     }).then((result) => {
       if (result.value) {
         this.router.navigateByUrl('/contacto');
       }
     });
   }
-
 }

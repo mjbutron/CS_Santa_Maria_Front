@@ -3,7 +3,8 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center courses-load-space">...</p>
 </div>
 
 <!-- Content -->
@@ -32,10 +33,10 @@
           <div class="card-body">
             <div class="row ml-1">
               <div>
-                <h5 class="card-title cssm-cursor cssm-card-title" (click)="onCourseDetail(course.id)">{{course.title}}</h5>
+                <h5 class="card-title courses-cursor courses-card-title" (click)="onCourseDetail(course.id)">{{course.title}}</h5>
               </div>
               <div class="courses-price">
-                Precio: {{(course.price==0 || course.price==null)? 'Consultar':(course.price)+'€'}}
+                {{globalCnstns.K_COURSE_PRICE_STR}} {{(course.price==0 || course.price==null)? 'Consultar':(course.price)+'€'}}
               </div>
             </div>
             <div class="row">
@@ -44,22 +45,22 @@
                   <small *ngIf="course.new_course==1" class="text-muted">
                     <span class="courses-badge-new">
                       <span data-purpose="badge" class="badge badge-accented green">
-                        <span class="badge-text">Nuevo</span>
+                        <span class="badge-text">{{globalCnstns.K_COURSE_NEW_STR}}</span>
                       </span>
                     </span>
                   </small>
                   <small *ngIf="course.offer==1" class="text-muted">
                     <span class="courses-badge-new">
                       <span data-purpose="badge" class="badge badge-accented orange">
-                        <span class="badge-text">Oferta</span>
+                        <span class="badge-text">{{globalCnstns.K_COURSE_OFFER_STR}}</span>
                       </span>
                     </span>
                   </small>
                   <small *ngIf="course.session_date" class="text-muted">
-                    Fecha: {{(course.session_date == noDate)? 'Consultar':course.session_date | date}} | {{course.session_start | timeWithoutSec}} a {{course.session_end | timeWithoutSec}}
+                    {{globalCnstns.K_COURSE_DATE_STR}} {{(course.session_date == noDate)? 'Consultar':course.session_date | date}} | {{course.session_start | timeWithoutSec}} a {{course.session_end | timeWithoutSec}}
                   </small>
                   <small *ngIf="!course.session_date" class="text-muted">
-                    Consultar
+                    {{globalCnstns.K_COURSE_QUERY_STR}}
                   </small>
                 </p>
               </div>
@@ -76,7 +77,7 @@
                   <div *ngIf="course.free_places!=0" class="progress-bar" title="Plazas libres: {{course.free_places}}/{{course.places}}"
                   [style.width]="(course.free_places/course.places)*100+'%'"></div>
                   <div *ngIf="course.free_places==0" class="progress-bar pb-danger"
-                  style="width: 100%;">Completo</div>
+                  style="width: 100%;">{{globalCnstns.K_COURSE_DTL_COMPLETE_STR}}</div>
                 </div>
               </div>
             </div>
@@ -87,20 +88,23 @@
               <div class="col-md-3 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    Impartido por: {{course.impart}}
+                    {{globalCnstns.K_COURSE_IMPART_STR}} {{course.impart}}
                   </small>
                 </p>
               </div>
               <div class="col-md-5 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    Lugar: {{course.address}}
+                    {{globalCnstns.K_COURSE_ADDRESS_STR}} {{course.address}}
                   </small>
                 </p>
               </div>
               <div class="col-md-4">
-                <button (click)="onInscription()" class="courses-btn float-right">
-                    Inscribirse
+                <button *ngIf="course.free_places!=0" (click)="onInscription()" class="courses-btn float-right">
+                    {{globalCnstns.K_COURSE_DTL_INSCRIPTION_STR}}
+                </button>
+                <button *ngIf="course.free_places==0" (click)="onInscription()" class="courses-btn float-right not-allowed" disabled>
+                    {{globalCnstns.K_COURSE_DTL_INSCRIPTION_STR}}
                 </button>
               </div>
             </div>
@@ -111,7 +115,7 @@
   </div>
   <div *ngIf="courses.length == 0" class="row text-center m-5">
     <div class="col">
-      No tenemos cursos en estos momentos. Disculpen las molestias.
+      {{globalCnstns.K_COURSE_NO_DATA_STR}}
     </div>
   </div>
 </div>

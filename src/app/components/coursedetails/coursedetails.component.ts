@@ -69,8 +69,8 @@ export class CoursedetailsComponent implements OnInit {
       html: globalsConstants.K_INSCRIPTION_TEXT_STR + globalsConstants.K_INSCRIPTION_NOTE_STR,
       showCancelButton: true,
       background: globalsConstants.K_BACKGROUND_INSC_COLOR,
-      confirmButtonColor: globalsConstants.K_CANCEL_BUTTON_COLOR,
-      cancelButtonColor: globalsConstants.K_CONFIRM_BUTTON_COLOR,
+      confirmButtonColor: globalsConstants.K_CONFIRM_BUTTON_COLOR,
+      cancelButtonColor: globalsConstants.K_CANCEL_BUTTON_COLOR,
       confirmButtonText: globalsConstants.K_INSCRIPTION_OK_BUTTON_STR,
       cancelButtonText: globalsConstants.K_CANCEL_BUTTON_STR
     }).then((result) => {

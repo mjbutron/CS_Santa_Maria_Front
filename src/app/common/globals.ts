@@ -22,8 +22,8 @@ export const K_LOCALE_EN = 'en';
 export const K_NO_DATE_STR = '0000-00-00';
 export const K_LOADING_STR = 'Cargando...';
 // Colors
-export const K_CONFIRM_BUTTON_COLOR = '#d33';
-export const K_CANCEL_BUTTON_COLOR = '#0095A6';
+export const K_CONFIRM_BUTTON_COLOR = '#0095A6';
+export const K_CANCEL_BUTTON_COLOR = '#d33';
 export const K_SLIDER_TEXT_COLOR = '#ffffff';
 export const K_BACKGROUND_INSC_COLOR = '#f1f1f1';
 // Inscriptions
@@ -108,7 +108,15 @@ export const K_CONTACT_ERROR_REQUEST_STR = 'No se ha podido enviar su solicitud.
 export const K_COURSE_DTL_BACK_STR = 'Volver a cursos';
 export const K_COURSE_DTL_COMPLETE_STR = 'Completo';
 export const K_COURSE_DTL_INSCRIPTION_STR = 'Inscribirse';
-
+//// Course
+export const K_COURSE_NEW_STR = 'Nuevo';
+export const K_COURSE_OFFER_STR = 'Oferta';
+export const K_COURSE_DATE_STR = 'Fecha: ';
+export const K_COURSE_PRICE_STR = 'Precio: ';
+export const K_COURSE_QUERY_STR = 'Consultar';
+export const K_COURSE_IMPART_STR = 'Impartido por: ';
+export const K_COURSE_ADDRESS_STR = 'Lugar: ';
+export const K_COURSE_NO_DATA_STR = 'No tenemos cursos en estos momentos. Disculpen las molestias.';
 // End web sections
 
 @Injectable()
