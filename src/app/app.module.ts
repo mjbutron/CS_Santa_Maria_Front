@@ -21,7 +21,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
-import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { BrandsComponent } from './components/brands/brands.component';
 import { WorkshopComponent } from './components/workshop/workshop.component';
@@ -55,7 +54,6 @@ registerLocaleData(localeEs);
     NavbarComponent,
     HomeComponent,
     ServicesComponent,
-    LoginComponent,
     FooterComponent,
     BrandsComponent,
     WorkshopComponent,

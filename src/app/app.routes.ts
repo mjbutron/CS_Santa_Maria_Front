@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
-import { LoginComponent } from './components/login/login.component';
 import { WorkshopComponent } from './components/workshop/workshop.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { CoursesComponent } from './components/courses/courses.component';
@@ -25,7 +24,6 @@ const APP_ROUTES: Routes = [
   { path: 'servicio/:id', component: ServicedetailsComponent },
   { path: 'taller/:id', component: WorkshopdetailsComponent },
   { path: 'curso/:id', component: CoursedetailsComponent },
-  { path: 'login', component: LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
