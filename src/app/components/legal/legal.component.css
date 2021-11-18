@@ -1,8 +1,11 @@
+/* Legal CSS Style */
+
 .content {
   padding: 20px;
   background-color: #f1f1f1;
 }
-.cssm-display-5 {
+
+.legal-display-5 {
   font-family: 'Amatic SC', cursive;
   font-size: 2rem;
   font-weight: 400;
