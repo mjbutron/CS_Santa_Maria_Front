@@ -22,13 +22,13 @@ export class AboutusComponent implements OnInit {
   globalCnstns = globalsConstants;
 
   /**
-   * [constructor]
-   * @param dataApi  [Data API Object]
+   * constructor
+   * @param dataApi  Data API Object
    */
   constructor(private dataApi: DataApiService) { }
 
   /**
-   * [ngOnInit]
+   * ngOnInit
    */
   ngOnInit() {
     this.isLoaded = false;
@@ -36,8 +36,8 @@ export class AboutusComponent implements OnInit {
   }
 
   /**
-   * [Get about us information]
-   * @return [List filled with team members]
+   * Get about us information
+   * @return List filled with team members
    */
   getAboutUs() {
     this.dataApi.getAllAboutUs().subscribe((data) => {

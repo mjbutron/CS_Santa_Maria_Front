@@ -2,14 +2,15 @@
 <div id="preloader" *ngIf="!isLoaded">
   <div id="loader"></div>
 </div>
+<div *ngIf="!isLoaded" class="content-load">
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center home-load-space">...</p>
+</div>
 
 <!-- Slider -->
 <div class="animated fadeInUp carousel slide" id="slider" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#slider" *ngFor="let x of sliders;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>
-    <!-- <li data-target="#slider" data-slide-to="0" class="active"></li>
-    <li data-target="#slider" data-slide-to="1"></li>
-    <li data-target="#slider" data-slide-to="2"></li> -->
   </ul>
   <div class="carousel-inner" role="listbox">
     <div *ngFor="let slider of sliders; let j = index" [ngClass]="j == 0 ? 'carousel-item active' : 'carousel-item'" [style.background-image]="'url('+path+slider.image+')'">
@@ -19,51 +20,14 @@
         </div>
     </div>
   </div>
-  <!-- <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active" [style.background-image]="'url('+pathImgSlider1+')'">
-      <div class="carousel-caption d-md-block">
-          <h2 class="display-4" style="color: #638699;">Masaje prenatal</h2>
-          <p class="lead" style="color: #638699;">Masajes especializados en minimizar las molestias comunes de gestación.</p>
-        </div>
-    </div>
-    <div class="carousel-item" [style.background-image]="'url('+pathImgSlider2+')'">
-      <div class="carousel-caption d-md-block">
-          <h2 class="display-4">Método BLW</h2>
-          <p class="lead">El método BLW/BLISS que ha revolucionado la alimentación infantil.</p>
-        </div>
-    </div>
-    <div class="carousel-item" [style.background-image]="'url('+pathImgSlider3+')'">
-      <div class="carousel-caption d-md-block">
-          <h2 class="display-4">Talleres</h2>
-          <p class="lead">Apuntate a nuestros talleres. Plazas limitadas.</p>
-        </div>
-    </div>
-  </div> -->
 </div>
 <!-- End Slider -->
-<!-- Blq0 Welcome -->
-<!-- <div class="row padding animated fadeInUp">
-  <div class="col-sm-12 col-md-6 col-lg-5">
-    <h1 class="cssm-display-5">¡Bienvenida!</h1>
-    <hr class="my-6">
-    <p>Tras varios años de formación fuera de España* volvemos a casa y, como matronas, queremos aportar nuestro granito de
-    arena compartiendo todo lo aprendido para ofrecer una visión más global de la maternidad.</p>
-    <p>Nuestro principal objetivo es empoderar a las mujeres preparándolas de forma integral y realista frente al embarazo,
-    parto, puerperio, lactancia y crianza, facilitando la toma de decisiones desde la más actualizada evidencia científica
-  sin perder el lado humano.</p>
-  <p>Actualmente compaginamos nuestra actividad laboral entre el sector público y privado.</p>
-  <p>* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).</p>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-7">
-    <img src="../../assets/img/massagePrenatal.jpg" alt="" class="rounded-lg cssm-img-full">
-  </div>
-</div> -->
-  <!-- End Blq0 Welcome -->
-<!-- Blq1 Services -->
+
+<!-- Services -->
 <div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
-  <div class="cssm-bb-image">
-    <h1 class="cssm-display-5">Servicios</h1>
-    <p class="cssm-lead text-center">Estos son nuestros principales servicios. Podrá encontrar más información en la sección de servicios.</p>
+  <div class="home-bb-image">
+    <h1 class="home-display-5">{{globalCnstns.K_HOME_SERVICE_STR}}</h1>
+    <p class="home-lead text-center">{{globalCnstns.K_HOME_SUB_SERVICE_STR}}</p>
     <hr class="my-4">
   </div>
   <div class="container">
@@ -76,7 +40,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Preparación al parto</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_PREP_BIRTH_STR}}</p>
         </div>
       </div>
     </div>
@@ -88,7 +52,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Dilatación en casa</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_DILATATION_STR}}</p>
         </div>
       </div>
     </div>
@@ -100,7 +64,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Lactancia</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_LACTATION_STR}}</p>
         </div>
       </div>
     </div>
@@ -112,7 +76,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Talleres y charlas</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_WORKSHOPS_STR}}</p>
         </div>
       </div>
     </div>
@@ -126,7 +90,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Seguimiento en el postparto</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_POST_BIRTH_STR}}</p>
         </div>
       </div>
     </div>
@@ -138,7 +102,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Recuparación del suelo pélvico</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_PELVIC_STR}}</p>
         </div>
       </div>
     </div>
@@ -150,7 +114,7 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Pilates con bebés</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_PILATES_STR}}</p>
         </div>
       </div>
     </div>
@@ -162,81 +126,83 @@
           </div>
         </div>
         <div class="serv-details text-center pb-4">
-          <p class="mb-0 text-uppercase name">Consultas a domicilio</p>
+          <p class="mb-0 text-uppercase name">{{globalCnstns.K_HOME_AT_HOME_STR}}</p>
         </div>
       </div>
     </div>
   </div>
+  </div>
 </div>
+<!-- End Services -->
 
-</div>
-<!-- End Blq1 Services -->
-<!-- Blq 2 Workshops -->
+<!-- Workshops -->
 <div *ngIf="wspInHome.length > 0" class="row padding animated fadeInUp">
-  <div class="col-12 cssm-fruit-image">
-    <h1 class="cssm-display-5">Talleres</h1>
-    <p class="cssm-lead text-center">No te pierdas nuestros talleres. Plazas limitadas, ¡Apúntate!.</p>
+  <div class="col-12 home-fruit-image">
+    <h1 class="home-display-5">{{globalCnstns.K_HOME_WORKSHOP_TTL_STR}}</h1>
+    <p class="home-lead text-center">{{globalCnstns.K_HOME_SUB_WORKSHOP_STR}}</p>
     <hr class="my-4">
   </div>
   <div class="card-columns">
-    <div *ngFor="let workshop of wspInHome | slice:0:3; let i=index" class="card cssm-background-card">
+    <div *ngFor="let workshop of wspInHome | slice:0:3; let i=index" class="card home-background-card">
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <p class="fw-bold cssm-colorWhite cssm-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
-        <p class="card-text cssm-colorWhite" style="font-weight: initial;">
+        <p class="fw-bold home-colorWhite pointer-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
+        <p class="card-text home-colorWhite" style="font-weight: initial;">
           {{(workshop.short_description.length>150)? (workshop.short_description | slice:0:150)+'...':(workshop.short_description)}}
         </p>
       </div>
-      <div class="card-footer text-center cssm-background-footer-card">
-        <small *ngIf="workshop.session_date" class="cssm-colorWhite">
+      <div class="card-footer text-center home-background-footer-card">
+        <small *ngIf="workshop.session_date" class="home-colorWhite">
           Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}
         </small>
-        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">
-          Fecha: Consultar
+        <small *ngIf="!workshop.session_date" class="home-colorWhite">
+          {{globalCnstns.K_HOME_WORKSHOP_QUERY_DATE_STR}}
         </small>
       </div>
     </div>
-    <div *ngIf="wspInHome.length > 3" class="card text-white text-center p-3 cssm-background-card-center">
-      <a [routerLink]="['/talleres']" class="cssm-lnks-card-center">
+    <div *ngIf="wspInHome.length > 3" class="card text-white text-center p-3 home-background-card-center">
+      <a [routerLink]="['/talleres']" class="home-lnks-card-center">
         <blockquote class="blockquote mb-0">
-          <p class="cssm-colorWhite">No lo dudes, ven y apúntate a nuestros próximos talleres.</p>
+          <p class="home-colorWhite">{{globalCnstns.K_HOME_WORKSHOP_TXT_CENTER_STR}}</p>
         </blockquote>
       </a>
     </div>
-    <div *ngFor="let workshop of wspInHome | slice:3:6; let i=index" class="card cssm-background-card">
+    <div *ngFor="let workshop of wspInHome | slice:3:6; let i=index" class="card home-background-card">
       <img [src]="path+workshop.image" class="card-img-top" alt="...">
       <div class="card-body">
-        <p class="fw-bold cssm-colorWhite cssm-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
-        <p class="card-text cssm-colorWhite" style="font-weight: initial;">
+        <p class="fw-bold home-colorWhite pointer-cursor" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</p>
+        <p class="card-text home-colorWhite" style="font-weight: initial;">
           {{(workshop.short_description.length>150)? (workshop.short_description | slice:0:150)+'...':(workshop.short_description)}}
         </p>
       </div>
-      <div class="card-footer text-center cssm-background-footer-card">
-        <small *ngIf="workshop.session_date" class="cssm-colorWhite">
+      <div class="card-footer text-center home-background-footer-card">
+        <small *ngIf="workshop.session_date" class="home-colorWhite">
           Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}}
         </small>
-        <small *ngIf="!workshop.session_date" class="cssm-colorWhite">
-          Fecha: Consultar
+        <small *ngIf="!workshop.session_date" class="home-colorWhite">
+          {{globalCnstns.K_HOME_WORKSHOP_QUERY_DATE_STR}}
         </small>
       </div>
     </div>
   </div>
 </div>
-<!-- End Blq2 Workshops -->
-<!-- Blq3 Opinions -->
+<!-- End Workshops -->
+
+<!-- Opinions -->
 <div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
-  <div class="cssm-testimonials-image">
-    <h1 class="cssm-display-5">Testimonios</h1>
+  <div class="home-testimonials-image">
+    <h1 class="home-display-5">{{globalCnstns.K_HOME_OPINIONS_TTL_STR}}</h1>
     <hr class="my-4">
   </div>
   <app-opinions></app-opinions>
 </div>
-<!-- End Blq3 Opinions -->
-<!-- Blq4 Brands -->
+<!-- End Opinions -->
+
+<!-- Brands -->
 <div *ngIf="isLoaded">
-  <h1 class="cssm-display-5">Compañias</h1>
-  <p class="cssm-lead text-center">Trabajamos con las principales compañias. Pacientes privados y seguros (Consultar compañias).</p>
+  <h1 class="home-display-5">{{globalCnstns.K_HOME_BRANDS_TTL_STR}}</h1>
+  <p class="home-lead text-center">{{globalCnstns.K_HOME_SUB_BRANDS_STR}}</p>
   <hr class="my-4">
   <app-brands></app-brands>
 </div>
-<!-- End Blq4 Brands -->
+<!-- End Brands -->

@@ -35,9 +35,9 @@ export class ContactComponent implements OnInit {
   globalCnstns = globalsConstants;
 
   /**
-   * [constructor]
-   * @param dataApi  [Data API Object]
-   * @param toastr   [Toastr service]
+   * constructor
+   * @param dataApi  Data API Object
+   * @param toastr   Toastr service
    */
   constructor(private dataApi: DataApiService, public toastr: ToastrService) {
     this.informationObj = new ContactInterface();
@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
   }
 
   /**
-   * [ngOnInit]
+   * ngOnInit
    */
   ngOnInit() {
     this.isLoaded = false;
@@ -53,8 +53,8 @@ export class ContactComponent implements OnInit {
   }
 
   /**
-   * [Get contact information]
-   * @return [Object filled with contact information]
+   * Get contact information
+   * @return Object filled with contact information
    */
   getContactInfo() {
     this.dataApi.getInfoContact().subscribe((data) => {
@@ -67,15 +67,15 @@ export class ContactComponent implements OnInit {
         }
         this.isLoaded = true;
       } else {
-        this.isLoaded = true;
+        this.isLoaded = false;
       }
     });
   }
 
   /**
-   * [Check if there are multiple emails]
-   * @param  dataEmails [Emails stored in data base]
-   * @return            [Email formatting]
+   * Check if there are multiple emails
+   * @param  dataEmails Emails stored in data base
+   * @return            Email formatting
    */
   checkEmails(dataEmails: string) {
     var splitted = dataEmails.split(";");
@@ -85,9 +85,9 @@ export class ContactComponent implements OnInit {
   }
 
   /**
-   * [Sending the request]
-   * @param  form [NgForm]
-   * @return      [It informs if the request has been sent or not.]
+   * Sending the request
+   * @param  form NgForm
+   * @return      It informs if the request has been sent or not.
    */
   onSubmit(form: NgForm) {
     this.isLoaded = false;

@@ -25,14 +25,14 @@ export class CoursesComponent implements OnInit {
   globalCnstns = globalsConstants;
 
   /**
-   * [constructor]
-   * @param dataApi  [Data API Object]
-   * @param router   [Router Object]
+   * constructor
+   * @param dataApi  Data API Object
+   * @param router   Router Object
    */
   constructor(private dataApi: DataApiService, private router: Router) { }
 
   /**
-   * [ngOnInit]
+   * ngOnInit
    */
   ngOnInit() {
     this.isLoaded = false;
@@ -40,8 +40,8 @@ export class CoursesComponent implements OnInit {
   }
 
   /**
-   * [Get courses information]
-   * @return [List filled with active courses]
+   * Get courses information
+   * @return List filled with active courses
    */
   getCourses() {
     this.dataApi.getAllActiveCourses().subscribe((data) => {
@@ -50,21 +50,21 @@ export class CoursesComponent implements OnInit {
         this.isLoaded = true;
       }
       else {
-        this.isLoaded = true;
+        this.isLoaded = false;
       }
     });
   }
 
   /**
-   * [Redirection to course details.]
-   * @param  id [Id course]
+   * Redirection to course details
+   * @param  id Id course
    */
   onCourseDetail(id: number) {
     this.router.navigate(['/curso', id]);
   }
 
   /**
-   * [Inscription to the course]
+   * Inscription to the course
    */
   onInscription() {
     Swal.fire({

@@ -117,6 +117,24 @@ export const K_COURSE_QUERY_STR = 'Consultar';
 export const K_COURSE_IMPART_STR = 'Impartido por: ';
 export const K_COURSE_ADDRESS_STR = 'Lugar: ';
 export const K_COURSE_NO_DATA_STR = 'No tenemos cursos en estos momentos. Disculpen las molestias.';
+//// Home
+export const K_HOME_SERVICE_STR = 'Servicios';
+export const K_HOME_SUB_SERVICE_STR = 'Estos son nuestros principales servicios. Podrá encontrar más información en la sección de servicios.';
+export const K_HOME_PREP_BIRTH_STR = 'Preparación al parto';
+export const K_HOME_DILATATION_STR = 'Dilatación en casa';
+export const K_HOME_LACTATION_STR = 'Lactancia';
+export const K_HOME_WORKSHOPS_STR = 'Talleres y charlas';
+export const K_HOME_POST_BIRTH_STR = 'Seguimiento en el postparto';
+export const K_HOME_PELVIC_STR = 'Recuparación del suelo pélvico';
+export const K_HOME_PILATES_STR = 'Pilates con bebés';
+export const K_HOME_AT_HOME_STR = 'Consultas a domicilio';
+export const K_HOME_WORKSHOP_TTL_STR = 'Talleres';
+export const K_HOME_SUB_WORKSHOP_STR = 'No te pierdas nuestros talleres. Plazas limitadas, ¡Apúntate!.';
+export const K_HOME_WORKSHOP_QUERY_DATE_STR = 'Fecha: Consultar';
+export const K_HOME_WORKSHOP_TXT_CENTER_STR = 'No lo dudes, ven y apúntate a nuestros próximos talleres.';
+export const K_HOME_OPINIONS_TTL_STR = 'Opiniones';
+export const K_HOME_BRANDS_TTL_STR = 'Compañias';
+export const K_HOME_SUB_BRANDS_STR = 'Trabajamos con las principales compañias. Pacientes privados y seguros (Consultar compañias).';
 // End web sections
 
 @Injectable()

@@ -29,10 +29,10 @@ export class CoursedetailsComponent implements OnInit {
   globalCnstns = globalsConstants;
 
   /**
-   * [constructor]
-   * @param dataApi         [Data API Object]
-   * @param activatedRoute  [Active Router Object]
-   * @param router          [Router Object]
+   * constructor
+   * @param dataApi         Data API Object
+   * @param activatedRoute  Active Router Object
+   * @param router          Router Object
    */
   constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
@@ -49,19 +49,19 @@ export class CoursedetailsComponent implements OnInit {
           }
         }
         else {
-          this.isLoaded = true;
+          this.isLoaded = false;
         }
       });
     });
   }
 
   /**
-   * [ngOnInit]
+   * ngOnInit
    */
   ngOnInit() { }
 
   /**
-   * [Inscription to the course]
+   * Inscription to the course
    */
   onInscription() {
     Swal.fire({

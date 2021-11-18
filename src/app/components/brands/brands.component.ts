@@ -9,22 +9,22 @@ import * as globalsConstants from 'src/app/common/globals';
 export class BrandsComponent implements OnInit {
 
   /**
-   * [Picture list]
+   * Picture list
    */
   slides = globalsConstants.K_BRANDS_IMG_VECTOR;
 
   /**
-   * [Carousel configuration]
+   * Carousel configuration
    */
   slideConfig = globalsConstants.K_BRANDS_CAROUSEL_CONFIG;
 
   /**
-   * [constructor]
+   * constructor
    */
-  constructor() {}
+  constructor() { }
 
   /**
-   * [ngOnInit]
+   * ngOnInit
    */
   ngOnInit() { }
 }
