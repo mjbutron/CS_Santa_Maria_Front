@@ -135,6 +135,12 @@ export const K_HOME_WORKSHOP_TXT_CENTER_STR = 'No lo dudes, ven y apúntate a nu
 export const K_HOME_OPINIONS_TTL_STR = 'Opiniones';
 export const K_HOME_BRANDS_TTL_STR = 'Compañias';
 export const K_HOME_SUB_BRANDS_STR = 'Trabajamos con las principales compañias. Pacientes privados y seguros (Consultar compañias).';
+//// Opinion
+export const K_OPINION_USER_COMMENT_STR = 'userComment';
+export const K_OPINION_COMMENT_BL_CLASS = 'row mt-3 opinion-comment-bl animated ';
+export const K_OPINION_COLUMN_CLASS = 'col-md-6 mb-md-0 mb-5';
+export const K_OPINION_FADEIN_CLASS = 'fadeInUp';
+export const K_OPINION_FADEOUT_CLASS = 'fadeOutDown';
 // End web sections
 
 @Injectable()

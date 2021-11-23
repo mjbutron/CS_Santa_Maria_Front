@@ -1,26 +1,25 @@
-<!-- Opinions -->
 <!-- Loading -->
 <div id="preloader" *ngIf="!isLoaded">
   <div id="loader"></div>
 </div>
-<!-- Section: Testimonials -->
-<section class="testimonial-section text-center my-5">
-  <!--Grid row-->
+
+<!-- Content -->
+<section class="opinion-section text-center my-5">
+  <!--Grid-->
   <div class="row text-center">
-    <!--Grid column-->
     <div *ngFor="let opinion of opnInHome | slice:0:3; let i=index" [class]="classColumn">
-      <div class="testimonial">
+      <div class="opinion">
         <!--Avatar-->
         <div class="avatar mx-auto">
           <img [src]="path+opinion.image" class="rounded-circle z-depth-1 img-fluid">
         </div>
         <!--Content-->
-        <h4 class="font-weight-bold mt-4 testimonial-header-text">{{opinion.name}}</h4>
+        <h4 class="font-weight-bold mt-4 opinion-header-text">{{opinion.name}}</h4>
         <div class="font-weight-normal">
           <span [innerHTML]="(opinion.commentary.length>250)? (opinion.commentary | slice:0:250)+'...':(opinion.commentary)"></span>
         </div>
         <p *ngIf="opinion.commentary.length>250" class="font-weight-normal">
-          <a class="testimonial-lnks-plus" [routerLink]="" (click)="openComment(opinion.name, opinion.commentary)">Leer más</a>
+          <a class="opinion-lnks-plus" [routerLink]="" (click)="openComment(opinion.name, opinion.commentary)">Leer más</a>
         </p>
         <!--Review-->
         <div class="star-text">
@@ -29,23 +28,17 @@
           </span>
         </div>
       </div>
-
     </div>
-    <!--Grid column-->
   </div>
-  <!--Grid row-->
 
   <!-- Commentary -->
   <div #userComment id="userComm"></div>
-  <!--Grid row-->
     <div *ngIf="testContent" [class]="classComment">
       <div class="col-sm-11">
         <p class="font-weight-normal" [innerHTML]="testContent"></p>
       </div>
       <div class="col-sm-1">
-        <a class="testimonial-lnks-plus" title="Ocultar" [routerLink]="" (click)="onCloseComment()">X</a>
+        <a class="opinion-lnks-plus" title="Ocultar" [routerLink]="" (click)="onCloseComment()">X</a>
       </div>
     </div>
-  <!--Grid row-->
 </section>
-<!-- Section: Testimonials -->

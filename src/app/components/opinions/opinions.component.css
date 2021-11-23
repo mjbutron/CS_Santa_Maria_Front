@@ -1,19 +1,20 @@
-/* Opinions--> */
-.testimonial-section .avatar img {
+/* Opinions CSS Style */
+
+.opinion-section .avatar img {
   max-width:200px;
   height:auto;
 }
 
-.testimonial-section .avatar img.rounded-circle {
+.opinion-section .avatar img.rounded-circle {
   max-width:100px;
 }
 
-.testimonial .star-text {
+.opinion .star-text {
   font-size: 1em;
   color: gold;
 }
 
-.testimonial-header-text {
+.opinion-header-text {
   color: #0e94a0;
 }
 
@@ -27,13 +28,12 @@
   height:auto;
 }
 
-.testimonial-lnks-plus {
+.opinion-lnks-plus {
   text-decoration: none;
   background-color: transparent;
   color: #0e94a0;
 }
 
-.testimonial-comment-bl {
+.opinion-comment-bl {
   border-left-style: solid;
 }
-/* <--Opinions */
