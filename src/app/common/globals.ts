@@ -141,6 +141,8 @@ export const K_OPINION_COMMENT_BL_CLASS = 'row mt-3 opinion-comment-bl animated 
 export const K_OPINION_COLUMN_CLASS = 'col-md-6 mb-md-0 mb-5';
 export const K_OPINION_FADEIN_CLASS = 'fadeInUp';
 export const K_OPINION_FADEOUT_CLASS = 'fadeOutDown';
+//// Service Details
+export const K_SERVICE_DTL_BACK_STR = 'Volver a servicios';
 // End web sections
 
 @Injectable()

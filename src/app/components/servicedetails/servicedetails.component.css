@@ -5,7 +5,16 @@
   background-image: url('/../../assets/img/header-title.png');
 }
 
-.title-display-5 {
+.content-load p {
+  color: #0095A6;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.service-dtl-display-5 {
   font-family: 'Amatic SC', cursive;
   font-size: 4rem;
   font-weight: 400;
@@ -14,7 +23,11 @@
   color: #f1f1f1;
 }
 
-.section-back a {
+.service-dtl-load-space {
+  margin-top: 1000px;
+}
+
+.service-dtl-section-back a {
   text-decoration: none;
   color: #0095A6;
 }

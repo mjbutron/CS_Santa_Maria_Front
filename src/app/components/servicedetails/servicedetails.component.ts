@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-custom';
-
 // Services
 import { DataApiService } from 'src/app/services/data-api.service';
 // Interfaces
@@ -23,24 +23,38 @@ export class ServicedetailsComponent implements OnInit {
   service: ServiceInterface;
   // Load
   isLoaded: boolean;
+  // Global Constants
+  globalCnstns = globalsConstants;
 
-  constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute) {
+  /**
+   * constructor
+   * @param dataApi         Data API Object
+   * @param activatedRoute  Active Router Object
+   * @param router          Router Object
+   */
+  constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
     this.service = new ServiceInterface();
-    this.activatedRoute.params.subscribe( param => {
-      this.dataApi.getServiceById(param['id']).subscribe((data) =>{
-        if (globalsConstants.K_COD_OK == data.cod){
-          this.service = data.service[0];
-          this.isLoaded = true;
+    this.activatedRoute.params.subscribe(param => {
+      this.dataApi.getServiceById(param['id']).subscribe((data) => {
+        if (globalsConstants.K_COD_OK == data.cod) {
+          if (data.service.length > 0) {
+            this.service = data.service[0];
+            this.isLoaded = true;
+          }
+          else {
+            this.router.navigateByUrl('/servicios');
+          }
         }
-        else{
+        else {
           this.isLoaded = true;
         }
       });
     });
   }
 
-  ngOnInit() {
-  }
-
+  /**
+   * ngOnInit
+   */
+  ngOnInit() { }
 }

@@ -3,7 +3,8 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center service-dtl-load-space">...</p>
 </div>
 
 <!-- Content -->
@@ -11,13 +12,13 @@
   <!-- Header -->
   <div class="row">
       <div class="header-section">
-        <h1 class="title-display-5 mt-5 mb-5">{{service.title}}</h1>
+        <h1 class="service-dtl-display-5 mt-5 mb-5">{{service.title}}</h1>
       </div>
   </div>
   <!-- Section back -->
-  <div class="section-back pl-3 mt-3">
+  <div class="service-dtl-section-back pl-3 mt-3">
     <a [routerLink]="['/servicios']" class="font-weight-normal text-left">
-      <i class="fas fa-arrow-left"></i> Volver a servicios
+      <i class="fas fa-arrow-left"></i> {{globalCnstns.K_SERVICE_DTL_BACK_STR}}
     </a>
   </div>
   <hr>
