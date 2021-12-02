@@ -143,6 +143,9 @@ export const K_OPINION_FADEIN_CLASS = 'fadeInUp';
 export const K_OPINION_FADEOUT_CLASS = 'fadeOutDown';
 //// Service Details
 export const K_SERVICE_DTL_BACK_STR = 'Volver a servicios';
+//// Service
+export const K_SERVICE_TITLE = '¡Ven a vernos a nuestro centro!';
+export const K_SERVICE_SUBTITLE = 'Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.';
 // End web sections
 
 @Injectable()
