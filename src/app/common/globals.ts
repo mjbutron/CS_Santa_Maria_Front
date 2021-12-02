@@ -146,6 +146,20 @@ export const K_SERVICE_DTL_BACK_STR = 'Volver a servicios';
 //// Service
 export const K_SERVICE_TITLE = '¡Ven a vernos a nuestro centro!';
 export const K_SERVICE_SUBTITLE = 'Echa un vistazo a los servicios que ofrecemos y encuentra el que necesitas.';
+//// Workshop
+export const K_WORKSHOP_P_ONE = '¿Te has dado cuenta de que cuando buscas información sobre algún tema los resultados pueden ser muy distintos en función de dónde lo busques? ¿Consultas páginas fiables?¿Estás segura de que esa información está actualizada según la última evidencia científica?';
+export const K_WORKSHOP_P_TWO = 'En Santamaría estamos muy orgullosas de nuestros talleres. Porque hemos podido “concentrar” toda la información que te interesa para que no tengas que estar buscando más. Ahorrándote tiempo, dinero y algún que otro disgusto y, lo que es más importante, recibirás información de fuentes fiables y actualizadas.';
+export const K_WORKSHOP_P_THREE = 'De hecho nuestros talleres no son estáticos, sino que van siendo modificados en función de las ultimas evidencias.';
+export const K_WORKSHOP_NEW_STR = 'Nuevo';
+export const K_WORKSHOP_OFFER_STR = 'Oferta';
+export const K_WORKSHOP_DATE_STR = 'Fecha: ';
+export const K_WORKSHOP_PRICE_STR = 'Precio: ';
+export const K_WORKSHOP_QUERY_STR = 'Consultar';
+export const K_WORKSHOP_IMPART_STR = 'Impartido por: ';
+export const K_WORKSHOP_ADDRESS_STR = 'Lugar: ';
+export const K_WORKSHOP_COMPLETE_STR = 'Completo';
+export const K_WORKSHOP_INSCRIPTION_STR = 'Inscribirse';
+export const K_WORKSHOP_NO_DATA_STR = 'No tenemos talleres en estos momentos. Disculpen las molestias.';
 // End web sections
 
 @Injectable()

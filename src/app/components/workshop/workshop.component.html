@@ -3,12 +3,12 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center workshop-load-space">...</p>
 </div>
 
 <!-- Content -->
 <div *ngIf="isLoaded" class="animated fadeInUp">
-
   <!-- Header -->
   <div class="row">
       <div class="header-section">
@@ -20,15 +20,9 @@
   <div class="row p-3 mt-3 pl-5 pr-5">
     <div class="col-md-1-12">
       <!-- <hr class="my-4"> -->
-      <p class="text-center">
-        ¿Te has dado cuenta de que cuando buscas información sobre algún tema los resultados pueden ser muy distintos en función de dónde lo busques? ¿Consultas páginas fiables?¿Estás segura de que esa información está actualizada según la última evidencia científica?
-      </p>
-      <p class="text-center">
-        En Santamaría estamos muy orgullosas de nuestros talleres. Porque hemos podido “concentrar” toda la información que te interesa para que no tengas que estar buscando más. Ahorrándote tiempo, dinero y algún que otro disgusto y, lo que es más importante, recibirás información de fuentes fiables y actualizadas.
-      </p>
-      <p class="text-center">
-        De hecho nuestros talleres no son estáticos, sino que van siendo modificados en función de las ultimas evidencias.
-      </p>
+      <p class="text-center">{{globalCnstns.K_WORKSHOP_P_ONE}}</p>
+      <p class="text-center">{{globalCnstns.K_WORKSHOP_P_TWO}}</p>
+      <p class="text-center">{{globalCnstns.K_WORKSHOP_P_THREE}}</p>
     </div>
   </div>
 
@@ -51,10 +45,10 @@
           <div class="card-body">
             <div class="row ml-1">
               <div>
-                <h5 class="card-title cssm-cursor cssm-card-title" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</h5>
+                <h5 class="card-title workshop-cursor workshop-card-title" (click)="onWorkshopDetail(workshop.id)">{{workshop.title}}</h5>
               </div>
               <div class="workshop-price">
-                Precio: {{(workshop.price==0 || workshop.price==null)? 'Consultar':(workshop.price)+'€'}}
+                {{globalCnstns.K_WORKSHOP_PRICE_STR}} {{(workshop.price==0 || workshop.price==null)? 'Consultar':(workshop.price)+'€'}}
               </div>
             </div>
             <div class="row">
@@ -63,15 +57,15 @@
                   <small *ngIf="workshop.new_workshop==1" class="text-muted">
                     <span class="workshop-badge-new">
                       <span data-purpose="badge" class="badge badge-accented green">
-                        <span class="badge-text">Nuevo</span>
+                        <span class="badge-text">{{globalCnstns.K_WORKSHOP_NEW_STR}}</span>
                       </span>
                     </span>
                   </small>
                   <small *ngIf="workshop.session_date" class="text-muted">
-                    Fecha: {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}} a {{workshop.session_end | timeWithoutSec}}
+                    {{globalCnstns.K_WORKSHOP_DATE_STR}} {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}} | {{workshop.session_start | timeWithoutSec}} a {{workshop.session_end | timeWithoutSec}}
                   </small>
                   <small *ngIf="!workshop.session_date" class="text-muted">
-                    Consultar
+                    {{globalCnstns.K_WORKSHOP_QUERY_STR}}
                   </small>
                 </p>
               </div>
@@ -87,7 +81,7 @@
                   <div *ngIf="workshop.free_places!=0" class="progress-bar" title="Plazas libres: {{workshop.free_places}}/{{workshop.places}}"
                   [style.width]="(workshop.free_places/workshop.places)*100+'%'"></div>
                   <div *ngIf="workshop.free_places==0" class="progress-bar pb-danger"
-                  style="width: 100%;">Completo</div>
+                  style="width: 100%;">{{globalCnstns.K_WORKSHOP_COMPLETE_STR}}</div>
                 </div>
               </div>
             </div>
@@ -98,20 +92,23 @@
               <div class="col-md-3 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    Impartido por: {{workshop.impart}}
+                    {{globalCnstns.K_WORKSHOP_IMPART_STR}} {{workshop.impart}}
                   </small>
                 </p>
               </div>
               <div class="col-md-5 pl-0">
                 <p class="card-text">
                   <small class="text-muted">
-                    Lugar: {{workshop.address}}
+                    {{globalCnstns.K_WORKSHOP_ADDRESS_STR}} {{workshop.address}}
                   </small>
                 </p>
               </div>
               <div class="col-md-4">
-                <button (click)="onInscription()" class="workshop-btn float-right">
-                    Inscribirse
+                <button *ngIf="workshop.free_places!=0" (click)="onInscription()" class="workshop-btn float-right">
+                    {{globalCnstns.K_WORKSHOP_INSCRIPTION_STR}}
+                </button>
+                <button *ngIf="workshop.free_places==0" (click)="onInscription()" class="workshop-btn float-right not-allowed" disabled>
+                    {{globalCnstns.K_WORKSHOP_INSCRIPTION_STR}}
                 </button>
               </div>
             </div>
@@ -122,7 +119,7 @@
   </div>
   <div *ngIf="workshops.length == 0" class="row text-center m-5">
     <div class="col">
-      No tenemos talleres en estos momentos. Disculpen las molestias.
+      {{globalCnstns.K_WORKSHOP_NO_DATA_STR}}
     </div>
   </div>
 </div>

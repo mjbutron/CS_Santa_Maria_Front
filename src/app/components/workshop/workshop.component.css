@@ -1,16 +1,27 @@
+/* Workshop CSS Style */
+
 .header-section img {
   width: 100%;
+}
+
+.content-load p {
+  color: #0095A6;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
 .content-workshop {
   padding: 20px;
 }
 
-.content-load {
-  height: 1080px;
+.workshop-load-space {
+  margin-top: 1000px;
 }
 
-.cssm-card-title {
+.workshop-card-title {
   color: #0095A6;
   font-family: "Amatic SC", cursive;
   font-size: 2rem;
@@ -44,7 +55,6 @@
   max-width: 200px;
   background-color: #0095A6;
   border-radius: 3px;
-
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -119,7 +129,6 @@
 }
 
 .workshop-price {
-  /* margin-left: auto; */
   margin-right: 1rem;
 }
 
@@ -144,11 +153,7 @@
   margin-left: 1em;
 }
 
-.cssm-icon-color {
-  color: #04C1C3;
-}
-
-.cssm-cursor {
+.workshop-cursor {
   cursor: pointer;
 }
 
@@ -190,6 +195,7 @@
     width: 100%;
   }
 }
+
 .separator--dots {
   overflow: visible;
   border: 0;
@@ -201,6 +207,7 @@
   border-radius: 50%;
   position: relative;
 }
+
 .separator--dots:before {
   content: "";
   background-color: #04C1C3;
@@ -213,6 +220,7 @@
   -webkit-animation: dot-move-left 2s ease-out forwards;
           animation: dot-move-left 2s ease-out forwards;
 }
+
 .separator--dots:after {
   content: "";
   background-color: #04C1C3;
@@ -243,6 +251,7 @@
     left: 32px;
   }
 }
+
 @-webkit-keyframes dot-move-left {
   0% {
     left: 0;
@@ -251,6 +260,7 @@
     left: -32px;
   }
 }
+
 @keyframes dot-move-left {
   0% {
     left: 0;
@@ -259,6 +269,7 @@
     left: -32px;
   }
 }
+
 .separator--dotter {
   border: 0;
   border-bottom: 5px dotted #04C1C3;
