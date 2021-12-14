@@ -3,7 +3,8 @@
   <div id="loader"></div>
 </div>
 <div *ngIf="!isLoaded" class="content-load">
-  <p class="text-center"><small class="text-muted">Cargando...</small></p>
+  <p class="text-center"><small class="text-muted">{{globalCnstns.K_LOADING_STR}}</small></p>
+  <p class="text-center workshop-dtl-load-space">...</p>
 </div>
 
 <!-- Content -->
@@ -11,53 +12,53 @@
   <!-- Header -->
   <div class="row">
       <div class="header-section">
-        <h1 class="title-display-5 mt-5 mb-5">{{workshop.title}}</h1>
+        <h1 class="workshop-dtl-display-5 mt-5 mb-5">{{workshop.title}}</h1>
       </div>
   </div>
   <!-- Section back -->
-  <div class="row section-back pl-3 mt-3">
+  <div class="row workshop-dtl-section-back pl-3 mt-3">
     <div class="col-md-2 text-left">
       <a [routerLink]="['/talleres']" class="font-weight-normal">
-        <i class="fas fa-arrow-left"></i> Volver a talleres
+        <i class="fas fa-arrow-left"></i> {{globalCnstns.K_WORKSHOP_DTL_BACK_STR}}
       </a>
     </div>
     <div class="col-md-10 text-right">
-      <i class="fas fa-euro-sign icon-color" title="Precio"></i>
+      <i class="fas fa-euro-sign workshop-dtl-icon-color" title="Precio"></i>
       <small class="text-muted mr-1">
         {{(workshop.price==0 || workshop.price==null)? 'Consultar':(workshop.price)}}
       </small>
       |
-      <i class="far fa-calendar-alt icon-color ml-1" title="Fecha"></i>
+      <i class="far fa-calendar-alt workshop-dtl-icon-color ml-1" title="Fecha"></i>
       <small class="text-muted mr-1">
         {{(workshop.session_date == noDate)? 'Consultar':workshop.session_date | date}}
       </small>
        |
-       <i class="far fa-clock icon-color ml-1" title="Horario"></i>
+       <i class="far fa-clock workshop-dtl-icon-color ml-1" title="Horario"></i>
        <small class="text-muted mr-1">
          {{workshop.session_start | timeWithoutSec}} a {{workshop.session_end | timeWithoutSec}}
        </small>
        |
-       <i class="fas fa-graduation-cap icon-color ml-1" title="Duración"></i>
+       <i class="fas fa-graduation-cap workshop-dtl-icon-color ml-1" title="Duración"></i>
        <small class="text-muted mr-1">
          Taller de {{(workshop.hours == null)? (0)+' horas':(workshop.hours==1)? (workshop.hours)+' hora':(workshop.hours)+' horas'}}
        </small>
        |
-       <i class="fas fa-map-marker-alt icon-color ml-1" title="Ubicación"></i>
+       <i class="fas fa-map-marker-alt workshop-dtl-icon-color ml-1" title="Ubicación"></i>
        <small class="text-muted mr-1">
          {{workshop.address}}
        </small>
        |
-       <i class="fas fa-chalkboard-teacher icon-color ml-1" title="Impartido"></i>
+       <i class="fas fa-chalkboard-teacher workshop-dtl-icon-color ml-1" title="Impartido"></i>
        <small class="text-muted mr-1">
          {{workshop.impart}}
        </small>
        |
-       <i class="fas fa-chair icon-color ml-1" title="Plazas"></i>
+       <i class="fas fa-chair workshop-dtl-icon-color ml-1" title="Plazas"></i>
        <small *ngIf="workshop.free_places!=0" class="text-muted mr-1">
          {{(workshop.free_places == null)? (0):(workshop.free_places)}} Plazas libres
        </small>
        <small *ngIf="workshop.free_places==0" class="text-muted mr-1">
-         Completo
+         {{globalCnstns.K_WORKSHOP_DTL_COMPLETE_STR}}
        </small>
     </div>
   </div>
@@ -65,9 +66,11 @@
   <div class="ck-content m-5" [innerHTML]="workshop.description | safe: 'html'"></div>
   <hr>
   <div class="row justify-content-center">
-      <button (click)="onInscription()" class="workshop-btn m-3">
-          Inscribirse
+      <button *ngIf="workshop.free_places!=0" (click)="onInscription()" class="workshop-dtl-btn m-3">
+          {{globalCnstns.K_WORKSHOP_DTL_INSCRIPTION_STR}}
+      </button>
+      <button *ngIf="workshop.free_places==0" (click)="onInscription()" class="workshop-dtl-btn m-3 not-allowed" disabled>
+          {{globalCnstns.K_WORKSHOP_DTL_INSCRIPTION_STR}}
       </button>
   </div>
-
 </div>

@@ -160,6 +160,10 @@ export const K_WORKSHOP_ADDRESS_STR = 'Lugar: ';
 export const K_WORKSHOP_COMPLETE_STR = 'Completo';
 export const K_WORKSHOP_INSCRIPTION_STR = 'Inscribirse';
 export const K_WORKSHOP_NO_DATA_STR = 'No tenemos talleres en estos momentos. Disculpen las molestias.';
+//// Workshop Details
+export const K_WORKSHOP_DTL_BACK_STR = 'Volver a talleres';
+export const K_WORKSHOP_DTL_COMPLETE_STR = 'Completo';
+export const K_WORKSHOP_DTL_INSCRIPTION_STR = 'Inscribirse';
 // End web sections
 
 @Injectable()
