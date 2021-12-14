@@ -7,16 +7,15 @@
         {{phonesStr}}
       </div>
       <div class="col-sm text-right" *ngIf="hasSocialLinks">
-        Redes sociales:
+        {{globalCnstns.K_NAV_SOCIAL_LINKS_STR}}
         <a [href]="informationObj.home_fcbk" *ngIf="hasFbk" class="lnks-facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a [href]="informationObj.home_ytube" *ngIf="hasYtb" class="lnks-youtube" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
         <a [href]="informationObj.home_insta" *ngIf="hasItg" class="lnks-instagram" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-        <!-- | <a [routerLink]="['login']"><i class="fas fa-sign-in-alt"></i></a> -->
       </div>
     </div>
   </div>
 </div>
-<!-- End upper bar -->
+
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light animated fadeInUp sticky-top">
   <a class="navbar-brand" [routerLink]="['inicio']"><img src="../../assets/img/logoLarge.png" alt="" width="200"></a>
@@ -32,37 +31,23 @@
        [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav">
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['inicio']" routerLinkActive="active">Inicio</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['inicio']" routerLinkActive="active">{{globalCnstns.K_HOME_STR}}</a>
       </li>
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['servicios']" routerLinkActive="active">Servicios</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['servicios']" routerLinkActive="active">{{globalCnstns.K_SERVICE_STR}}</a>
       </li>
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['nosotras']" routerLinkActive="active">Nosotras</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['nosotras']" routerLinkActive="active">{{globalCnstns.K_ABOUT_STR}}</a>
       </li>
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['talleres']" routerLinkActive="active">Talleres</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['talleres']" routerLinkActive="active">{{globalCnstns.K_WORKSHOP_STR}}</a>
       </li>
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['cursos']" routerLinkActive="active">Cursos</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['cursos']" routerLinkActive="active">{{globalCnstns.K_COURSES_STR}}</a>
       </li>
       <li class="nav-item animated zoomIn">
-        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['contacto']" routerLinkActive="active">Contacto</a>
+        <a class="nav-link" (click)="toggleNavbar()" [routerLink]="['contacto']" routerLinkActive="active">{{globalCnstns.K_CONTACT_STR}}</a>
       </li>
     </ul>
   </div>
 </nav>
-
-  <!-- Menu animado (test) -->
-  <!-- <nav>
-    <div class="hamburger" id="hamb">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Projects</a></li>
-    </ul>
-  </nav> -->

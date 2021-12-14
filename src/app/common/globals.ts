@@ -173,7 +173,10 @@ export const K_FOOTER_ADMIN_STR = 'Administración';
 export const K_FOOTER_POLICY_STR = 'Política de privacidad';
 export const K_FOOTER_LEGAL_STR = 'Aviso legal';
 export const K_FOOTER_CR_STR = '©2021';
+//// Navbar
+export const K_NAV_SOCIAL_LINKS_STR = 'Redes sociales:';
 //// General
+export const K_HOME_STR = 'Inicio';
 export const K_SERVICE_STR = 'Servicios';
 export const K_ABOUT_STR = 'Quiénes somos';
 export const K_WORKSHOP_STR = 'Talleres';
