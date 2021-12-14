@@ -1,128 +1,93 @@
 <!-- Footer -->
-<footer class="cssm-footer-color pt-4 animated fadeInUp">
-
+<footer class="footer-bg-color pt-4 animated fadeInUp">
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
-
-      <!-- Footer links -->
       <div class="row text-center text-md-left mt-3 pb-3">
-
         <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <!-- <h6 class="text-uppercase mb-4 font-weight-bold">Centro Sanitario SantaMaría</h6> -->
           <img src="../../assets/img/logoIcon.png" alt="" class="center" width="180">
-          <p class="text-center text-uppercase mb-4 font-weight">Centro Sanitario <br> Santa María</p>
+          <p class="text-center text-uppercase mb-4 font-weight">
+            {{globalCnstns.K_FOOTER_HEALTH_CENTER_I_STR}} <br> {{globalCnstns.K_FOOTER_HEALTH_CENTER_II_STR}}
+          </p>
         </div>
-        <!-- Grid column -->
-
         <hr class="w-100 clearfix d-md-none">
-
         <!-- Grid column -->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Menú</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold">{{globalCnstns.K_FOOTER_MENU_STR}}</h6>
           <p>
-            <a [routerLink]="['servicios']" class="lnks-footer-cssm">Servicios</a>
+            <a [routerLink]="['servicios']" class="lnks-footer">{{globalCnstns.K_SERVICE_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['nosotras']" class="lnks-footer-cssm">Quiénes somos</a>
+            <a [routerLink]="['nosotras']" class="lnks-footer">{{globalCnstns.K_ABOUT_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['talleres']" class="lnks-footer-cssm">Talleres</a>
+            <a [routerLink]="['talleres']" class="lnks-footer">{{globalCnstns.K_WORKSHOP_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['cursos']" class="lnks-footer-cssm">Cursos</a>
+            <a [routerLink]="['cursos']" class="lnks-footer">{{globalCnstns.K_COURSES_STR}}</a>
           </p>
         </div>
-        <!-- Grid column -->
-
         <hr class="w-100 clearfix d-md-none">
-
         <!-- Grid column -->
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Enlaces</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold">{{globalCnstns.K_FOOTER_LINKS_STR}}</h6>
           <p>
-            <a [href]="pathBackEnd" class="lnks-footer-cssm" target="_blank">Administración</a>
+            <a [href]="pathBackEnd" class="lnks-footer" target="_blank">{{globalCnstns.K_FOOTER_ADMIN_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['contacto']" class="lnks-footer-cssm">Contacto</a>
+            <a [routerLink]="['contacto']" class="lnks-footer">{{globalCnstns.K_CONTACT_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['politica_privacidad']" class="lnks-footer-cssm">Política de Privacidad</a>
+            <a [routerLink]="['politica_privacidad']" class="lnks-footer">{{globalCnstns.K_FOOTER_POLICY_STR}}</a>
           </p>
           <p>
-            <a [routerLink]="['aviso_legal']" class="lnks-footer-cssm">Aviso legal</a>
+            <a [routerLink]="['aviso_legal']" class="lnks-footer">{{globalCnstns.K_FOOTER_LEGAL_STR}}</a>
           </p>
         </div>
-
-        <!-- Grid column -->
         <hr class="w-100 clearfix d-md-none">
-
         <!-- Grid column -->
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" *ngIf="hasContactInfo">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold">{{globalCnstns.K_CONTACT_STR}}</h6>
           <p *ngIf="hasAdress">
-             <i class="fas fa-home margin-icon"></i> {{informationObj.footer_address}}
+             <i class="fas fa-home footer-margin-icon"></i> {{informationObj.footer_address}}
           </p>
           <p *ngIf="hasEmail">
-             <i class="fas fa-envelope-open-text margin-icon"></i> {{informationObj.footer_email}}
+             <i class="fas fa-envelope-open-text footer-margin-icon"></i> {{informationObj.footer_email}}
           </p>
           <p *ngIf="hasPhone">
-             <i class="fas fa-phone-alt margin-icon"></i> {{informationObj.footer_ph | phoneFormat}}
+             <i class="fas fa-phone-alt footer-margin-icon"></i> {{informationObj.footer_ph | phoneFormat}}
           </p>
           <p *ngIf="hasSchedule">
-             <i class="fas fa-clock"></i> {{informationObj.footer_schdl}}
+             <i class="fas fa-clock footer-margin-icon"></i> {{informationObj.footer_schdl}}
           </p>
         </div>
-        <!-- Grid column -->
-
       </div>
-      <!-- Footer links -->
-
       <hr>
-
       <!-- Grid row -->
       <div class="row d-flex align-items-center">
-
         <!-- Grid column -->
         <div class="col-md-7 col-lg-8">
-
           <!--Copyright-->
-          <p class="text-center text-md-left">©2021
-            <strong> Centro Sanitario Santa María</strong>
+          <p class="text-center text-md-left">{{globalCnstns.K_FOOTER_CR_STR}}
+            <strong> {{globalCnstns.K_FOOTER_HEALTH_CENTER_I_STR}} {{globalCnstns.K_FOOTER_HEALTH_CENTER_II_STR}}</strong>
           </p>
-
         </div>
         <!-- Grid column -->
-
-        <!-- Grid column -->
         <div class="col-md-5 col-lg-4 ml-lg-0">
-
           <!-- Social buttons -->
           <div class="text-center text-md-right">
             <ul class="list-unstyled list-inline">
               <li class="list-inline-item">
-
               </li>
               <li class="list-inline-item">
-
               </li>
               <li class="list-inline-item">
-
               </li>
               <li class="list-inline-item">
-
               </li>
             </ul>
           </div>
-
         </div>
-        <!-- Grid column -->
-
       </div>
-      <!-- Grid row -->
-
     </div>
-    <!-- Footer Links -->
-
   </footer>
-  <!-- Footer -->

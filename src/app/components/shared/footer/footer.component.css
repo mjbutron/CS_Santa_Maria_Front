@@ -1,5 +1,6 @@
+/* Footer CSS Style */
 
-.cssm-footer-color {
+.footer-bg-color {
   background-color: #0e94a0;
   color: #ffffff;
   background-image: url(src\assets\img\girls3_drw_sm_o20.png);
@@ -10,7 +11,7 @@
 }
 
 @media (min-width: 768px) {
-  .cssm-footer-color {
+  .footer-bg-color {
     background-color: #0e94a0;
     color: #ffffff;
     background-image: url(src\assets\img\girls3_drw_sm_o20.png);
@@ -19,17 +20,17 @@
   }
 }
 
-.margin-icon {
+.footer-margin-icon {
   margin-right: 1rem;
 }
 
-.lnks-footer-cssm {
+.lnks-footer {
   color: #fff;
   text-decoration: none;
   background-color: transparent;
 }
 
-.lnks-footer-cssm:hover {
+.lnks-footer:hover {
   color: #add5dd;
   text-decoration: none;
   background-color: transparent;

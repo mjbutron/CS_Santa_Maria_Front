@@ -164,6 +164,21 @@ export const K_WORKSHOP_NO_DATA_STR = 'No tenemos talleres en estos momentos. Di
 export const K_WORKSHOP_DTL_BACK_STR = 'Volver a talleres';
 export const K_WORKSHOP_DTL_COMPLETE_STR = 'Completo';
 export const K_WORKSHOP_DTL_INSCRIPTION_STR = 'Inscribirse';
+//// Footer
+export const K_FOOTER_HEALTH_CENTER_I_STR = 'Centro Sanitario';
+export const K_FOOTER_HEALTH_CENTER_II_STR = 'Santa María';
+export const K_FOOTER_MENU_STR = 'Menú';
+export const K_FOOTER_LINKS_STR = 'Enlaces';
+export const K_FOOTER_ADMIN_STR = 'Administración';
+export const K_FOOTER_POLICY_STR = 'Política de privacidad';
+export const K_FOOTER_LEGAL_STR = 'Aviso legal';
+export const K_FOOTER_CR_STR = '©2021';
+//// General
+export const K_SERVICE_STR = 'Servicios';
+export const K_ABOUT_STR = 'Quiénes somos';
+export const K_WORKSHOP_STR = 'Talleres';
+export const K_COURSES_STR = 'Cursos';
+export const K_CONTACT_STR = 'Contacto';
 // End web sections
 
 @Injectable()
