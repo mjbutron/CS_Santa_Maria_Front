@@ -24,6 +24,7 @@ export class FooterComponent implements OnInit {
   hasSchedule: boolean;
   // Social links
   hasSocialLinks: boolean;
+  showSocialLinks: boolean;
   hasFbk: boolean;
   hasYtb: boolean;
   hasItg: boolean;
@@ -36,6 +37,7 @@ export class FooterComponent implements OnInit {
    */
   constructor(private dataApi: DataApiService) {
     this.informationObj = new ContactInterface();
+    this.showSocialLinks = false;
   }
 
   /**
@@ -83,6 +85,7 @@ export class FooterComponent implements OnInit {
           this.informationObj.footer_email = data.footerInfo[i].footer_email;
           this.informationObj.footer_ph = data.footerInfo[i].footer_ph;
           this.informationObj.footer_schdl = data.footerInfo[i].footer_schdl;
+          this.showSocialLinks = (data.footerInfo[i].footer_social_links == 1) ? true : false;
         }
         this.checkContactInformation();
       }
