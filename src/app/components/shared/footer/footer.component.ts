@@ -22,6 +22,11 @@ export class FooterComponent implements OnInit {
   hasEmail: boolean;
   hasPhone: boolean;
   hasSchedule: boolean;
+  // Social links
+  hasSocialLinks: boolean;
+  hasFbk: boolean;
+  hasYtb: boolean;
+  hasItg: boolean;
   // Global Constants
   globalCnstns = globalsConstants;
 
@@ -41,7 +46,29 @@ export class FooterComponent implements OnInit {
     this.hasEmail = false;
     this.hasPhone = false;
     this.hasSchedule = false;
+    this.hasFbk = false;
+    this.hasYtb = false;
+    this.hasItg = false;
+    this.getHomeInfo();
     this.getFooterInfo();
+  }
+
+  /**
+   * Obtain navigation bar information
+   */
+  getHomeInfo(): void {
+    this.dataApi.getInfoHome().subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod && 0 < data.homeInfo.length) {
+        for (let i = 0; i < data.homeInfo.length; i++) {
+          this.informationObj.home_first_ph = data.homeInfo[i].home_first_ph;
+          this.informationObj.home_second_ph = data.homeInfo[i].home_second_ph;
+          this.informationObj.home_fcbk = data.homeInfo[i].home_fcbk;
+          this.informationObj.home_ytube = data.homeInfo[i].home_ytube;
+          this.informationObj.home_insta = data.homeInfo[i].home_insta;
+        }
+        this.checkSocialLinks();
+      }
+    });
   }
 
   /**
@@ -60,6 +87,25 @@ export class FooterComponent implements OnInit {
         this.checkContactInformation();
       }
     });
+  }
+
+  /**
+   * Check what social links we should show in the navigation bar
+   */
+  checkSocialLinks() {
+    this.hasSocialLinks = true;
+    if (this.informationObj.home_fcbk) {
+      this.hasFbk = true;
+    }
+    if (this.informationObj.home_ytube) {
+      this.hasYtb = true;
+    }
+    if (this.informationObj.home_insta) {
+      this.hasItg = true;
+    }
+    if (!this.hasFbk && !this.hasYtb && !this.hasItg) {
+      this.hasSocialLinks = false;
+    }
   }
 
   /**
