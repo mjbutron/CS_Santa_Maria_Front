@@ -44,7 +44,7 @@ describe('SafePipe', () => {
     const pipe = new SafePipe(domSanitizer);
     const error = 'Invalid safe type specified';
 
-    spyOn(pipe, 'transform', ).and.returnValue(Observable.throw(error));
+    spyOn(pipe, 'transform').and.returnValue(Observable.throw(error));
 
     const res = pipe.transform('Test', 'noType');
     expect(res).toBe(error);

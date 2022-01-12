@@ -15,7 +15,7 @@ const DEFAULT_MAX_RETRIES = 5;
 export class DataApiService {
 
   // API url
-  private url = environment.urlApiRest;
+  url = environment.urlApiRest;
 
   /**
    * Constructor
