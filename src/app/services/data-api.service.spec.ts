@@ -39,7 +39,7 @@ describe('DataApiService', () => {
     it('Should be get all sliders', () => {
       const dummyData = [
         {
-          "id": "2",
+          "id": 2,
           "title": "Método BLW",
           "description": "Alimentación con método BLW",
           "image": "10022020-5e41941e6e5c3-blw.jpg",
@@ -50,7 +50,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "1",
+          "id": 1,
           "title": "Masaje Prenatal",
           "description": "Masajes prenatales para mejorar el bienestar del bebe y la mama.",
           "image": "29012020-5e31bfb60f405-massagePrenatal.jpg",
@@ -61,7 +61,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Talleres",
           "description": "Realizamos diferentes talleres. ¡Apuntate!",
           "image": "29012020-5e31c016237ae-prenatal-massage.jpg",
@@ -89,7 +89,7 @@ describe('DataApiService', () => {
     it('Should be get home information', () => {
       const dummyData = [
         {
-          "id": "1",
+          "id": 1,
           "home_first_ph": "666777888",
           "home_second_ph": "999888555",
           "home_fcbk": "https://es-es.facebook.com/",
@@ -114,7 +114,7 @@ describe('DataApiService', () => {
     it('Should be get footer information', () => {
       const dummyData = [
         {
-          "id": "1",
+          "id": 1,
           "footer_address": "Calle Aurora 18, El Puerto de Santa María",
           "footer_email": "info@cssantamaria.es",
           "footer_ph": "666777888",
@@ -139,7 +139,7 @@ describe('DataApiService', () => {
     it('Should be get contact information', () => {
       const dummyData = [
         {
-          "id": "1",
+          "id": 1,
           "cnt_address": "Calle Aurora 18, El Puerto de Santa María",
           "cnt_ph_appo": "999555111",
           "cnt_emails": "info@cssantamaria.es;solicitud@cssantamaria.es",
@@ -166,7 +166,7 @@ describe('DataApiService', () => {
     it('Should be get all workshop information', () => {
       const dummyData = [
         {
-          "id": "35",
+          "id": 35,
           "active": "1",
           "home": "1",
           "title": "Preparación al parto y ayuda con los primeros pasos",
@@ -189,7 +189,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "36",
+          "id": 36,
           "active": "1",
           "home": "1",
           "title": "Porteo",
@@ -212,7 +212,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "38",
+          "id": 38,
           "active": "1",
           "home": "1",
           "title": "Porteo bebe",
@@ -249,7 +249,7 @@ describe('DataApiService', () => {
     it('Should be get all active workshops', () => {
       const dummyData = [
         {
-          "id": "36",
+          "id": 36,
           "active": "1",
           "home": "1",
           "title": "Porteo",
@@ -272,7 +272,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "38",
+          "id": 38,
           "active": "1",
           "home": "1",
           "title": "Porteo bebe",
@@ -350,7 +350,7 @@ describe('DataApiService', () => {
     it('Should be get opinions information', () => {
       const dummyData = [
         {
-          "id": "18",
+          "id": 18,
           "home": "0",
           "image": "default-avatar.png",
           "name": "DumyName",
@@ -361,7 +361,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "17",
+          "id": 17,
           "home": "1",
           "image": "default-avatar.png",
           "name": "Mark",
@@ -372,7 +372,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "16",
+          "id": 16,
           "home": "1",
           "image": "06052021-609422ad8a7b3-perfil-avatar.jpg",
           "name": "Anne",
@@ -400,7 +400,7 @@ describe('DataApiService', () => {
     it('Should be get all courses information', () => {
       const dummyData = [
         {
-          "id": "8",
+          "id": 8,
           "active": "0",
           "title": "Preparación al parto.",
           "short_description": "",
@@ -423,7 +423,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "12",
+          "id": 12,
           "active": "1",
           "title": "Curso 2",
           "short_description": "Dummy Short Desc.",
@@ -460,7 +460,7 @@ describe('DataApiService', () => {
     it('Should be get all active courses', () => {
       const dummyData = [
         {
-          "id": "15",
+          "id": 15,
           "active": "1",
           "title": "Curso Ult.",
           "short_description": "Dummy Desc.",
@@ -483,7 +483,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "12",
+          "id": 12,
           "active": "1",
           "title": "Curso 2",
           "short_description": "",
@@ -561,7 +561,7 @@ describe('DataApiService', () => {
     it('Should be get about us information', () => {
       const dummyData = [
         {
-          "id": "5",
+          "id": 5,
           "name": "Nombre",
           "surname1": "Apellidos",
           "surname2": "Apellidos 2",
@@ -577,7 +577,7 @@ describe('DataApiService', () => {
           "user_id": "1"
         },
         {
-          "id": "7",
+          "id": 7,
           "name": "Dummy Name",
           "surname1": "Dummy Surname",
           "surname2": "Dummy Surname 2",
@@ -601,6 +601,148 @@ describe('DataApiService', () => {
 
       const req = httpMock.expectOne(`${service.url}/api/allAboutUs`);
       expect(req.request.method).toBe("GET");
+      req.flush(dummyData);
+    });
+  });
+
+  // Service information
+  describe('Services Information', () => {
+    it('Should be get all services information', () => {
+      const dummyData = [
+        {
+          "id": 30,
+          "active": "1",
+          "title": "Valoración y tratamiento",
+          "image": "default_image.jpg",
+          "subtitle": "Seguramente hayas escuchado hablar de las famosas correas.",
+          "description": "Si tu bebé nace con el frenillo lingual corto (anquiloglosia) puede (o no) tener dificultad durante la lactancia como succión ineficaz, mala transferencia de leche, puede provocarte dolor en el pecho durante el amamantamiento por mal agarre, grietas, mastitis de repetición… A medida que tu bebé crece el frenillo lingual corto puede ocasionar problemas de mala oclusión dental, dificultad a la hora de pronunciar algunas letras, problemas de respiración… Esto no significa que un bebé con anquiloglosia vaya a sufrir todas estas dificultades, puede sufrir alguna o ninguna porque nunca sabemos, a priori, qué dificultades puede causar un frenillo lingual corto hasta que las dificultades se manifiestan. En caso de que fuera necesario, la intervención más habitual para intervenir la anquiloglosias.\r\n",
+          "create_date": "2021-09-07 19:10:47",
+          "update_date": "2021-10-19 20:58:07",
+          "user_id": "1"
+        },
+        {
+          "id": 34,
+          "active": "0",
+          "title": "Acondicionamiento del suelo pélvico",
+          "image": "default_image.jpg",
+          "subtitle": "DummySubtitle",
+          "description": "DummyDescription",
+          "create_date": "2021-08-04 20:19:14",
+          "update_date": "2021-09-20 20:22:24",
+          "user_id": "1"
+        },
+        {
+          "id": 39,
+          "active": "1",
+          "title": "Control del crecimiento y peso saludable",
+          "image": "default_image.jpg",
+          "subtitle": "",
+          "description": "Descripción del servicio",
+          "create_date": "2021-08-04 20:19:14",
+          "update_date": "2021-09-20 20:22:24",
+          "user_id": "1"
+        }
+      ];
+
+      service.getAllServices().subscribe(data => {
+        expect(data.length).toBeGreaterThan(0);
+        expect(data).toEqual(dummyData);
+      });
+
+      const req = httpMock.expectOne(`${service.url}/api/allServices`);
+      expect(req.request.method).toBe("GET");
+      req.flush(dummyData);
+    });
+
+    it('Should be get all active services', () => {
+      const dummyData = [
+        {
+          "id": 30,
+          "active": "1",
+          "title": "Valoración y tratamiento del frenillo lingual",
+          "image": "default_image.jpg",
+          "subtitle": "Seguramente hayas escuchado hablar de las famosas “correas”asda sdas dasd asd asd asdasd as asdd sdasdds a asasd cas assdads.",
+          "description": "Si tu bebé nace con el frenillo lingual corto (anquiloglosia) puede (o no) tener dificultad durante la lactancia como succión ineficaz, mala transferencia de leche, puede provocarte dolor en el pecho durante el amamantamiento por mal agarre, grietas, mastitis de repetición… A medida que tu bebé crece el frenillo lingual corto puede ocasionar problemas de mala oclusión dental, dificultad a la hora de pronunciar algunas letras, problemas de respiración… Esto no significa que un bebé con anquiloglosia vaya a sufrir todas estas dificultades, puede sufrir alguna o ninguna porque nunca sabemos, a priori, qué dificultades puede causar un frenillo lingual corto hasta que las dificultades se manifiestan. En caso de que fuera necesario, la intervención más habitual para intervenir la anquiloglosias.\r\n",
+          "create_date": "2021-09-07 19:10:47",
+          "update_date": "2021-10-19 20:58:07",
+          "user_id": "1"
+        },
+        {
+          "id": 39,
+          "active": "1",
+          "title": "Control del crecimiento y peso saludable",
+          "image": "default_image.jpg",
+          "subtitle": "",
+          "description": "Descripción del servicio",
+          "create_date": "2021-08-04 20:19:14",
+          "update_date": "2021-09-20 20:22:24",
+          "user_id": "1"
+        }
+      ];
+
+      service.getAllActiveServices().subscribe(data => {
+        expect(data.length).toBeGreaterThan(0);
+        expect(data).toEqual(dummyData);
+      });
+
+      const req = httpMock.expectOne(`${service.url}/api/activeServices`);
+      expect(req.request.method).toBe("GET");
+      req.flush(dummyData);
+    });
+
+    it('Should be get service by ID', () => {
+      const dummyData = [
+        {
+          "id": 34,
+          "active": "1",
+          "title": "Acondicionamiento del suelo pélvico",
+          "image": "default_image.jpg",
+          "subtitle": "",
+          "description": "desc",
+          "create_date": "2021-08-04 20:19:14",
+          "update_date": "2021-09-20 20:22:24",
+          "user_id": "1"
+        }
+      ];
+
+      service.getServiceById(34).subscribe(data => {
+        expect(data.length).toBeGreaterThan(0);
+        expect(data[0].id).toEqual(34);
+        expect(data).toEqual(dummyData);
+      });
+
+      const req = httpMock.expectOne(`${service.url}/api/service/34`);
+      expect(req.request.method).toBe("GET");
+      req.flush(dummyData);
+    });
+  });
+
+  // Send Email
+  describe('Send Email', () => {
+    it('Should be send email', () => {
+      const dummyData = [
+        {
+          "cod": 200,
+          "message": "Email enviado"
+        }
+      ];
+
+      const dummyRequest = {
+        name: "DummyName",
+        surname: "DummySurname",
+        email: "dummyemail@email.com",
+        subject: "DummySubject",
+        message: "DummyMessage",
+        acceptRGPD: false
+      };
+
+      service.sendEmailContact(dummyRequest).subscribe(data => {
+        expect(data.length).toBeGreaterThan(0);
+        expect(data).toEqual(dummyData);
+      });
+
+      const req = httpMock.expectOne(`${service.url}/api/sendEmail`);
+      expect(req.request.method).toBe("POST");
       req.flush(dummyData);
     });
   });
