@@ -306,7 +306,7 @@ export class DataApiService {
     const url_api = this.url + '/api/sendEmail';
     return this.http.post(url_api, JSON.stringify(infoRequest), this.getHeadersOptions())
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(2000),
         catchError(err => {
           return of(err.value.error);
         }),
