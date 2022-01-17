@@ -77,10 +77,10 @@ export class WorkshopComponent implements OnInit {
       confirmButtonText: globalsConstants.K_INSCRIPTION_OK_BUTTON_STR,
       cancelButtonText: globalsConstants.K_CANCEL_BUTTON_STR
     }).then((result) => {
+      /* istanbul ignore else */
       if (result.value) {
         this.router.navigateByUrl('/contacto');
       }
     });
   }
-
 }
