@@ -6,7 +6,6 @@ import { Observable, Subject, of } from 'rxjs';
 import { WorkshopdetailsComponent } from './workshopdetails.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataApiService } from 'src/app/services/data-api.service';
-import { WorkshopInterface } from 'src/app/models/workshop-interface';
 
 class fakeRouter {
   navigateByUrl(params) { }
