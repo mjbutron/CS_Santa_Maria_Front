@@ -60,6 +60,7 @@ export class FooterComponent implements OnInit {
    */
   getHomeInfo(): void {
     this.dataApi.getInfoHome().subscribe((data) => {
+      /* istanbul ignore else */
       if (globalsConstants.K_COD_OK == data.cod && 0 < data.homeInfo.length) {
         for (let i = 0; i < data.homeInfo.length; i++) {
           this.informationObj.home_first_ph = data.homeInfo[i].home_first_ph;
@@ -79,6 +80,7 @@ export class FooterComponent implements OnInit {
    */
   getFooterInfo() {
     this.dataApi.getInfoFooter().subscribe((data) => {
+      /* istanbul ignore else */
       if (globalsConstants.K_COD_OK == data.cod && 0 < data.footerInfo.length) {
         for (let i = 0; i < data.footerInfo.length; i++) {
           this.informationObj.footer_address = data.footerInfo[i].footer_address;
