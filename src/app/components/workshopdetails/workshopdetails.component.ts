@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
@@ -15,12 +15,13 @@ import { WorkshopInterface } from 'src/app/models/workshop-interface';
   templateUrl: './workshopdetails.component.html',
   styleUrls: ['./workshopdetails.component.css']
 })
-export class WorkshopdetailsComponent implements OnInit {
+export class WorkshopdetailsComponent {
   // Editor
   public Editor = ClassicEditor;
   // Path
   path = environment.imageRootPath;
   // Workshop
+  workshopId = 0;
   workshop: WorkshopInterface;
   noDate = globalsConstants.K_NO_DATE_STR;
   // Load
@@ -38,27 +39,30 @@ export class WorkshopdetailsComponent implements OnInit {
     this.isLoaded = false;
     this.workshop = new WorkshopInterface();
     this.activatedRoute.params.subscribe(param => {
-      this.dataApi.getWorkshopById(param['id']).subscribe((data) => {
-        if (globalsConstants.K_COD_OK == data.cod) {
-          if (data.workshop.length > 0 && data.workshop[0].active == 1) {
-            this.workshop = data.workshop[0];
-            this.isLoaded = true;
-          }
-          else {
-            this.router.navigateByUrl('/talleres');
-          }
-        }
-        else {
-          this.isLoaded = true;
-        }
-      });
+      this.workshopId = param['id'];
+      this.getDetailsWorkshop();
     });
   }
 
   /**
-   * ngOnInit
+   * Obtain workshop details information
    */
-  ngOnInit() { }
+  getDetailsWorkshop(): void {
+    this.dataApi.getWorkshopById(this.workshopId).subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod) {
+        if (data.workshop.length > 0 && data.workshop[0].active == 1) {
+          this.workshop = data.workshop[0];
+          this.isLoaded = true;
+        }
+        else {
+          this.router.navigateByUrl('/talleres');
+        }
+      }
+      else {
+        this.isLoaded = true;
+      }
+    });
+  }
 
   /**
    * Inscription to the workshop
