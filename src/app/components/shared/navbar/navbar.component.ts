@@ -62,6 +62,7 @@ export class NavbarComponent implements OnInit {
    */
   getHomeInfo() {
     this.dataApi.getInfoHome().subscribe((data) => {
+      /* istanbul ignore else */
       if (globalsConstants.K_COD_OK == data.cod && 0 < data.homeInfo.length) {
         for (let i = 0; i < data.homeInfo.length; i++) {
           this.informationObj.home_first_ph = data.homeInfo[i].home_first_ph;
