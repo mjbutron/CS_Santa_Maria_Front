@@ -30,7 +30,6 @@ describe('Workshop Component', () => {
     router = TestBed.get(Router);
 
     component = new WorkshopComponent(service, router);
-
   });
 
   it('Create an instance', () => {

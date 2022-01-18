@@ -28,7 +28,6 @@ describe('Service Component', () => {
     router = TestBed.get(Router);
 
     component = new ServicesComponent(service, router);
-
   });
 
   it('Create an instance', () => {
@@ -99,7 +98,7 @@ describe('Service Component', () => {
     const spy = spyOn(service, 'getAllActiveServices').and.returnValue(of(dummyData));
 
     component.getServices();
-    
+
     expect(component.isLoaded).toBeTruthy();
   });
 

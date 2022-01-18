@@ -43,7 +43,6 @@ describe('Service Details Component Unit', () => {
     activatedRoute = TestBed.get(ActivatedRoute);
 
     component = new ServicedetailsComponent(service, activatedRoute, router);
-
   });
 
   it('Create an instance', () => {

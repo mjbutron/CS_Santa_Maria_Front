@@ -44,7 +44,6 @@ describe('Workshop Details Component Unit', () => {
     activatedRoute = TestBed.get(ActivatedRoute);
 
     component = new WorkshopdetailsComponent(service, activatedRoute, router);
-
   });
 
   it('Create an instance', () => {

@@ -51,9 +51,12 @@ export class OpinionsComponent implements OnInit {
   getAllOpinions() {
     this.classColumn = globalsConstants.K_OPINION_COLUMN_CLASS;
     this.dataApi.getAllOpinions().subscribe((data) => {
+      /* istanbul ignore else */
       if (globalsConstants.K_COD_OK == data.cod) {
+        /* istanbul ignore else */
         if (0 < data.allOpinions.length) {
           for (let opnHome of data.allOpinions) {
+            /* istanbul ignore else */
             if (opnHome.home == 1) {
               this.opnInHome.push(opnHome);
             }
@@ -72,9 +75,9 @@ export class OpinionsComponent implements OnInit {
   }
 
   /**
-   * Show comentary
+   * Show commentary
    * @param  name     User name
-   * @param  content  Comentary text
+   * @param  content  Commentary text
    */
   openComment(name: string, content: string) {
     this.scrollToCommentary();
@@ -83,7 +86,7 @@ export class OpinionsComponent implements OnInit {
   }
 
   /**
-   * Hide comentary
+   * Hide commentary
    */
   onCloseComment() {
     this.classComment = this.classCommentDefault + globalsConstants.K_OPINION_FADEOUT_CLASS;
@@ -93,7 +96,7 @@ export class OpinionsComponent implements OnInit {
   }
 
   /**
-   * Scroll to comentary
+   * Scroll to commentary
    */
   scrollToCommentary() {
     this.userComment.nativeElement.scrollIntoView({ block: "center", behavior: "smooth" });
