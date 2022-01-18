@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
@@ -14,12 +14,13 @@ import { ServiceInterface } from 'src/app/models/service-interface';
   templateUrl: './servicedetails.component.html',
   styleUrls: ['./servicedetails.component.css']
 })
-export class ServicedetailsComponent implements OnInit {
+export class ServicedetailsComponent {
   // Editor
   public Editor = ClassicEditor;
   // Path
   path = environment.imageRootPath;
   // Services
+  serviceId = 0;
   service: ServiceInterface;
   // Load
   isLoaded: boolean;
@@ -36,25 +37,28 @@ export class ServicedetailsComponent implements OnInit {
     this.isLoaded = false;
     this.service = new ServiceInterface();
     this.activatedRoute.params.subscribe(param => {
-      this.dataApi.getServiceById(param['id']).subscribe((data) => {
-        if (globalsConstants.K_COD_OK == data.cod) {
-          if (data.service.length > 0) {
-            this.service = data.service[0];
-            this.isLoaded = true;
-          }
-          else {
-            this.router.navigateByUrl('/servicios');
-          }
-        }
-        else {
-          this.isLoaded = true;
-        }
-      });
+      this.serviceId = param['id'];
+      this.getDetailsService();
     });
   }
 
   /**
-   * ngOnInit
+   * Obtain service details information
    */
-  ngOnInit() { }
+  getDetailsService(): void {
+    this.dataApi.getServiceById(this.serviceId).subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod) {
+        if (data.service.length > 0 && data.service[0].active == 1) {
+          this.service = data.service[0];
+          this.isLoaded = true;
+        }
+        else {
+          this.router.navigateByUrl('/servicios');
+        }
+      }
+      else {
+        this.isLoaded = true;
+      }
+    });
+  }
 }
