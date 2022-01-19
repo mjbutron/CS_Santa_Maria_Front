@@ -62,12 +62,13 @@ export class ContactComponent implements OnInit {
         this.informationObj = data.contactInfo[0];
         this.lat = +this.informationObj.cnt_lat;
         this.lon = +this.informationObj.cnt_lon;
+        /* istanbul ignore else */
         if (this.informationObj.cnt_emails) {
           this.checkEmails(this.informationObj.cnt_emails);
         }
         this.isLoaded = true;
       } else {
-        this.isLoaded = false;
+        this.isLoaded = true;
       }
     });
   }

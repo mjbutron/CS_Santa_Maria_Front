@@ -5,7 +5,7 @@ import { AboutusComponent } from './aboutus.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataApiService } from 'src/app/services/data-api.service';
 
-describe('Service Component', () => {
+describe('About Us Component', () => {
   let component: AboutusComponent;
   let injector: TestBed;
   let service: DataApiService;
