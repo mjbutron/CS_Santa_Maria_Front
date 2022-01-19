@@ -23,7 +23,7 @@ class fakeActivatedRouter {
   }
 }
 
-describe('Workshop Details Component Unit', () => {
+describe('Workshop Details Component', () => {
   let component: WorkshopdetailsComponent;
   let injector: TestBed;
   let service: DataApiService;

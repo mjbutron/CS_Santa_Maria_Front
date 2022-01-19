@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 import { ActivatedRoute } from '@angular/router';
@@ -15,12 +15,13 @@ import { CourseInterface } from 'src/app/models/course-interface';
   templateUrl: './coursedetails.component.html',
   styleUrls: ['./coursedetails.component.css']
 })
-export class CoursedetailsComponent implements OnInit {
+export class CoursedetailsComponent {
   // Editor
   public Editor = ClassicEditor;
   // Path
   path = environment.imageRootPath;
   // Course
+  courseId = 0;
   course: CourseInterface;
   noDate = globalsConstants.K_NO_DATE_STR;
   // Load
@@ -38,27 +39,30 @@ export class CoursedetailsComponent implements OnInit {
     this.isLoaded = false;
     this.course = new CourseInterface();
     this.activatedRoute.params.subscribe(param => {
-      this.dataApi.getCourseById(param['id']).subscribe((data) => {
-        if (globalsConstants.K_COD_OK == data.cod) {
-          if (data.course.length > 0 && data.course[0].active == 1) {
-            this.course = data.course[0];
-            this.isLoaded = true;
-          }
-          else {
-            this.router.navigateByUrl('/cursos');
-          }
-        }
-        else {
-          this.isLoaded = false;
-        }
-      });
+      this.courseId = param['id'];
+      this.getDetailsCourse();
     });
   }
 
   /**
-   * ngOnInit
+   * Obtain course details information
    */
-  ngOnInit() { }
+  getDetailsCourse(): void {
+    this.dataApi.getCourseById(this.courseId).subscribe((data) => {
+      if (globalsConstants.K_COD_OK == data.cod) {
+        if (data.course.length > 0 && data.course[0].active == 1) {
+          this.course = data.course[0];
+          this.isLoaded = true;
+        }
+        else {
+          this.router.navigateByUrl('/cursos');
+        }
+      }
+      else {
+        this.isLoaded = true;
+      }
+    });
+  }
 
   /**
    * Inscription to the course
@@ -74,6 +78,7 @@ export class CoursedetailsComponent implements OnInit {
       confirmButtonText: globalsConstants.K_INSCRIPTION_OK_BUTTON_STR,
       cancelButtonText: globalsConstants.K_CANCEL_BUTTON_STR
     }).then((result) => {
+      /* istanbul ignore else */
       if (result.value) {
         this.router.navigateByUrl('/contacto');
       }
