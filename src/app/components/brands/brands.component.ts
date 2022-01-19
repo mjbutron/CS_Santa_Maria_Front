@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as globalsConstants from 'src/app/common/globals';
 
 @Component({
@@ -6,7 +6,7 @@ import * as globalsConstants from 'src/app/common/globals';
   templateUrl: './brands.component.html',
   styleUrls: ['./brands.component.css']
 })
-export class BrandsComponent implements OnInit {
+export class BrandsComponent {
 
   /**
    * Picture list
@@ -22,9 +22,4 @@ export class BrandsComponent implements OnInit {
    * constructor
    */
   constructor() { }
-
-  /**
-   * ngOnInit
-   */
-  ngOnInit() { }
 }
