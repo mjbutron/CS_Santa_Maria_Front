@@ -46,7 +46,7 @@ export class AboutusComponent implements OnInit {
         this.isLoaded = true;
       }
       else {
-        this.isLoaded = false;
+        this.isLoaded = true;
       }
     });
   }
