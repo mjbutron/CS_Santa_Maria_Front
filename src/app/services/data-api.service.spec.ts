@@ -6,7 +6,7 @@ import { delay, mergeMap, catchError, retry, retryWhen, shareReplay } from 'rxjs
 
 import { DataApiService } from './data-api.service';
 
-describe('DataApiService', () => {
+describe('Data Api Service', () => {
   let injector: TestBed;
   let service: DataApiService;
   let httpMock: HttpTestingController;
@@ -29,14 +29,14 @@ describe('DataApiService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('Should be get headers options', () => {
+  it('Should get headers options', () => {
     const res = service.getHeadersOptions();
     expect(typeof res.headers.get('Content-type')).toBe('string');
   });
 
   // Slider
   describe('Slider', () => {
-    it('Should be get all sliders', () => {
+    it('Should get all sliders', () => {
       const dummyData = [
         {
           "id": 2,
@@ -86,7 +86,7 @@ describe('DataApiService', () => {
 
   // Home information
   describe('Home Information', () => {
-    it('Should be get home information', () => {
+    it('Should get home information', () => {
       const dummyData = [
         {
           "id": 1,
@@ -111,7 +111,7 @@ describe('DataApiService', () => {
 
 // Footer information
 describe('Footer Information', () => {
-  it('Should be get footer information', () => {
+  it('Should get footer information', () => {
     const dummyData = [
       {
         "id": 1,
@@ -136,7 +136,7 @@ describe('Footer Information', () => {
 
 // Contact information
 describe('Contact Information', () => {
-  it('Should be get contact information', () => {
+  it('Should get contact information', () => {
     const dummyData = [
       {
         "id": 1,
@@ -163,7 +163,7 @@ describe('Contact Information', () => {
 
 // Workshop information
 describe('Workshop Information', () => {
-  it('Should be get all workshop information', () => {
+  it('Should get all workshop information', () => {
     const dummyData = [
       {
         "id": 35,
@@ -175,7 +175,7 @@ describe('Workshop Information', () => {
         "image": "default_image.jpg",
         "subtitle": "",
         "price": null,
-        "address": "Dummy",
+        "address": "Dummy Address",
         "session_date": "0000-00-00",
         "session_start": "00:00:00",
         "session_end": "00:00:00",
@@ -246,7 +246,7 @@ describe('Workshop Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get all active workshops', () => {
+  it('Should get all active workshops', () => {
     const dummyData = [
       {
         "id": 36,
@@ -306,7 +306,7 @@ describe('Workshop Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get workshop by ID', () => {
+  it('Should get workshop by ID', () => {
     const dummyData = [
       {
         "id": 36,
@@ -347,13 +347,13 @@ describe('Workshop Information', () => {
 
 // Opinions information
 describe('Opinions Information', () => {
-  it('Should be get opinions information', () => {
+  it('Should get opinions information', () => {
     const dummyData = [
       {
         "id": 18,
         "home": "0",
         "image": "default-avatar.png",
-        "name": "DumyName",
+        "name": "Dumy Name",
         "commentary": "<p>Comment</p>",
         "rating": "1",
         "create_date": "2021-08-14 14:59:34",
@@ -364,7 +364,7 @@ describe('Opinions Information', () => {
         "id": 17,
         "home": "1",
         "image": "default-avatar.png",
-        "name": "Mark",
+        "name": "Dumy Name",
         "commentary": "<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipiscing elit. Cras ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus quam quis dignissim. Integer nec tincidunt ex. Phasellus in elit mi. Aenean at risus vel arcu fringilla laoreet porttitor in leo. Cras in dolor quis turpis lacinia rhoncus. Ut vestibulum, ligula at finibus vestibulum, elit mauris convallis sapien, dictum dignissim leo justo at urna.</p>",
         "rating": "3",
         "create_date": "2021-08-05 18:27:38",
@@ -375,7 +375,7 @@ describe('Opinions Information', () => {
         "id": 16,
         "home": "1",
         "image": "06052021-609422ad8a7b3-perfil-avatar.jpg",
-        "name": "Anne",
+        "name": "Dumy Name",
         "commentary": "<p><strong>Crask</strong> ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus dignissim. Integer nec tincidunt ex.</p>",
         "rating": "3",
         "create_date": "2021-05-06 19:09:01",
@@ -397,7 +397,7 @@ describe('Opinions Information', () => {
 
 // Courses information
 describe('Courses Information', () => {
-  it('Should be get all courses information', () => {
+  it('Should get all courses information', () => {
     const dummyData = [
       {
         "id": 8,
@@ -426,7 +426,7 @@ describe('Courses Information', () => {
         "id": 12,
         "active": "1",
         "title": "Curso 2",
-        "short_description": "Dummy Short Desc.",
+        "short_description": "Dummy Short",
         "description": "Dummy description",
         "image": "default_image.jpg",
         "new_course": "1",
@@ -457,13 +457,13 @@ describe('Courses Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get all active courses', () => {
+  it('Should get all active courses', () => {
     const dummyData = [
       {
         "id": 15,
         "active": "1",
-        "title": "Curso Ult.",
-        "short_description": "Dummy Desc.",
+        "title": "Curso",
+        "short_description": "Dummy description",
         "description": "<h3 class=\"fancy\">Titulo Ultimo Curso.</h3><hr><p class=\"fancy\">Toda la información del ultimo curso estructurado según el operador.</p>",
         "image": "19102021-616f075b7c59c-taller.png",
         "new_course": "1",
@@ -517,7 +517,7 @@ describe('Courses Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get course by ID', () => {
+  it('Should get course by ID', () => {
     const dummyData = [
       {
         "id": 11,
@@ -558,17 +558,17 @@ describe('Courses Information', () => {
 
 // AboutUs information
 describe('AboutUs Information', () => {
-  it('Should be get about us information', () => {
+  it('Should get about us information', () => {
     const dummyData = [
       {
         "id": 5,
-        "name": "Nombre",
-        "surname1": "Apellidos",
-        "surname2": "Apellidos 2",
+        "name": "Dumy Name",
+        "surname1": "Dumy Surname",
+        "surname2": "Dumy Surname 2",
         "image": "default-avatar.png",
-        "position": "Prof1",
+        "position": "Dumy Position",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molesti. Tuto commodo.",
-        "academic_degree": "Est1",
+        "academic_degree": "Dumy",
         "user_fcbk": "https://www.facebook.com/",
         "user_ytube": "",
         "user_insta": "",
@@ -582,9 +582,9 @@ describe('AboutUs Information', () => {
         "surname1": "Dummy Surname",
         "surname2": "Dummy Surname 2",
         "image": "default-avatar.png",
-        "position": "Prof",
+        "position": "Dumy Position",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molesti.",
-        "academic_degree": "Est",
+        "academic_degree": "Dumy",
         "user_fcbk": "https://www.facebook.com/",
         "user_ytube": "https://www.youtube.com/",
         "user_insta": "",
@@ -607,7 +607,7 @@ describe('AboutUs Information', () => {
 
 // Service information
 describe('Services Information', () => {
-  it('Should be get all services information', () => {
+  it('Should get all services information', () => {
     const dummyData = [
       {
         "id": 30,
@@ -625,8 +625,8 @@ describe('Services Information', () => {
         "active": "0",
         "title": "Acondicionamiento del suelo pélvico",
         "image": "default_image.jpg",
-        "subtitle": "DummySubtitle",
-        "description": "DummyDescription",
+        "subtitle": "Dummy Subtitle",
+        "description": "Dummy Description",
         "create_date": "2021-08-04 20:19:14",
         "update_date": "2021-09-20 20:22:24",
         "user_id": "1"
@@ -654,7 +654,7 @@ describe('Services Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get all active services', () => {
+  it('Should get all active services', () => {
     const dummyData = [
       {
         "id": 30,
@@ -690,7 +690,7 @@ describe('Services Information', () => {
     req.flush(dummyData);
   });
 
-  it('Should be get service by ID', () => {
+  it('Should get service by ID', () => {
     const dummyData = [
       {
         "id": 34,

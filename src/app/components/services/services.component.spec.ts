@@ -50,7 +50,7 @@ describe('Service Component', () => {
           "title": "Acondicionamiento del suelo pélvico",
           "image": "default_image.jpg",
           "subtitle": "",
-          "description": "DummyDesc",
+          "description": "Dummy description",
           "create_date": "2021-08-04 20:19:14",
           "update_date": "2021-09-20 20:22:24",
           "user_id": 1
@@ -61,7 +61,7 @@ describe('Service Component', () => {
           "title": "Control del crecimiento y peso saludable",
           "image": "default_image.jpg",
           "subtitle": "",
-          "description": "DummyDesc",
+          "description": "Dummy description",
           "create_date": "2021-08-04 20:19:14",
           "update_date": "2021-09-20 20:22:24",
           "user_id": 1
@@ -72,7 +72,7 @@ describe('Service Component', () => {
           "title": "Perforación de orejas sin dolor",
           "image": "default_image.jpg",
           "subtitle": "",
-          "description": "DummyDesc",
+          "description": "Dummy description",
           "create_date": "2021-08-04 20:15:15",
           "update_date": "2021-09-20 20:22:08",
           "user_id": 1

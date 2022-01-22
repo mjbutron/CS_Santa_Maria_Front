@@ -23,7 +23,6 @@ describe('Contact Component', () => {
     });
     injector = getTestBed();
     service = injector.get(DataApiService);
-    // toast = TestBed.get(ToastrService);
 
     component = new ContactComponent(service, toast);
   });
@@ -85,11 +84,11 @@ describe('Contact Component', () => {
     };
 
     let validators: any[], asyncValidators: any[];
-    let form = new NgForm(validators, asyncValidators);
+    let dummyForm = new NgForm(validators, asyncValidators);
 
     const spy = spyOn(service, 'sendEmailContact').and.returnValue(of(dummyData));
 
-    component.onSubmit(form);
+    component.onSubmit(dummyForm);
 
     expect(component.isLoaded).toBeTruthy();
     expect(toast.success).toHaveBeenCalledWith(
@@ -108,11 +107,11 @@ describe('Contact Component', () => {
     };
 
     let validators: any[], asyncValidators: any[];
-    let form = new NgForm(validators, asyncValidators);
+    let dummyForm = new NgForm(validators, asyncValidators);
 
     const spy = spyOn(service, 'sendEmailContact').and.returnValue(of(dummyData));
 
-    component.onSubmit(form);
+    component.onSubmit(dummyForm);
 
     expect(component.isLoaded).toBeTruthy();
     expect(toast.error).toHaveBeenCalledWith(
@@ -134,8 +133,6 @@ describe('Contact Component', () => {
     let dummyForm = new NgForm(validators, asyncValidators);
     dummyForm.form.addControl('email', new FormControl('', Validators.required));
     dummyForm.form.controls['email'].setErrors({'incorrect': true});
-
-    console.log(dummyForm);
 
     const spy = spyOn(service, 'sendEmailContact').and.returnValue(of(dummyData));
 

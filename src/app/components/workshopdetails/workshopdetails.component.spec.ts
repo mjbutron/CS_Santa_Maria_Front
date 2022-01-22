@@ -72,26 +72,26 @@ describe('Workshop Details Component', () => {
       "workshop": [
         {
           "id": 36,
-          "active": "1",
-          "home": "1",
+          "active": 1,
+          "home": 1,
           "title": "Porteo",
           "short_description": "Porteo del bebe.",
           "description": "Transporte del bebe.",
           "image": "default_image.jpg",
           "subtitle": "",
-          "price": "50",
+          "price": 50,
           "address": "Calle Aurora, 18",
           "session_date": "2021-08-31",
           "session_start": "11:00:00",
           "session_end": "12:00:00",
-          "hours": "1",
-          "places": "5",
-          "free_places": "5",
-          "new_workshop": "0",
+          "hours": 1,
+          "places": 5,
+          "free_places": 5,
+          "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
           "update_date": "2021-11-16 21:20:23",
-          "user_id": "1"
+          "user_id": 1
         }
       ]
     };
@@ -109,26 +109,26 @@ describe('Workshop Details Component', () => {
       "workshop": [
         {
           "id": 36,
-          "active": "1",
-          "home": "1",
+          "active": 1,
+          "home": 1,
           "title": "Porteo",
           "short_description": "Porteo del bebe.",
           "description": "Transporte del bebe.",
           "image": "default_image.jpg",
           "subtitle": "",
-          "price": "50",
+          "price": 50,
           "address": "Calle Aurora, 18",
           "session_date": "2021-08-31",
           "session_start": "11:00:00",
           "session_end": "12:00:00",
-          "hours": "1",
-          "places": "5",
-          "free_places": "5",
-          "new_workshop": "0",
+          "hours": 1,
+          "places": 5,
+          "free_places": 5,
+          "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
           "update_date": "2021-11-16 21:20:23",
-          "user_id": "1"
+          "user_id": 1
         }
       ]
     };
@@ -148,26 +148,26 @@ describe('Workshop Details Component', () => {
       "workshop": [
         {
           "id": 88,
-          "active": "0",
-          "home": "1",
+          "active": 0,
+          "home": 1,
           "title": "Porteo",
           "short_description": "Porteo del bebe.",
           "description": "Transporte del bebe.",
           "image": "default_image.jpg",
           "subtitle": "",
-          "price": "50",
+          "price": 50,
           "address": "Calle Aurora, 18",
           "session_date": "2021-08-31",
           "session_start": "11:00:00",
           "session_end": "12:00:00",
-          "hours": "1",
-          "places": "5",
-          "free_places": "5",
-          "new_workshop": "0",
+          "hours": 1,
+          "places": 5,
+          "free_places": 5,
+          "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
           "update_date": "2021-11-16 21:20:23",
-          "user_id": "1"
+          "user_id": 1
         }
       ]
     };
