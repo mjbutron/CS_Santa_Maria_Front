@@ -1,8 +1,8 @@
 export const environment = {
   production: true,
   urlBackEnd: "http://localhost:4300",
-  pathImage: "../../cssm/assets/img",
-  urlApiRest: "http://sisloc.es/rest",
-  imageRootPath: "http://sisloc.es/uploads/",
-  pathServerImage: "http://sisloc.es/uploads/"
+  pathImage: "https://sisloc.es/cssm/assets/img",
+  urlApiRest: "https://sisloc.es/rest",
+  imageRootPath: "https://sisloc.es/uploads/",
+  pathServerImage: "https://sisloc.es/uploads/"
 };
