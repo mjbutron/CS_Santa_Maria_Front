@@ -14,6 +14,7 @@ import { ContactInterface } from 'src/app/models/contact-interface';
 export class FooterComponent implements OnInit {
   // Path
   pathBackEnd = environment.urlBackEnd;
+  assetsImg = environment.pathImage;
   // Information
   informationObj: ContactInterface;
   // Contact Information

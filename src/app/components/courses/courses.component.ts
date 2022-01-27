@@ -16,6 +16,7 @@ import { CourseInterface } from 'src/app/models/course-interface';
 export class CoursesComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
+  assetsImg = environment.pathImage;
   // Courses
   courses: CourseInterface[] = [];
   noDate = globalsConstants.K_NO_DATE_STR;

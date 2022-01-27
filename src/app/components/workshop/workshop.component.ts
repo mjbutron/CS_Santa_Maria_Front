@@ -16,6 +16,7 @@ import { WorkshopInterface } from 'src/app/models/workshop-interface';
 export class WorkshopComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
+  assetsImg = environment.pathImage;
   // Workshops
   workshops: WorkshopInterface[] = [];
   noDate = globalsConstants.K_NO_DATE_STR;

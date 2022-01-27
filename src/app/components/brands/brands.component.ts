@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import * as globalsConstants from 'src/app/common/globals';
 
 @Component({
@@ -7,6 +8,11 @@ import * as globalsConstants from 'src/app/common/globals';
   styleUrls: ['./brands.component.css']
 })
 export class BrandsComponent {
+
+  /**
+   * Path images
+   */
+  assetsImg = environment.pathImage;
 
   /**
    * Picture list

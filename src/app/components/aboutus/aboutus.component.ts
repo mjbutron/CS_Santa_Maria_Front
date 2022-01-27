@@ -14,6 +14,7 @@ import { AboutUsInterface } from 'src/app/models/aboutus-interface';
 export class AboutusComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
+  assetsImg = environment.pathImage;
   // About Us list
   aboutusList: AboutUsInterface[] = [];
   // Load

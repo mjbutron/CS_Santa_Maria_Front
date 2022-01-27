@@ -15,6 +15,7 @@ import { ServiceInterface } from 'src/app/models/service-interface';
 export class ServicesComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
+  assetsImg = environment.pathImage;
   // Services list
   services: ServiceInterface[] = [];
   // Load

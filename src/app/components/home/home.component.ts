@@ -16,6 +16,7 @@ import { WorkshopInterface } from 'src/app/models/workshop-interface';
 export class HomeComponent implements OnInit {
   // Path
   path = environment.imageRootPath;
+  assetsImg = environment.pathImage;
   // Sliders
   sliders: SliderInterface[] = [];
   // Workshops

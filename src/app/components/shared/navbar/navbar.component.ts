@@ -14,6 +14,8 @@ import { PhoneFormatPipe } from 'src/app/pipes/phone-format.pipe';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  //Path
+  assetsImg = environment.pathImage;
   // Navbar
   public navbarOpen = false;
   // Information

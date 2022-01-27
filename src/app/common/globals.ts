@@ -40,15 +40,15 @@ export const K_ABOUT_US_HISTORY_THREE = 'Actualmente compaginamos nuestra activi
 export const K_ABOUT_US_HISTORY_FOUR = '* María Terry se formó en Londres (Inglaterra) y Laura Feria en Florencia (Italia).';
 //// Brands
 export const K_BRANDS_IMG_VECTOR = [
-  { img: "../../assets/img/asisa.png" },
-  { img: "../../assets/img/allianz.png" },
-  { img: "../../assets/img/adeslas.png" },
-  { img: "../../assets/img/zurich.png" },
-  { img: "../../assets/img/reale.png" },
-  { img: "../../assets/img/aegon.png" },
-  { img: "../../assets/img/liberty.png" },
-  { img: "../../assets/img/mapfre.png" },
-  { img: "../../assets/img/sanitas.png" }
+  { img: "asisa.png" },
+  { img: "allianz.png" },
+  { img: "adeslas.png" },
+  { img: "zurich.png" },
+  { img: "reale.png" },
+  { img: "aegon.png" },
+  { img: "liberty.png" },
+  { img: "mapfre.png" },
+  { img: "sanitas.png" }
 ];
 export const K_BRANDS_CAROUSEL_CONFIG = {
   "slidesToShow": 2,
@@ -172,7 +172,7 @@ export const K_FOOTER_LINKS_STR = 'Enlaces';
 export const K_FOOTER_ADMIN_STR = 'Administración';
 export const K_FOOTER_POLICY_STR = 'Política de privacidad';
 export const K_FOOTER_LEGAL_STR = 'Aviso legal';
-export const K_FOOTER_CR_STR = '©2021';
+export const K_FOOTER_CR_STR = '©2022';
 //// Navbar
 export const K_NAV_SOCIAL_LINKS_STR = 'Redes sociales:';
 //// General
