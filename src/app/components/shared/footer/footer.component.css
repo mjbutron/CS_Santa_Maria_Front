@@ -44,3 +44,7 @@ margin:auto;
 .font-weight {
   font-weight: 700 !important;
 }
+
+.footer-icon-color {
+  color: #FF5959;
+}

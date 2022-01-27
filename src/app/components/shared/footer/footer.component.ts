@@ -31,6 +31,8 @@ export class FooterComponent implements OnInit {
   hasItg: boolean;
   // Global Constants
   globalCnstns = globalsConstants;
+  // Year
+  year: number;
 
   /**
    * Constructor
@@ -39,6 +41,7 @@ export class FooterComponent implements OnInit {
   constructor(private dataApi: DataApiService) {
     this.informationObj = new ContactInterface();
     this.showSocialLinks = false;
+    this.year = new Date().getFullYear();
   }
 
   /**
