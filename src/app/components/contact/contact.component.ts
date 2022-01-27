@@ -99,6 +99,12 @@ export class ContactComponent implements OnInit {
     this.dataApi.sendEmailContact(this.infoRequest).subscribe((data) => {
       if (globalsConstants.K_COD_OK == data.cod) {
         form.resetForm();
+        this.infoRequest.name = "";
+        this.infoRequest.surname = "";
+        this.infoRequest.email = "";
+        this.infoRequest.subject = "";
+        this.infoRequest.message = "";
+        this.infoRequest.acceptRGPD = false;
         this.isLoaded = true;
         this.toastr.success(globalsConstants.K_CONTACT_RESP_REQUEST_STR, globalsConstants.K_CONTACT_SUCCESS_REQUEST_STR, {
           progressBar: true,
