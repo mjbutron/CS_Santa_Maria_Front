@@ -35,7 +35,7 @@
   <div #userComment id="userComm"></div>
     <div *ngIf="testContent" [class]="classComment">
       <div class="col-sm-11">
-        <p class="font-weight-normal" [innerHTML]="testContent"></p>
+        <div class="ck-content font-weight-normal" [innerHTML]="testContent | safe: 'html'"></div>
       </div>
       <div class="col-sm-1">
         <a class="opinion-lnks-plus" title="Ocultar" [routerLink]="" (click)="onCloseComment()">X</a>
