@@ -130,6 +130,7 @@
 
 .workshop-price {
   margin-right: 1rem;
+  margin-left: auto;
 }
 
 .separator {
@@ -155,13 +156,6 @@
 
 .workshop-cursor {
   cursor: pointer;
-}
-
-@media (min-width: 395px) {
-  .workshop-price {
-    margin-left: auto;
-    margin-right: 1rem;
-  }
 }
 
 .separator {
