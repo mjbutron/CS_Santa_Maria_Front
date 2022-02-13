@@ -5,5 +5,4 @@ export interface SliderInterface {
   image?: string;
   createDate?: string;
   updateDate?: string;
-  userId?: string;
 }

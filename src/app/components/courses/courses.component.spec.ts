@@ -66,8 +66,7 @@ describe('Course Component', () => {
           "free_places": 5,
           "price": 20,
           "create_date": "2021-10-19 19:58:51",
-          "update_date": "2021-12-17 12:10:54",
-          "user_id": 1
+          "update_date": "2021-12-17 12:10:54"
         },
         {
           "id": 11,
@@ -89,8 +88,7 @@ describe('Course Component', () => {
           "free_places": 3,
           "price": 15,
           "create_date": "2021-08-04 20:33:12",
-          "update_date": "2021-11-16 20:26:39",
-          "user_id": 1
+          "update_date": "2021-11-16 20:26:39"
         }
       ]
     };

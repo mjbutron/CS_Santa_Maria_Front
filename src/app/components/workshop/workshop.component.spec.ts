@@ -66,8 +66,7 @@ describe('Workshop Component', () => {
           "new_workshop": 1,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:10:50",
-          "update_date": "2021-10-27 20:21:41",
-          "user_id": 1
+          "update_date": "2021-10-27 20:21:41"
         },
         {
           "id": 38,
@@ -89,8 +88,7 @@ describe('Workshop Component', () => {
           "new_workshop": 1,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
-          "update_date": "2021-11-16 21:20:18",
-          "user_id": 1
+          "update_date": "2021-11-16 21:20:18"
         }
       ]
     };

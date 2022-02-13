@@ -48,8 +48,7 @@ describe('About Us Component', () => {
           "user_ytube": "",
           "user_insta": "",
           "create_date": "2021-05-05 20:43:45",
-          "update_date": "2021-09-15 20:34:20",
-          "user_id": 1
+          "update_date": "2021-09-15 20:34:20"
         },
         {
           "id": 7,
@@ -64,8 +63,7 @@ describe('About Us Component', () => {
           "user_ytube": "https://www.youtube.com/",
           "user_insta": "",
           "create_date": "2021-05-29 21:44:27",
-          "update_date": "2021-09-13 21:05:31",
-          "user_id": 1
+          "update_date": "2021-09-13 21:05:31"
         },
         {
           "id": 8,
@@ -80,8 +78,7 @@ describe('About Us Component', () => {
           "user_ytube": "",
           "user_insta": "",
           "create_date": "2021-10-25 18:34:18",
-          "update_date": "2021-10-25 20:05:15",
-          "user_id": 1
+          "update_date": "2021-10-25 20:05:15"
         }
       ]
     };

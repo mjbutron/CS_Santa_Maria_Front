@@ -90,8 +90,7 @@ describe('Workshop Details Component', () => {
           "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
-          "update_date": "2021-11-16 21:20:23",
-          "user_id": 1
+          "update_date": "2021-11-16 21:20:23"
         }
       ]
     };
@@ -127,8 +126,7 @@ describe('Workshop Details Component', () => {
           "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
-          "update_date": "2021-11-16 21:20:23",
-          "user_id": 1
+          "update_date": "2021-11-16 21:20:23"
         }
       ]
     };
@@ -166,8 +164,7 @@ describe('Workshop Details Component', () => {
           "new_workshop": 0,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
-          "update_date": "2021-11-16 21:20:23",
-          "user_id": 1
+          "update_date": "2021-11-16 21:20:23"
         }
       ]
     };

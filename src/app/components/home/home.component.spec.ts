@@ -51,8 +51,7 @@ describe('Home Component', () => {
           "color_text": "#FFFFFF",
           "order_slider": "1",
           "create_date": "2019-09-23 20:59:12",
-          "update_date": "2021-08-12 12:11:43",
-          "user_id": "1"
+          "update_date": "2021-08-12 12:11:43"
         },
         {
           "id": "1",
@@ -62,8 +61,7 @@ describe('Home Component', () => {
           "color_text": "#0095a6",
           "order_slider": "2",
           "create_date": "2019-09-23 20:59:12",
-          "update_date": "2021-12-21 10:31:01",
-          "user_id": "1"
+          "update_date": "2021-12-21 10:31:01"
         },
         {
           "id": "3",
@@ -73,8 +71,7 @@ describe('Home Component', () => {
           "color_text": "#FFFFFF",
           "order_slider": "3",
           "create_date": "2019-09-23 20:59:45",
-          "update_date": "2021-12-21 10:31:01",
-          "user_id": "1"
+          "update_date": "2021-12-21 10:31:01"
         }
       ]
     };
@@ -126,8 +123,7 @@ describe('Home Component', () => {
           "new_workshop": 1,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:10:50",
-          "update_date": "2021-10-27 20:21:41",
-          "user_id": 1
+          "update_date": "2021-10-27 20:21:41"
         },
         {
           "id": 38,
@@ -149,8 +145,7 @@ describe('Home Component', () => {
           "new_workshop": 1,
           "impart": "Matronas",
           "create_date": "2021-08-21 13:13:17",
-          "update_date": "2021-11-16 21:20:18",
-          "user_id": 1
+          "update_date": "2021-11-16 21:20:18"
         }
       ]
     };

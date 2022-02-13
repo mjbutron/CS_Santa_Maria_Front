@@ -52,8 +52,7 @@ describe('Service Component', () => {
           "subtitle": "",
           "description": "Dummy description",
           "create_date": "2021-08-04 20:19:14",
-          "update_date": "2021-09-20 20:22:24",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:24"
         },
         {
           "id": 39,
@@ -63,8 +62,7 @@ describe('Service Component', () => {
           "subtitle": "",
           "description": "Dummy description",
           "create_date": "2021-08-04 20:19:14",
-          "update_date": "2021-09-20 20:22:24",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:24"
         },
         {
           "id": 33,
@@ -74,8 +72,7 @@ describe('Service Component', () => {
           "subtitle": "",
           "description": "Dummy description",
           "create_date": "2021-08-04 20:15:15",
-          "update_date": "2021-09-20 20:22:08",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:08"
         }
       ]
     };

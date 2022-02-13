@@ -90,8 +90,7 @@ describe('Course Details Component', () => {
           "free_places": 5,
           "price": 20,
           "create_date": "2021-10-19 19:58:51",
-          "update_date": "2021-12-17 12:10:54",
-          "user_id": 1
+          "update_date": "2021-12-17 12:10:54"
         }
       ]
     };
@@ -127,8 +126,7 @@ describe('Course Details Component', () => {
           "free_places": 5,
           "price": 20,
           "create_date": "2021-10-19 19:58:51",
-          "update_date": "2021-12-17 12:10:54",
-          "user_id": 1
+          "update_date": "2021-12-17 12:10:54"
         }
       ]
     };
@@ -166,8 +164,7 @@ describe('Course Details Component', () => {
           "free_places": 5,
           "price": 20,
           "create_date": "2021-10-19 19:58:51",
-          "update_date": "2021-12-17 12:10:54",
-          "user_id": 1
+          "update_date": "2021-12-17 12:10:54"
         }
       ]
     };

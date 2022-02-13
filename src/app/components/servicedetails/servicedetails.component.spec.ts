@@ -62,8 +62,7 @@ describe('Service Details Component Unit', () => {
           "subtitle": "Dummy Subtitle",
           "description": "Dummy Description",
           "create_date": "2021-08-04 20:19:14",
-          "update_date": "2021-09-20 20:22:24",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:24"
         }
       ]
     };
@@ -87,8 +86,7 @@ describe('Service Details Component Unit', () => {
           "subtitle": "Dummy Subtitle",
           "description": "Dummy Description",
           "create_date": "2021-08-04 20:19:14",
-          "update_date": "2021-09-20 20:22:24",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:24"
         }
       ]
     };
@@ -114,8 +112,7 @@ describe('Service Details Component Unit', () => {
           "subtitle": "",
           "description": "Descripción del servicio",
           "create_date": "2021-08-04 20:19:14",
-          "update_date": "2021-09-20 20:22:24",
-          "user_id": 1
+          "update_date": "2021-09-20 20:22:24"
         }
       ]
     };

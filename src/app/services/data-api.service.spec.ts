@@ -46,8 +46,7 @@ describe('Data Api Service', () => {
           "color_text": "#FFFFFF",
           "order_slider": "1",
           "create_date": "2019-09-23 20:59:12",
-          "update_date": "2021-08-12 12:11:43",
-          "user_id": "1"
+          "update_date": "2021-08-12 12:11:43"
         },
         {
           "id": 1,
@@ -57,8 +56,7 @@ describe('Data Api Service', () => {
           "color_text": "#0095a6",
           "order_slider": "2",
           "create_date": "2019-09-23 20:59:12",
-          "update_date": "2021-12-21 10:31:01",
-          "user_id": "1"
+          "update_date": "2021-12-21 10:31:01"
         },
         {
           "id": 3,
@@ -68,8 +66,7 @@ describe('Data Api Service', () => {
           "color_text": "#FFFFFF",
           "order_slider": "3",
           "create_date": "2019-09-23 20:59:45",
-          "update_date": "2021-12-21 10:31:01",
-          "user_id": "1"
+          "update_date": "2021-12-21 10:31:01"
         }
       ];
 
@@ -185,8 +182,7 @@ describe('Workshop Information', () => {
         "new_workshop": "1",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:10:50",
-        "update_date": "2021-10-27 20:21:41",
-        "user_id": "1"
+        "update_date": "2021-10-27 20:21:41"
       },
       {
         "id": 36,
@@ -208,8 +204,7 @@ describe('Workshop Information', () => {
         "new_workshop": "0",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:13:17",
-        "update_date": "2021-11-16 21:20:23",
-        "user_id": "1"
+        "update_date": "2021-11-16 21:20:23"
       },
       {
         "id": 38,
@@ -231,8 +226,7 @@ describe('Workshop Information', () => {
         "new_workshop": "1",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:13:17",
-        "update_date": "2021-11-16 21:20:18",
-        "user_id": "1"
+        "update_date": "2021-11-16 21:20:18"
       }
     ];
 
@@ -268,8 +262,7 @@ describe('Workshop Information', () => {
         "new_workshop": "0",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:13:17",
-        "update_date": "2021-11-16 21:20:23",
-        "user_id": "1"
+        "update_date": "2021-11-16 21:20:23"
       },
       {
         "id": 38,
@@ -291,8 +284,7 @@ describe('Workshop Information', () => {
         "new_workshop": "1",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:13:17",
-        "update_date": "2021-11-16 21:20:18",
-        "user_id": "1"
+        "update_date": "2021-11-16 21:20:18"
       }
     ];
 
@@ -328,8 +320,7 @@ describe('Workshop Information', () => {
         "new_workshop": "0",
         "impart": "Matronas",
         "create_date": "2021-08-21 13:13:17",
-        "update_date": "2021-11-16 21:20:23",
-        "user_id": "1"
+        "update_date": "2021-11-16 21:20:23"
       }
     ];
 
@@ -357,8 +348,7 @@ describe('Opinions Information', () => {
         "commentary": "<p>Comment</p>",
         "rating": "1",
         "create_date": "2021-08-14 14:59:34",
-        "update_date": "2021-10-27 19:12:05",
-        "user_id": "1"
+        "update_date": "2021-10-27 19:12:05"
       },
       {
         "id": 17,
@@ -368,8 +358,7 @@ describe('Opinions Information', () => {
         "commentary": "<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipiscing elit. Cras ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus quam quis dignissim. Integer nec tincidunt ex. Phasellus in elit mi. Aenean at risus vel arcu fringilla laoreet porttitor in leo. Cras in dolor quis turpis lacinia rhoncus. Ut vestibulum, ligula at finibus vestibulum, elit mauris convallis sapien, dictum dignissim leo justo at urna.</p>",
         "rating": "3",
         "create_date": "2021-08-05 18:27:38",
-        "update_date": "2021-10-09 13:29:53",
-        "user_id": "1"
+        "update_date": "2021-10-09 13:29:53"
       },
       {
         "id": 16,
@@ -379,8 +368,7 @@ describe('Opinions Information', () => {
         "commentary": "<p><strong>Crask</strong> ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus dignissim. Integer nec tincidunt ex.</p>",
         "rating": "3",
         "create_date": "2021-05-06 19:09:01",
-        "update_date": "2021-10-09 12:32:51",
-        "user_id": "1"
+        "update_date": "2021-10-09 12:32:51"
       },
     ];
 
@@ -419,8 +407,7 @@ describe('Courses Information', () => {
         "free_places": "0",
         "price": "30",
         "create_date": "2021-03-30 20:39:30",
-        "update_date": "2021-10-27 19:00:58",
-        "user_id": "1"
+        "update_date": "2021-10-27 19:00:58"
       },
       {
         "id": 12,
@@ -442,8 +429,7 @@ describe('Courses Information', () => {
         "free_places": "0",
         "price": "0",
         "create_date": "2021-08-04 20:36:13",
-        "update_date": "2021-12-23 14:45:33",
-        "user_id": "1"
+        "update_date": "2021-12-23 14:45:33"
       }
     ];
 
@@ -479,8 +465,7 @@ describe('Courses Information', () => {
         "free_places": "5",
         "price": "20",
         "create_date": "2021-10-19 19:58:51",
-        "update_date": "2021-12-17 12:10:54",
-        "user_id": "1"
+        "update_date": "2021-12-17 12:10:54"
       },
       {
         "id": 12,
@@ -502,8 +487,7 @@ describe('Courses Information', () => {
         "free_places": "0",
         "price": "0",
         "create_date": "2021-08-04 20:36:13",
-        "update_date": "2021-12-23 14:45:33",
-        "user_id": "1"
+        "update_date": "2021-12-23 14:45:33"
       }
     ];
 
@@ -539,8 +523,7 @@ describe('Courses Information', () => {
         "free_places": "3",
         "price": "15",
         "create_date": "2021-08-04 20:33:12",
-        "update_date": "2021-11-16 20:26:39",
-        "user_id": "1"
+        "update_date": "2021-11-16 20:26:39"
       }
     ];
 
@@ -573,8 +556,7 @@ describe('AboutUs Information', () => {
         "user_ytube": "",
         "user_insta": "",
         "create_date": "2021-05-05 20:43:45",
-        "update_date": "2021-09-15 20:34:20",
-        "user_id": "1"
+        "update_date": "2021-09-15 20:34:20"
       },
       {
         "id": 7,
@@ -589,8 +571,7 @@ describe('AboutUs Information', () => {
         "user_ytube": "https://www.youtube.com/",
         "user_insta": "",
         "create_date": "2021-05-29 21:44:27",
-        "update_date": "2021-09-13 21:05:31",
-        "user_id": "1"
+        "update_date": "2021-09-13 21:05:31"
       }
     ];
 
@@ -617,8 +598,7 @@ describe('Services Information', () => {
         "subtitle": "Seguramente hayas escuchado hablar de las famosas correas.",
         "description": "Si tu bebé nace con el frenillo lingual corto (anquiloglosia) puede (o no) tener dificultad durante la lactancia como succión ineficaz, mala transferencia de leche, puede provocarte dolor en el pecho durante el amamantamiento por mal agarre, grietas, mastitis de repetición… A medida que tu bebé crece el frenillo lingual corto puede ocasionar problemas de mala oclusión dental, dificultad a la hora de pronunciar algunas letras, problemas de respiración… Esto no significa que un bebé con anquiloglosia vaya a sufrir todas estas dificultades, puede sufrir alguna o ninguna porque nunca sabemos, a priori, qué dificultades puede causar un frenillo lingual corto hasta que las dificultades se manifiestan. En caso de que fuera necesario, la intervención más habitual para intervenir la anquiloglosias.\r\n",
         "create_date": "2021-09-07 19:10:47",
-        "update_date": "2021-10-19 20:58:07",
-        "user_id": "1"
+        "update_date": "2021-10-19 20:58:07"
       },
       {
         "id": 34,
@@ -628,8 +608,7 @@ describe('Services Information', () => {
         "subtitle": "Dummy Subtitle",
         "description": "Dummy Description",
         "create_date": "2021-08-04 20:19:14",
-        "update_date": "2021-09-20 20:22:24",
-        "user_id": "1"
+        "update_date": "2021-09-20 20:22:24"
       },
       {
         "id": 39,
@@ -639,8 +618,7 @@ describe('Services Information', () => {
         "subtitle": "",
         "description": "Descripción del servicio",
         "create_date": "2021-08-04 20:19:14",
-        "update_date": "2021-09-20 20:22:24",
-        "user_id": "1"
+        "update_date": "2021-09-20 20:22:24"
       }
     ];
 
@@ -664,8 +642,7 @@ describe('Services Information', () => {
         "subtitle": "Seguramente hayas escuchado hablar de las famosas “correas”asda sdas dasd asd asd asdasd as asdd sdasdds a asasd cas assdads.",
         "description": "Si tu bebé nace con el frenillo lingual corto (anquiloglosia) puede (o no) tener dificultad durante la lactancia como succión ineficaz, mala transferencia de leche, puede provocarte dolor en el pecho durante el amamantamiento por mal agarre, grietas, mastitis de repetición… A medida que tu bebé crece el frenillo lingual corto puede ocasionar problemas de mala oclusión dental, dificultad a la hora de pronunciar algunas letras, problemas de respiración… Esto no significa que un bebé con anquiloglosia vaya a sufrir todas estas dificultades, puede sufrir alguna o ninguna porque nunca sabemos, a priori, qué dificultades puede causar un frenillo lingual corto hasta que las dificultades se manifiestan. En caso de que fuera necesario, la intervención más habitual para intervenir la anquiloglosias.\r\n",
         "create_date": "2021-09-07 19:10:47",
-        "update_date": "2021-10-19 20:58:07",
-        "user_id": "1"
+        "update_date": "2021-10-19 20:58:07"
       },
       {
         "id": 39,
@@ -675,8 +652,7 @@ describe('Services Information', () => {
         "subtitle": "",
         "description": "Descripción del servicio",
         "create_date": "2021-08-04 20:19:14",
-        "update_date": "2021-09-20 20:22:24",
-        "user_id": "1"
+        "update_date": "2021-09-20 20:22:24"
       }
     ];
 
@@ -700,8 +676,7 @@ describe('Services Information', () => {
         "subtitle": "",
         "description": "desc",
         "create_date": "2021-08-04 20:19:14",
-        "update_date": "2021-09-20 20:22:24",
-        "user_id": "1"
+        "update_date": "2021-09-20 20:22:24"
       }
     ];
 

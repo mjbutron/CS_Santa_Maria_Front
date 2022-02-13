@@ -43,8 +43,7 @@ describe('Opinion Component', () => {
           "commentary": "<p>Comentario</p>",
           "rating": 1,
           "create_date": "2021-08-14 14:59:34",
-          "update_date": "2021-10-27 19:12:05",
-          "user_id": 1
+          "update_date": "2021-10-27 19:12:05"
         },
         {
           "id": 17,
@@ -54,8 +53,7 @@ describe('Opinion Component', () => {
           "commentary": "<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipiscing elit. Cras ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus quam quis dignissim. Integer nec tincidunt ex. Phasellus in elit mi. Aenean at risus vel arcu fringilla laoreet porttitor in leo. Cras in dolor quis turpis lacinia rhoncus. Ut vestibulum, ligula at finibus vestibulum, elit mauris convallis sapien, dictum dignissim leo justo at urna.</p>",
           "rating": 3,
           "create_date": "2021-08-05 18:27:38",
-          "update_date": "2021-10-09 13:29:53",
-          "user_id": 1
+          "update_date": "2021-10-09 13:29:53"
         },
         {
           "id": 16,
@@ -65,8 +63,7 @@ describe('Opinion Component', () => {
           "commentary": "<p><strong>Crask</strong> ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus dignissim. Integer nec tincidunt ex.</p>",
           "rating": 3,
           "create_date": "2021-05-06 19:09:01",
-          "update_date": "2021-10-09 12:32:51",
-          "user_id": 1
+          "update_date": "2021-10-09 12:32:51"
         },
         {
           "id": 12,
@@ -76,8 +73,7 @@ describe('Opinion Component', () => {
           "commentary": "<p>Opinión del usuario.</p>",
           "rating": 5,
           "create_date": "2021-03-15 20:12:26",
-          "update_date": "2021-10-10 12:47:34",
-          "user_id": 1
+          "update_date": "2021-10-10 12:47:34"
         }
       ]
     };
@@ -103,8 +99,7 @@ describe('Opinion Component', () => {
           "commentary": "<p>Comentario</p>",
           "rating": 1,
           "create_date": "2021-08-14 14:59:34",
-          "update_date": "2021-10-27 19:12:05",
-          "user_id": 1
+          "update_date": "2021-10-27 19:12:05"
         },
         {
           "id": 17,
@@ -114,8 +109,7 @@ describe('Opinion Component', () => {
           "commentary": "<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipiscing elit. Cras ac eleifend nibh. Integer eget ipsum nisl. Cras laoreet porttitor ipsum. Sed sit amet semper nisi. Nullam euismod neque neque, vitae lobortis eros posuere faucibus. In ultricies condimentum auctor. Fusce placerat cursus quam quis dignissim. Integer nec tincidunt ex. Phasellus in elit mi. Aenean at risus vel arcu fringilla laoreet porttitor in leo. Cras in dolor quis turpis lacinia rhoncus. Ut vestibulum, ligula at finibus vestibulum, elit mauris convallis sapien, dictum dignissim leo justo at urna.</p>",
           "rating": 3,
           "create_date": "2021-08-05 18:27:38",
-          "update_date": "2021-10-09 13:29:53",
-          "user_id": 1
+          "update_date": "2021-10-09 13:29:53"
         }
       ]
     };
