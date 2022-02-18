@@ -52,7 +52,7 @@
     "tar": ">=4.4.18",
     "tree-kill": ">=1.2.2",
     "tslib": "^1.14.1",
-    "url-parse": "^1.5.3",
+    "url-parse": "^1.5.6",
     "webpack-subresource-integrity": "^5.0.0",
     "websocket-extensions": ">=0.1.4",
     "ws": "^8.2.3",
