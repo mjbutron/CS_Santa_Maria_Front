@@ -1,4 +1,4 @@
-export class OpinionInterface {
+export interface OpinionInterface {
   id?: number;
   home?: number;
   image?: string;

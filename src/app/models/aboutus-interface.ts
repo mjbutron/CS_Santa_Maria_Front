@@ -1,4 +1,4 @@
-export class AboutUsInterface {
+export interface AboutUsInterface {
   id?: number;
   name?: string;
   surname1?: string;

@@ -1,4 +1,4 @@
-export class WorkshopInterface {
+export interface WorkshopInterface {
   id?: number;
   active?: number;
   home?: number;

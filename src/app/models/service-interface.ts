@@ -1,4 +1,4 @@
-export class ServiceInterface {
+export interface ServiceInterface {
   id?: number;
   active?: number;
   title?: string;

@@ -35,7 +35,6 @@ export class ServicedetailsComponent {
    */
   constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
-    this.service = new ServiceInterface();
     this.activatedRoute.params.subscribe(param => {
       this.serviceId = param['id'];
       this.getDetailsService();

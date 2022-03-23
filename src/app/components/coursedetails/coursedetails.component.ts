@@ -37,7 +37,6 @@ export class CoursedetailsComponent {
    */
   constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
-    this.course = new CourseInterface();
     this.activatedRoute.params.subscribe(param => {
       this.courseId = param['id'];
       this.getDetailsCourse();

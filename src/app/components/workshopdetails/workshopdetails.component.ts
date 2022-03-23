@@ -37,7 +37,6 @@ export class WorkshopdetailsComponent {
    */
   constructor(private dataApi: DataApiService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.isLoaded = false;
-    this.workshop = new WorkshopInterface();
     this.activatedRoute.params.subscribe(param => {
       this.workshopId = param['id'];
       this.getDetailsWorkshop();
