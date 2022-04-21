@@ -1,21 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed, getTestBed } from '@angular/core/testing';
 
 import { PrivacypolicyComponent } from './privacypolicy.component';
 
 describe('Privacy Policy Component', () => {
-  let component: PrivacypolicyComponent;
-  let fixture: ComponentFixture<PrivacypolicyComponent>;
+  // let component: PrivacypolicyComponent;
+  // let fixture: ComponentFixture<PrivacypolicyComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ PrivacypolicyComponent ]
-    });
-    fixture = TestBed.createComponent(PrivacypolicyComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  const component = new PrivacypolicyComponent();
 
-  it('Create an instance', () => {
+  it('create an instance', () => {
     expect(component).toBeTruthy();
   });
+
+  // beforeEach(() => {
+  //   TestBed.configureTestingModule({
+  //     declarations: [ PrivacypolicyComponent ]
+  //   });
+  //   fixture = TestBed.createComponent(PrivacypolicyComponent);
+  //   component = fixture.componentInstance;
+  //   fixture.detectChanges();
+  // });
 });
