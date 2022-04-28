@@ -16,6 +16,8 @@ export class DataApiService {
 
   // API url
   url = environment.urlApiRest;
+  retries: number = 3;
+  delay_ms:number = 2000;
 
   /**
    * Constructor
@@ -61,7 +63,7 @@ export class DataApiService {
     const url_api = this.url + '/api/allSlider';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -77,7 +79,7 @@ export class DataApiService {
     const url_api = this.url + '/api/home/info';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -93,7 +95,7 @@ export class DataApiService {
     const url_api = this.url + '/api/footer/info';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -109,7 +111,7 @@ export class DataApiService {
     const url_api = this.url + '/api/contact/info';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -125,7 +127,7 @@ export class DataApiService {
     const url_api = this.url + '/api/allWorkshops';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -142,7 +144,7 @@ export class DataApiService {
     const url_api = this.url + '/api/workshop/' + id;
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -158,7 +160,7 @@ export class DataApiService {
     const url_api = this.url + '/api/activeWorkshops';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -174,7 +176,7 @@ export class DataApiService {
     const url_api = this.url + '/api/allOpinion';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -190,7 +192,7 @@ export class DataApiService {
     const url_api = this.url + '/api/courses';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -207,7 +209,7 @@ export class DataApiService {
     const url_api = this.url + '/api/course/' + id;
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -223,7 +225,7 @@ export class DataApiService {
     const url_api = this.url + '/api/activeCourses';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -239,7 +241,7 @@ export class DataApiService {
     const url_api = this.url + '/api/allAboutUs';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -255,7 +257,7 @@ export class DataApiService {
     const url_api = this.url + '/api/allServices';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -272,7 +274,7 @@ export class DataApiService {
     const url_api = this.url + '/api/service/' + id;
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -288,7 +290,7 @@ export class DataApiService {
     const url_api = this.url + '/api/activeServices';
     return this.http.get(url_api)
       .pipe(
-        this.delayRetry(2000, 3),
+        this.delayRetry(this.delay_ms, this.retries),
         catchError(err => {
           return of(err.value.error);
         }),
@@ -306,7 +308,7 @@ export class DataApiService {
     const url_api = this.url + '/api/sendEmail';
     return this.http.post(url_api, JSON.stringify(infoRequest), this.getHeadersOptions())
       .pipe(
-        this.delayRetry(2000),
+        this.delayRetry(this.delay_ms),
         catchError(err => {
           return of(err.value.error);
         }),
