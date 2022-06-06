@@ -8,9 +8,9 @@
 </div>
 
 <!-- Content -->
-<div *ngIf="isLoaded" class="animated fadeInUp">
+<div *ngIf="isLoaded" class="animated fadeIn">
   <!-- Map -->
-  <div class="animated fadeInUp">
+  <div class="animated fadeIn">
     <agm-map [latitude]="lat" [longitude]="lon" [zoom]="17">
       <agm-marker [latitude]="lat" [longitude]="lon"></agm-marker>
     </agm-map>

@@ -8,7 +8,7 @@
 </div>
 
 <!-- Slider -->
-<div class="animated fadeInUp carousel slide" id="slider" data-ride="carousel">
+<div class="animated fadeIn carousel slide" id="slider" data-ride="carousel">
   <ul class="carousel-indicators">
     <li data-target="#slider" *ngFor="let x of sliders;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''"></li>
   </ul>
@@ -24,7 +24,7 @@
 <!-- End Slider -->
 
 <!-- Services -->
-<div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
+<div *ngIf="isLoaded" class="jumbotron animated fadeIn">
   <div class="home-bb-image">
     <h1 class="home-display-5">{{globalCnstns.K_HOME_SERVICE_STR}}</h1>
     <p class="home-lead text-center">{{globalCnstns.K_HOME_SUB_SERVICE_STR}}</p>
@@ -136,7 +136,7 @@
 <!-- End Services -->
 
 <!-- Workshops -->
-<div *ngIf="wspInHome.length > 0" class="row padding animated fadeInUp">
+<div *ngIf="wspInHome.length > 0" class="row padding animated fadeIn">
   <div class="col-12 home-fruit-image">
     <h1 class="home-display-5">{{globalCnstns.K_HOME_WORKSHOP_TTL_STR}}</h1>
     <p class="home-lead text-center">{{globalCnstns.K_HOME_SUB_WORKSHOP_STR}}</p>
@@ -189,7 +189,7 @@
 <!-- End Workshops -->
 
 <!-- Opinions -->
-<div *ngIf="isLoaded" class="jumbotron animated fadeInUp">
+<div *ngIf="isLoaded" class="jumbotron animated fadeIn">
   <div class="home-testimonials-image">
     <h1 class="home-display-5">{{globalCnstns.K_HOME_OPINIONS_TTL_STR}}</h1>
     <hr class="my-4">

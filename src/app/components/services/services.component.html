@@ -8,7 +8,7 @@
 </div>
 
 <!-- Content -->
-<div  class="animated fadeInUp">
+<div *ngIf="isLoaded" class="animated fadeIn">
   <!-- Header -->
   <div class="header-section">
     <img [src]="assetsImg+'services-header.png'" alt="">
