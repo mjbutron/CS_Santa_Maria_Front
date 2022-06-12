@@ -4,8 +4,7 @@ import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
 import { of, throwError } from 'rxjs';
 import { delay, mergeMap, catchError, retry, retryWhen, shareReplay } from 'rxjs/operators';
-// Interfaces
-import { SliderInterface } from '../models/slider-interface';
+
 // Number of retries
 const DEFAULT_MAX_RETRIES = 5;
 

@@ -44,7 +44,7 @@ describe('Home Component', () => {
       "cod": "200",
       "allSliders": [
         {
-          "id": "2",
+          "id": 2,
           "title": "Método BLW",
           "description": "Alimentación con método BLW",
           "image": "10022020-5e41941e6e5c3-blw.jpg",
@@ -54,7 +54,7 @@ describe('Home Component', () => {
           "update_date": "2021-08-12 12:11:43"
         },
         {
-          "id": "1",
+          "id": 1,
           "title": "Masaje Prenatal",
           "description": "Masajes prenatales para mejorar el bienestar del bebe y la mama.",
           "image": "29012020-5e31bfb60f405-massagePrenatal.jpg",
@@ -64,7 +64,7 @@ describe('Home Component', () => {
           "update_date": "2021-12-21 10:31:01"
         },
         {
-          "id": "3",
+          "id": 3,
           "title": "Talleres",
           "description": "Realizamos diferentes talleres. ¡Apuntate!",
           "image": "29012020-5e31c016237ae-prenatal-massage.jpg",
