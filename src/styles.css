@@ -1,12 +1,10 @@
-/*
- Global Style
- */
+/* Global Style */
 
 .padding {
   padding: 20px;
 }
 
-/* --- ** Start Loader ** --- */
+ /* Loader */
 #preloader {
 		position:fixed;
 		width:100%;
@@ -15,6 +13,7 @@
 		z-index:9999;
 		display:block;
 }
+
 #loader {
     display: block;
     position: relative;
@@ -29,6 +28,7 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
+
 #loader:before {
     content: "";
     position: absolute;
@@ -42,6 +42,7 @@
     -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
 }
+
 #loader:after {
     content: "";
     position: absolute;
@@ -56,7 +57,7 @@
     animation: spin 1.5s linear infinite;
 }
 
-/* --- ** Animation Loader ** --- */
+/* Animation Loader  */
 @-webkit-keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);
@@ -69,6 +70,7 @@
         transform: rotate(360deg);
     }
 }
+
 @keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);
@@ -81,9 +83,8 @@
         transform: rotate(360deg);
     }
 }
-/* --- ** End Loader ** --- */
 
-/* --- ** Start Toast ** --- */
+/* Toast  */
 .toast {
   opacity: 1;
 }
@@ -91,9 +92,8 @@
 #toast-container > div {
    opacity: 1;
 }
-/* --- ** End Toast ** --- */
 
-/* --- ** Start Style CSSM Font ** --- */
+/* Style CSSM Font (Ckeditor)  */
 h3.fancy, .ck.ck-button.ckeditor-title {
   color: #fff;
   font-family: "Amatic SC", cursive;
@@ -103,9 +103,8 @@ h3.fancy, .ck.ck-button.ckeditor-title {
   line-height: 1.2;
   color: #0e94a0;
 }
-/* --- ** End Style CSSM Font ** --- */
 
-/* --- ** Cursor ** --- */
+/* Cursor */
 .not-allowed {
   cursor: not-allowed;
 }

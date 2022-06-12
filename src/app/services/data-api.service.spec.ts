@@ -91,7 +91,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting sliders - Should retry 5 times', (done) => {
-      console.log("Sliders - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -132,7 +131,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting home information - Should retry 5 times', (done) => {
-      console.log("Home - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -173,7 +171,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting footer information - Should retry 5 times', (done) => {
-      console.log("Footer - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -216,7 +213,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting contact information - Should retry 5 times', (done) => {
-      console.log("Contact - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -315,7 +311,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting workshops information - Should retry 5 times', (done) => {
-      console.log("Workshops - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -389,7 +384,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting all active workshops information - Should retry 5 times', (done) => {
-      console.log("Active workshops - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -442,7 +436,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting workshop by ID - Should retry 5 times', (done) => {
-      console.log("Workshop by ID - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -505,7 +498,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting opinions information - Should retry 5 times', (done) => {
-      console.log("Opinions - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -582,7 +574,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting courses information - Should retry 5 times', (done) => {
-      console.log("Courses - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -656,7 +647,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting all active courses information - Should retry 5 times', (done) => {
-      console.log("Active courses - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -709,7 +699,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting course by ID information - Should retry 5 times', (done) => {
-      console.log("Course by ID - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -772,7 +761,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting about us information - Should retry 5 times', (done) => {
-      console.log("About us - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -835,7 +823,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting services information - Should retry 5 times', (done) => {
-      console.log("Services - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -885,7 +872,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting all active services information - Should retry 5 times', (done) => {
-      console.log("Active services - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -926,7 +912,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error getting service by ID information - Should retry 5 times', (done) => {
-      console.log("Service by ID - Retry...");
       const errorDetails = {
         "error": {
           "cod": 503,
@@ -972,8 +957,6 @@ describe('Data Api Service', () => {
     });
 
     it('Error send email - Should retry 5 times', (done) => {
-      console.log("Send email - Retry...");
-
       const dummyRequest = {
         name: "DummyName",
         surname: "DummySurname",
