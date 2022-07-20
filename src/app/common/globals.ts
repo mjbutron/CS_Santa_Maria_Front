@@ -119,7 +119,7 @@ export const K_COURSE_ADDRESS_STR = 'Lugar: ';
 export const K_COURSE_NO_DATA_STR = 'No tenemos cursos en estos momentos. Disculpen las molestias.';
 //// Home
 export const K_HOME_SERVICE_STR = 'Servicios';
-export const K_HOME_SUB_SERVICE_STR = 'Estos son nuestros principales servicios. Podrá encontrar más información en la sección de servicios.';
+export const K_HOME_SUB_SERVICE_STR = 'Estos son nuestros principales servicios. Para mas información, visite nuestra sección de servicios.';
 export const K_HOME_PREP_BIRTH_STR = 'Preparación al parto';
 export const K_HOME_DILATATION_STR = 'Dilatación en casa';
 export const K_HOME_LACTATION_STR = 'Lactancia';

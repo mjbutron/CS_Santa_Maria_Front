@@ -22,12 +22,6 @@ describe('SafePipe', () => {
     expect(res).toBeTruthy();
   }));
 
-  it('Returns a SafeScript for script type.', inject([DomSanitizer], (domSanitizer: DomSanitizer) => {
-    const pipe = new SafePipe(domSanitizer);
-    const res = pipe.transform('Test', 'script');
-    expect(res).toBeTruthy();
-  }));
-
   it('Returns a SafeUrl for url type.', inject([DomSanitizer], (domSanitizer: DomSanitizer) => {
     const pipe = new SafePipe(domSanitizer);
     const res = pipe.transform('Test', 'url');
