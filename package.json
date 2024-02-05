@@ -24,7 +24,7 @@
     "@ckeditor/ckeditor5-build-classic": "^30.0.0",
     "animate.css": "^3.7.2",
     "browserslist": ">=4.16.5",
-    "dns-packet": "^5.3.1",
+    "dns-packet": "^5.4.0",
     "elliptic": ">=6.5.4",
     "follow-redirects": ">=1.14.8",
     "glob-parent": ">=5.1.2",
